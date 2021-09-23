@@ -61,7 +61,7 @@ Vous allez recopier dans votre dépot GitHub les fichiers nécessaires pour prod
     <img src="https://ericecmorlaix.github.io/img/GitHub06bis.png" alt="Glisser/Déposer">
 </figure>
 
-**Glisser/Déposer** ou **Sélectionner** les fichiers de l'archive à copier vers le dépot GitHub (*Ne pas prendre le `README.md`*)...
+**Glisser/Déposer** ou **Sélectionner** les fichiers de l'archive à copier vers le dépot GitHub : ne pas prendre le `README.md`, le fichier `ci.yml` doit être placé dans une suite de répertoires nommés `.github/workflows/ci.yml`, ...
 
 **Committer** !
 

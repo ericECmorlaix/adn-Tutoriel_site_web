@@ -1,0 +1,13 @@
+image: python:latest
+pages:
+  stage: deploy
+  only:
+    - main
+  script:
+    - python -m pip install -U pip
+    - python -m pip install mkdocs-material
+    - python -m pip install mkdocs-jupyter
+    - mkdocs build --site-dir public
+  artifacts:
+    paths:
+      - public

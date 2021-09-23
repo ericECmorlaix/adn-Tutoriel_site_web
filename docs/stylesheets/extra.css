@@ -1,0 +1,14 @@
+ /*Ajout de Guillaume CONNAN pour éviter l'ascenceur vertical  */
+.md-typeset div.arithmatex  {
+    overflow: initial;
+}
+
+/*Ajout de Sébastien HOARO pour avoir une taille de police normale dans les admonotions  */
+.md-typeset .admonition {
+    font-size: 0.8rem;
+}
+
+.md-typeset details {
+    font-size: 0.8rem;
+}
+

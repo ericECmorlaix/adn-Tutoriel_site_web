@@ -1,0 +1,21 @@
+- Documentation officielle de [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){:target="_blank"}
+
+- [Les vidéos de Fred LELEU](https://youtube.com/playlist?list=PL-Q7fIakgvUAcUluPeUMIP1128wWxboJY){:target="_blank"}
+
+- De Jupyter à MkDocs, par Franck CHAMBON :
+    - [Bases de Markdown](https://ens-fr.gitlab.io/mkdocs/markdown-bases/){:target="_blank"} 
+    - [Markdown pour MkDocs](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/){:target="_blank"}
+    - [Écrire des maths](https://ens-fr.gitlab.io/mkdocs/maths/){:target="_blank"}
+
+- Explorer les possibilités de code *Markdown*, <em>HTML</em> et $\LaTeX{}$ :
+
+    - [MarkDown Jupyter](../MarkDown-Le_BN_pour_rapporter)
+    - [HTML Jupyter](../HTML-Le_BN_pour_multimedier)
+    - [LaTeX Jupyter](../LaTeX-Le_BN_pour_formuler)
+
+- [Using MkDocs for technical reporting](https://www.timvink.nl/mkdocs-for-tech-doc/){:target="_blank"}
+
+- [Announcing the new Jupyter Book](https://blog.jupyter.org/announcing-the-new-jupyter-book-cbf7aa8bc72e){:target="_blank"}
+
+- [Documentation française pour git](https://git-scm.com/book/fr/v2/){:target="_blank"}
+- [Télécharger et installer git pour Windows](https://git-scm.com/){:target="_blank"}

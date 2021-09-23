@@ -1,0 +1,124 @@
+# Informations du site 
+site_name: ADN - Tutoriel site web
+site_description: Tutoriel créer et gérer un site web depuis un dépôt git avec le framework material pour mkdocs et des notebook jupyter
+site_author: "Eric MADEC" 
+copyright: Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a> &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
+site_url: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/
+
+# Dépot du projet 
+repo_name: 'adn-Tutoriel_site_web' 
+repo_url: https://github.com/ericECmorlaix/adn-Tutoriel_site_web # Ajoute l'icone et le lien vers le dépot GitHub en haut à droite
+edit_url: tree/main/docs/
+
+
+# Structure des dossiers :
+docs_dir: docs
+
+# Menu de navigation
+nav: 
+    - Progression : index.md
+    # - Premiers Pas : PremiersPas.md
+    - Ressources : Ressources.md
+    # - Pages en .ipynb :
+    #   - MarkDown Jupyter : MarkDown-Le_BN_pour_rapporter.ipynb
+    #   - HTML Jupyter : HTML-Le_BN_pour_multimedier.ipynb
+    #   - LaTeX Jupyter : LaTeX-Le_BN_pour_formuler.ipynb
+    # - Pages en .md :
+    #   - MarkDown Mkdocs Material : MarkDown-Mkdocs_Material.md
+    # - iPad local : iPad.md
+    # - iSH Shell : iSH_Shell.md
+    # - Visual Studio Code  : Windows10.md
+
+# Définition du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/
+theme:
+    name: material
+    custom_dir: overrides
+    font: false  # RGPD ; pas de fonte Google
+    language: fr # français
+    logo: images/LogoIO.png 
+    favicon: images/LogoIO-pink.png
+
+    palette: # Palettes de couleurs jour/nuit, cf : https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+      - scheme: default # nom du thème clair
+        primary: pink # couleur primaire des titres, des liens, ..., à prendre dans la liste
+        accent: cyan # couleur d'accentuation au survol des boutons, desliens, ..., à prendre dans la liste
+        toggle: # définition du bouton pour switcher de palette
+          icon: material/weather-sunny # apparence
+          name: Basculer en mode sombre # message
+      - scheme: slate # nom du thème sombre
+        primary: cyan
+        accent: pink
+        toggle:
+          icon: material/weather-night
+          name: Basculer en mode clair
+
+    features:
+        - navigation.instant
+        - navigation.tabs
+        - navigation.expand
+        - navigation.top
+        - toc.integrate
+        - header.autohide
+
+
+markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
+    # extensions de la bibliothèque markdown standard
+    - abbr # infobulles sur abbréviations 
+    - meta # Métadonnées
+    - def_list                      # Les listes de définition.
+    - attr_list                     # Un peu de CSS et des attributs HTML.
+    - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
+    - admonition                    # Blocs colorés  !!! info "ma remarque"
+    - toc: # Table des matières
+        permalink: ⚓︎
+        toc_depth: 3
+    # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
+    - pymdownx.details              #   qui peuvent se plier/déplier.
+    - pymdownx.caret                # Passage ^^souligné^^ ou en ^exposant^.
+    - pymdownx.mark                 # Passage ==surligné==.
+    - pymdownx.tilde                # Passage ~~barré~~ ou en ~indice~.
+    - pymdownx.highlight            # Coloration syntaxique du code
+    - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
+    - pymdownx.snippets             # Inclusion de fichiers externe.
+    - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    false   #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+    - pymdownx.tabbed               # Volets glissants.  === "Mon volet"
+    - pymdownx.superfences          # Imbrication de blocs.
+    - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
+        separator: "\uff0b"
+    - pymdownx.emoji:               # Émojis  :boom:
+        emoji_index:     !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.arithmatex:  # Formules en LaTeX 
+        generic: true
+    
+  
+
+plugins:
+  - search # Inclure une barre de recherche
+  - mkdocs-jupyter: # Convertir les fichiers .ipynb et .py en pages du site https://github.com/danielfrg/mkdocs-jupyter
+      kernel_name: python3
+      execute: False
+      include_source: True
+
+
+extra:
+  social: 
+    - icon: fontawesome/solid/paper-plane
+      link: mailto:eric.madec@ecmorlaix.fr
+      name: Pour toute question, suggestion ou commentaire, écrire à l'auteur
+    - icon: fontawesome/brands/github
+      link: https://github.com/ericECmorlaix/adn-Tutoriel_site_web
+      name: dépôt github
+    - icon: fontawesome/solid/university
+      link: https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/
+      name: Lycée Notre Dame du Mur
+
+
+extra_javascript:
+  - javascripts/config.js
+  - https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js
+
+extra_css:
+  - stylesheets/extra.css

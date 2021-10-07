@@ -12,3 +12,9 @@
     font-size: 0.8rem;
 }
 
+/*Ajout de Gilles LASSUS pour centrer les images en Markdown avec l'extension attr_list : ![monimage](data/image.png){: .center width=50%} */
+/* source https://github.com/squidfunk/mkdocs-material/issues/748 */
+.center {
+    display: block;
+    margin: 0 auto;
+}

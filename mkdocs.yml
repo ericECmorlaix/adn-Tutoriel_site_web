@@ -17,7 +17,7 @@ docs_dir: docs
 # Menu de navigation
 nav: 
     - Accueil : index.md
-    # - Dans un navigateur : PremiersPas.md
+    - Dans un navigateur : PremiersPas.md
     - Sur PC avec Visual Studio Code : PCW10-VSC.md
     - Ressources : Ressources.md
     # - Pages en .ipynb :

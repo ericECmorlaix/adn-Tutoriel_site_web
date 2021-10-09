@@ -19,6 +19,7 @@ nav:
     - Accueil : index.md
     - Dans un navigateur : PremiersPas.md
     - Sur PC avec Visual Studio Code : PCW10-VSC.md
+    - Sur iPad en ligne de commande : iPad.md
     - Ressources : Ressources.md
     # - Pages en .ipynb :
     #   - MarkDown Jupyter : MarkDown-Le_BN_pour_rapporter.ipynb

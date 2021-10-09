@@ -61,7 +61,34 @@ Vous allez recopier dans votre dépot GitHub les fichiers nécessaires pour prod
     <img src="https://ericecmorlaix.github.io/img/GitHub06bis.png" alt="Glisser/Déposer">
 </figure>
 
-**Glisser/Déposer** ou **Sélectionner** les fichiers de l'archive à copier vers le dépot GitHub : ne pas prendre le `README.md`, le fichier `ci.yml` doit être placé dans une suite de répertoires nommés `.github/workflows/ci.yml`, ...
+**Glisser/Déposer** ou **Sélectionner** les fichiers de l'archive à copier vers le dépot GitHub :
+- ne pas prendre le `README.md`;
+- le fichier `ci.yml` doit être placé dans une arborescence de répertoires nommés `.github/workflows/ci.yml` ;
+> Pour créer une telle arborescence de dossier dans GitHub, il faut éditer le ficher `ci.yml`, comme fait précédemment pour le fichier `README.md`, afin de le renommer en ajoutant devant son nom le chemin des dossiers `.github/workflows/` ainsi que le montre la vidéo suivante :
+
+<figure>
+    <video width=60% controls autoplay>
+        <source src="../video/GitHub-Editer_une_arborescence_de_dossiers.mov" type="video/mp4">  
+        <source src="../video/GitHub-Editer_une_arborescence_de_dossiers.mp4" type="video/mp4">  
+        Your browser does not support the video tag.
+    </video>
+    
+    <figcaption>
+        Comment éditer une arborescence de dossiers sur GitHub ? <br>
+        <a href="https://www.youtube-nocookie.com/embed/0uEdPOhpNLE" target="blank">
+            Voir la vidéo sur Youtube
+        </a>
+    </figcaption>
+</figure>
+
+
+<!-- 
+<figure>
+<iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/0uEdPOhpNLE" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</figure>
+ -->
+
+
 
 **Committer** !
 

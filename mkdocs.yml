@@ -17,19 +17,14 @@ docs_dir: docs
 # Menu de navigation
 nav: 
     - Accueil : index.md
-    - Dans un navigateur : PremiersPas.md
-    - Sur PC avec Visual Studio Code : PCW10-VSC.md
-    - Sur iPad en ligne de commande : iPad.md
+    - Créer, déployer puis maintenir son site :
+      - Dans un navigateur : PremiersPas.md
+      - Sur PC avec Visual Studio Code : PCW10-VSC.md
+      - Sur iPad en ligne de commande : iPad.md
+    - Coder pour générer ses pages web :
+      - Le MarkDown de Mkdocs Material : MarkDown-Mkdocs_Material.md
     - Ressources : Ressources.md
-    # - Pages en .ipynb :
-    #   - MarkDown Jupyter : MarkDown-Le_BN_pour_rapporter.ipynb
-    #   - HTML Jupyter : HTML-Le_BN_pour_multimedier.ipynb
-    #   - LaTeX Jupyter : LaTeX-Le_BN_pour_formuler.ipynb
-    # - Pages en .md :
-    #   - MarkDown Mkdocs Material : MarkDown-Mkdocs_Material.md
-    # - iPad local : iPad.md
-    # - iSH Shell : iSH_Shell.md
-    
+   
 
 # Définition du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/
 theme:

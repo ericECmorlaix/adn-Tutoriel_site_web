@@ -20,7 +20,7 @@ Cocher la case **"Initialize this repository with a README"** puis cliquer sur l
 
 ## Modifier le fichier `README.md` :
 
-Le fichier `README` à pour extension `.md` pour [**Mardown**](https://fr.wikipedia.org/wiki/Markdown){target="_blank"}, c'est ce langage de description rudimentaire que nous utiliserons principalement pour rédiger nos futures pages web.
+Le fichier `README` à pour extension `.md` pour [**MarkDown**](https://fr.wikipedia.org/wiki/Markdown){target="_blank"}, c'est ce langage de description rudimentaire que nous utiliserons principalement pour rédiger nos futures pages web.
 
 > Il existe plusieurs versions de ce langage qui, à partir d'une syntaxe de base commune, possèdent d'autres éléments additionnels spécifiques...
 
@@ -30,7 +30,7 @@ Le fichier `README` à pour extension `.md` pour [**Mardown**](https://fr.wikipe
     <img src="https://ericecmorlaix.github.io/img/GitHub02bis.png" alt="editer README">
 </figure>
 
-**Modifier** son contenu en utilisant la syntaxe [Markdown à la sauce GitHub](https://guides.github.com/features/mastering-markdown/){target="_blank"} :
+**Modifier** son contenu en utilisant la syntaxe [MarkDown à la sauce GitHub](https://guides.github.com/features/mastering-markdown/){target="_blank"} :
 
 
 <figure>

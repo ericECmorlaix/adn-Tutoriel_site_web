@@ -5,17 +5,17 @@ Ceci est un tutoriel pour déployer un site web depuis un dépôt git avec le fr
 
 ## Créer, déployer puis maintenir son site :
 
-1. [Premiers pas depuis un navigateur web](./PremiersPas)
+1. [Premiers pas depuis un navigateur web](./PremiersPas) ;
 
-2. [Puis sur PC avec Visual Studio Code](./PCW10-VSC)
+2. [Puis sur PC avec Visual Studio Code](./PCW10-VSC) ;
 
-3. [Et même sur un iPad en ligne de commande](./iPad.md)
+3. [Et même sur un iPad en ligne de commande](./iPad.md) ;
 
-<!--
-## Ecrire du code pour produire des pages web supports de cours, TD, TP, ... :
 
-1. [Le MarkDown est le code de base de Mkdocs](MarkDown-Mkdocs_Material.md) ;
- -->
+## Coder pour générer ses pages web  :
+
+1. [Le MarkDown de Mkdocs Material](MarkDown-Mkdocs_Material.md) ;
+
 
 
 

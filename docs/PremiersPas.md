@@ -45,7 +45,7 @@ Le fichier `README` à pour extension `.md` pour [**MarkDown**](https://fr.wikip
     <img src="https://ericecmorlaix.github.io/img/GitHub04bis.png" alt="publier README">
 </figure>
 
-> **Waouh !** vous venez de faire votre premier [**Commit**](https://fr.wikipedia.org/wiki/Commit) **!**
+> **Waouh !** vous venez de faire votre premier [**Commit**](https://fr.wikipedia.org/wiki/Commit){target="_blank"} **!**
 
 ## Récupérer un modèle de site :
 

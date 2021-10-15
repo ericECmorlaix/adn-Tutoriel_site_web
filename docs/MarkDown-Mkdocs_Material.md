@@ -302,7 +302,7 @@
     Cette solution offre aussi l'avantage de pouvoir partager la même adresse
      par plusieurs liens en ne la définissant qu’une fois dans le document.
 
-    > Le code du paragraphe d'[introduction](./#introduction) comporte d'ailleurs de nombreux liens de ce type...  
+    > Le code MarkDown du paragraphe d'[introduction](./#introduction) comporte d'ailleurs de nombreux liens de ce type...  
         
  
 === "MarkDown"

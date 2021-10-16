@@ -36,7 +36,7 @@ pip install mkdocs-jupyter
 
 - Choisir alors un dossier parent pour recevoir un clone local de votre dépôt distant ;
 
-- Cliquer sur le bouton "Explorateur" (++"Ctrl"+"Maj"+"E"++), puis cliquer sur un fichier pour l'ouvrir dans l'éditeur afin d'y apporter vos modifications... ;
+- Cliquer sur le bouton "Explorateur" (++"Ctrl"+"Maj"+"E"++) de VSC, puis cliquer sur un fichier pour l'ouvrir dans l'éditeur afin d'y apporter vos modifications... ;
 
 ## Développement du site en local :
 
@@ -50,7 +50,7 @@ pip install mkdocs-jupyter
 
 - Utiliser la combinaison de touches  ++"Ctrl"+"C"++ dans le terminal pour arrêter le serveur local...
 
-## Maintenir votre site distant :
+## Mettre à jour votre site distant :
 
 - Cliquer sur le bouton "Contrôle de code source" (`Source Control` ++"Ctrl"+"Maj"+"G"++) ;
 
@@ -66,7 +66,7 @@ pip install mkdocs-jupyter
     git config --global user.email "prenom.nom@eleves.ecmorlaix.fr"
     ```
 
-- Dans "Changement" (`Changes`) cliquer sur le `+` pour ajouter les fichiers modifiés à indexer dans cette phase (stage) de développement ;
+- Dans "Changements" (`Changes`) cliquer sur le `+` pour ajouter les fichiers modifiés à indexer dans cette phase (stage) de développement ;
 
 - Ajouter un message sous "CONTROLE DE CODE SOURCE" (`SOURCE CONTROL`) pour définir cette phase de développement puis cliquer sur `✓` pour valider ce commit ;
 
@@ -77,6 +77,35 @@ pip install mkdocs-jupyter
 
 > Votre site distant devrait se mettre à jour avec vos modifications après quelques temps...
 
-
 !!! danger "Par la suite, commencer toujours par cliquer sur les `...` et choisir `Pull` avant de faire de nouveau changements..."
+
+****
+
+## ==Routine pour maintenir un site Git sur PC avec VSC== :
+
+??? summary "1 - Ouvrir votre dossier local, le "clone" :"
+    Démarrer Visual Studio Code, dans le menu `Fichier` choisir `Ouvrir le dossier...`  
+    ou avec la comninaison de touches ++"Ctrl"+"K"+"O"++ ;
+
+??? summary "2 - Tirer les modifications du dépôt distant :"
+    Cliquer sur le bouton "Contrôle de code source" (`Source Control` ++"Ctrl"+"Maj"+"G"++), 
+    puis cliquer sur les `...` en face de `CONTRÔLE DE CODE SOURCE` et choisir `Pull` ;
+
+??? summary "3 - Modifier vos fichiers en local :"
+    Depuis l'Explorateur (`Explorer` ++"Ctrl"+"Maj"+"E"++) de VSC ,
+     cliquer sur un fichier pour l'ouvrir dans l'éditeur afin de le modifier ;
+
+??? summary "4 - Indexer vos changements :"
+    Depuis le "Contrôle de code source" (`Source Control` ++"Ctrl"+"Maj"+"G"++),
+     dans "Changements" (`Changes`) cliquer sur le `+` pour ajouter les fichiers modifiés
+      à mettre en attente (indexer) dans cette phase (stage) de développement ;
+
+??? summary "5 - Committer, valider vos modifications :"
+    Ajouter un message sous "CONTRÔLE DE CODE SOURCE" (`SOURCE CONTROL`)
+     pour définir ces modifications à ce stade de votre développement,
+      puis cliquer sur `✓` pour valider ce commit ;
+
+??? summary "6 - Pousser les modifications vers votre dépôt distant :"
+    Cliquer sur les `...` en face de `CONTRÔLE DE CODE SOURCE`
+    et choisir `Push` ;
 

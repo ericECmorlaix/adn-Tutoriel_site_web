@@ -50,6 +50,13 @@ pip install mkdocs-jupyter
 
 - Utiliser la combinaison de touches  ++"Ctrl"+"C"++ dans le terminal pour arrêter le serveur local...
 
+??? tip "Afficher le rendu sur iPad tout en développant votre site local sur PC :"
+    1. Connecter l'iPad et le PC sur un même réseau local ;
+    2. Dans un terminal de VSC saisir `ipconfig` pour obtenir l'adresse IPv4 de votre PC ;
+    3. Ouvrir un nouveau Terminal pour saisir : `mkdocs serve --dev-addr=0.0.0.0:8000` ;
+    4. Dans un navigateur de l'iPad saisir l'adresse : `<IP_de_votre_PC>:8000` ;
+
+
 ## Mettre à jour votre site distant :
 
 - Cliquer sur le bouton "Contrôle de code source" (`Source Control` ++"Ctrl"+"Maj"+"G"++) ;

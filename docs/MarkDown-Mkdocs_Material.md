@@ -17,11 +17,11 @@
     
     Cependant il est de plus en plus utilisé :
 
-    - incontournable sur [GitHub][]{target="_blank"},
-    - le site de partage d'informations [Reddit][]{target="_blank"},
-    - l'éditeur collaboratif en ligne [HedgeDoc][]{target="_blank"},
-    - les forums [Discourse][]{target="_blank"},
-     [Stack Overflow][]{target="_blank"}...
+    - incontournable sur [GitHub]{target="_blank"},
+    - le site de partage d'informations [Reddit]{target="_blank"},
+    - l'éditeur collaboratif en ligne [HedgeDoc]{target="_blank"},
+    - les forums [Discourse]{target="_blank"},
+     [Stack Overflow]{target="_blank"}...
 
     Mais c'est surtout le langage que nous utiliserons pour rédiger du texte enrichi
      dans nos [notebook jupyter][bn-md]{target="_blank"} 
@@ -67,11 +67,11 @@
     
     Cependant il est de plus en plus utilisé :
 
-    - incontournable sur [GitHub][]{target="_blank"},
-    - le site de partage d'informations [Reddit][]{target="_blank"},
-    - l'éditeur collaboratif en ligne [HedgeDoc][]{target="_blank"},
-    - les forums [Discourse][]{target="_blank"},
-     [Stack Overflow][]{target="_blank"}...
+    - incontournable sur [GitHub]{target="_blank"},
+    - le site de partage d'informations [Reddit]{target="_blank"},
+    - l'éditeur collaboratif en ligne [HedgeDoc]{target="_blank"},
+    - les forums [Discourse]{target="_blank"},
+     [Stack Overflow]{target="_blank"}...
 
     Mais c'est surtout le langage que nous utiliserons pour rédiger du texte enrichi
      dans nos [notebook jupyter][bn-md]{target="_blank"} 
@@ -298,7 +298,7 @@
        en dehors du texte (généralement rassemblé),
        avec la syntaxe `[référence]: adresse "info-bulle"`
        et au fil du texte on lie cette adresse par sa référence à un texte support
-       avec la syntaxe `[texte][référence]` ou encore `[référence][]`.      
+       avec la syntaxe `[texte][référence]` ou encore tout simplement `[référence]`.      
     Cette solution offre aussi l'avantage de pouvoir partager la même adresse
      par plusieurs liens en ne la définissant qu’une fois dans le document.
 
@@ -324,7 +324,7 @@
        en dehors du texte (généralement rassemblé),
        avec la syntaxe `[référence]: adresse "info-bulle"`
        et au fil du texte on lie cette adresse par sa référence à un texte support
-        avec la syntaxe `[texte][référence]` ou encore `[référence][]`.      
+        avec la syntaxe `[texte][référence]` ou encore tout simplement `[référence]`.      
     Cette solution offre aussi l'avantage de pouvoir partager la même adresse
      par plusieurs liens en ne la définissant qu’une fois dans le document.
 
@@ -433,17 +433,118 @@
     - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
 
 
-<!-- ## Les listes :
+## Les traits horizontaux :
 
 === "Rendu"
+    Une série d'au moins trois `*`,
+    ***
+    ou trois `-` avec une ligne vide,
 
-    
+    ---
+    ou trois `_`,
+    ___
+    trace une ligne de séparation.
 
 === "MarkDown"
     ```markdown
-    
+    Une série d'au moins trois `*`,
+    ***
+    ou trois `-` avec une ligne vide,
+
+    ---
+    ou trois `_`,
+    ___
+    trace une ligne de séparation.
     ```
 
+## Les listes :
+
+
+### Listes à puces :
+On commence par sauter une ligne, puis on place devant chaque item
+      un caractère `-`, `+` ou `*`, suivi d'au moins d'un espace :
+
+=== "MarkDown"
+    ```markdown
+    * Un élement de ma liste ;
+    - Un autre élément de ma liste ;
+        * Un élément de ma sous-liste ;
+        * Un autre élément de ma sous-liste ;
+    + Encore un autre élément de ma liste.
+    ```
+=== "Rendu"
+    * Un élement de ma liste ;
+    - Un autre élément de ma liste ;
+        * Un élément de ma sous-liste ;
+        * Un autre élément de ma sous-liste ;
+    + Encore un autre élément de ma liste.
+
+### Listes ordonnées :
+On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.` :
+=== "MarkDown"
+    ```markdown
+    1. Le premier élement de ma liste ;
+    1. Le second élément de ma liste ;
+        1. Le premier élément de ma sous-liste ;
+        72. Le second élément de ma sous-liste ;
+    1024. Le troisième élément de ma liste.
+    ```
+=== "Rendu"
+    1. Le premier élement de ma liste ;
+    1. Le second élément de ma liste ;
+        1. Le premier élément de ma sous-liste ;
+        72. Le second élément de ma sous-liste ;
+    1024. Le troisième élément de ma liste.
+
+### Listes avec des cases à cocher :
+On insère `[ ]` ou `[x]` devant chaque item :
+=== "MarkDown"
+    ```markdown
+    - [ ] Une tâche de ma todo liste ;
+    - [x] Une autre tâche de ma todo liste ;
+        - [x] une sous tâche de ma todo liste ;
+        - [ ] une autre sous tâche de ma todo liste ;
+    - [ ] Encore une autre tâche de ma todo liste.
+    ```
+=== "Rendu"
+    - [ ] Une tâche de ma todo liste ;
+    - [x] Une autre tâche de ma todo liste ;
+        - [x] une sous tâche de ma todo liste ;
+        - [ ] une autre sous tâche de ma todo liste ;
+    - [ ] Encore une autre tâche de ma todo liste.
+
+    
+#### Listes de description :
+Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins un espace :
+=== "MarkDown"
+    ```markdown
+    **Firefox :**
+    : Un navigateur Web libre, open-source, multi-plateforme 
+    dévelopé par la Mozilla Corporation et des centaines de
+    volontaires.
+
+    : Ou Le petit panda, panda roux, panda fuligineux ou panda
+    éclatant (Ailurus fulgens), est un mammifère originaire
+    de l'Himalaya et de la Chine méridionale. 
+
+    **Truc :**
+    : Pour définir...
+    ```
+=== "Rendu"
+    **Firefox :**
+    : Un navigateur Web libre, open-source, multi-plateforme 
+    dévelopé par la Mozilla Corporation et des centaines de
+    volontaires.
+
+    : Ou Le petit panda, panda roux, panda fuligineux ou panda
+    éclatant (Ailurus fulgens), est un mammifère originaire
+    de l'Himalaya et de la Chine méridionale. 
+
+    **Truc :**
+    : Pour définir...
+
+
+<!--
 ## Les images :
 
 === "Rendu"

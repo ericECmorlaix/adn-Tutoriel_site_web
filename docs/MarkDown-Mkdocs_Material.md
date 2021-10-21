@@ -467,30 +467,35 @@ On commence par sauter une ligne, puis on place devant chaque item
 === "MarkDown"
     ```markdown
     * Un élement de ma liste ;
+    Une précision concernant cet élément...
     - Un autre élément de ma liste ;
         * Un élément de ma sous-liste ;
         * Un autre élément de ma sous-liste ;
     + Encore un autre élément de ma liste.
     ```
 === "Rendu"
-    * Un élement de ma liste ;
+    * Un élement de ma liste ;  
+    Une précision concernant cet élément...
     - Un autre élément de ma liste ;
         * Un élément de ma sous-liste ;
         * Un autre élément de ma sous-liste ;
     + Encore un autre élément de ma liste.
 
 ### Listes ordonnées :
-On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.` :
+On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`,
+ la numérotation se fait alors automatiquement indépendamment du nombre indiqué :
 === "MarkDown"
     ```markdown
-    1. Le premier élement de ma liste ;
+    1. Le premier élement de ma liste ;  
+    Une précision concernant cet élément...
     1. Le second élément de ma liste ;
         1. Le premier élément de ma sous-liste ;
         72. Le second élément de ma sous-liste ;
     1024. Le troisième élément de ma liste.
     ```
 === "Rendu"
-    1. Le premier élement de ma liste ;
+    1. Le premier élement de ma liste ;  
+    Une précision concernant cet élément...
     1. Le second élément de ma liste ;
         1. Le premier élément de ma sous-liste ;
         72. Le second élément de ma sous-liste ;
@@ -518,30 +523,20 @@ On insère `[ ]` ou `[x]` devant chaque item :
 Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins un espace :
 === "MarkDown"
     ```markdown
-    **Firefox :**
-    : Un navigateur Web libre, open-source, multi-plateforme 
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    **Premier terme** :
+    : Voici la définition du premier terme...
 
-    : Ou Le petit panda, panda roux, panda fuligineux ou panda
-    éclatant (Ailurus fulgens), est un mammifère originaire
-    de l'Himalaya et de la Chine méridionale. 
-
-    **Truc :**
-    : Pour définir...
+    **Second terme** :
+    : Voici une définition pour le second terme...
+    : Voici une autre définition pour le second terme...    
     ```
 === "Rendu"
-    **Firefox :**
-    : Un navigateur Web libre, open-source, multi-plateforme 
-    dévelopé par la Mozilla Corporation et des centaines de
-    volontaires.
+    **Premier terme** :
+    : Voici la définition du premier terme...
 
-    : Ou Le petit panda, panda roux, panda fuligineux ou panda
-    éclatant (Ailurus fulgens), est un mammifère originaire
-    de l'Himalaya et de la Chine méridionale. 
-
-    **Truc :**
-    : Pour définir...
+    **Second terme** :
+    : Voici une définition pour le second terme...
+    : Voici une autre définition pour le second terme...
 
 
 <!--
@@ -560,6 +555,9 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
     
     ```
 
+Si votre codage renferme déjà l’apostrophe inversée, vous devez précéder la zone de code de deux fois ce caractère. Dans ce cas, Markdown n’interprétera pas l’apostrophe inversée comme une balise.
+
+``C’est tout le `code`.``
   -->
 
 
@@ -574,4 +572,6 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
 <https://www.markdownguide.org/>
 
 <https://www.markdowntutorial.com/>
+
+<https://www.ionos.fr/digitalguide/sites-internet/developpement-web/markdown/>
 

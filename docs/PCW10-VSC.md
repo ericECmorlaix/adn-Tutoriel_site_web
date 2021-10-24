@@ -61,7 +61,7 @@ pip install mkdocs-jupyter
 
 - Cliquer sur le bouton "Contrôle de code source" (`Source Control` ++"Ctrl"+"Maj"+"G"++) ;
 
-??? caution "La première fois, il faut configurer git en ligne de commande dans un terminal :"
+???+ caution "La première fois, il faut configurer git en ligne de commande dans un terminal :"
     
     > pour limiter la configuration à ce dossier uniquement, enlever le `--global`
     

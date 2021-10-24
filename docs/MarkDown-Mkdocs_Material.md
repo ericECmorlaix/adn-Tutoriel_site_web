@@ -1,5 +1,5 @@
 
-## Introduction :
+# Introduction :
 
 === "Rendu MarkDown"
     ![Logo]{ align=left }
@@ -227,7 +227,9 @@
     Liste des liens pour l'introduction :
     -->
 
-## Les titres :
+***
+
+# Les titres :
 
 === "Rendu"
 
@@ -252,7 +254,7 @@
     ```
 
 ??? info "Autres solutions pour obtenir des titres de niveau 1 et 2 :"
-    
+
     === "MarkDown"
 
         ```markdown
@@ -263,7 +265,6 @@
         ---------------------------------------------------
         ```
 
-    
     === "Rendu"
 
         Souligner avec des `=` produit un titre de niveau 1
@@ -272,12 +273,106 @@
         Souligner avec des `-` produit un titre de niveau 2
         ---------------------------------------------------
 
-        
+    !!! note "Remarque :"
+    
+        Un seul `=` ou `-` suffirait.  
+        Leur répétition permet de souligner ces titres
+         également dans le code en mode édition.
+    
+***
+# Le corps de texte :
+
+=== "Rendu"
+
+    On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
+     du __texte__ avec **forte emphase** rendu en **Gras**,
+      du **_Texte_** à la fois en **gras** et en *italique*,
+       du `code source` rendu en caractères [`monospaces`][2],
+        du ~~texte barré~~  rendu avec une ligne en travers du texte,
+         du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
+          On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
 
 
 
+    En regardant le code
+    qui produit cette phrase,
+    vous remarquerez que
+    même
+    si
+    on
+    fait 
+    des
+    retours
+    à
+    la
+    ligne
+    dans
+    le
+    code,
+    le texte                s'affiche              sans rupture
+    dans un seul            et                  même paragraphe
+    et les espaces      laissés en trop         sont supprimés...
 
-## Les liens :
+    Pour former des paragraphes séparés, il faut laisser une ligne vide entre eux.
+
+    Pour forcer le retour à la ligne dans un paragraphe,  
+    il faut ajouter deux espaces à la fin d'une ligne  
+    avant de faire un retour à la ligne...
+
+
+    [2]: https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe "Police d'écriture à chasse fixe"
+
+=== "MarkDown"
+    ```markdown
+    On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
+     du __texte__ avec **forte emphase** rendu en **Gras**,
+      du **_Texte_** à la fois en **gras** et en *italique*,
+       du `code source` rendu en caractères [`monospaces`][2],
+        du ~~texte barré~~  rendu avec une ligne en travers du texte,
+         du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
+          On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
+
+
+    En regardant le code
+    qui produit cette phrase,
+    vous remarquerez que
+    même
+    si
+    on
+    fait 
+    des
+    retours
+    à
+    la
+    ligne
+    dans
+    le
+    code,
+    le texte                s'affiche              sans rupture
+    dans un seul            et                  même paragraphe
+    et les espaces      laissés en trop         sont supprimés...
+
+    Pour former des paragraphes séparés, il faut laisser une ligne vide entre eux.
+
+    Pour forcer le retour à la ligne dans un paragraphe,  
+    il faut ajouter deux espaces à la fin d'une ligne  
+    avant de faire un retour à la ligne...
+
+
+    [2]: https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe "Police d'écriture à chasse fixe"
+    ```
+
+??? info 
+
+    Il faut activer dans le fichier `mkdocs.yml` les extensions :
+
+    - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret) pour `^^souligné^^` ou mettre en `^exposant^`;
+    - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/) pour `==surligné==`;
+    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
+
+***
+
+# Les liens :
 
 === "Rendu"
 
@@ -302,9 +397,6 @@
     Cette solution offre aussi l'avantage de pouvoir partager la même adresse
      par plusieurs liens en ne la définissant qu’une fois dans le document.
 
-    > Le code MarkDown du paragraphe d'[introduction](./#introduction) comporte d'ailleurs de nombreux liens de ce type...  
-        
- 
 === "MarkDown"
     ```markdown
     Le plus simple pour intégrer un lien hypertexte est de coller son adresse
@@ -326,141 +418,159 @@
        et au fil du texte on lie cette adresse par sa référence à un texte support
         avec la syntaxe `[texte][référence]` ou encore tout simplement `[référence]`.      
     Cette solution offre aussi l'avantage de pouvoir partager la même adresse
-     par plusieurs liens en ne la définissant qu’une fois dans le document.
-
-    > Le code du paragraphe d'[introduction](./#introduction) comporte d'ailleurs de nombreux liens de ce type...
+     par plusieurs liens en ne la définissant qu’une fois dans le document.    
     ```
+
+!!! example "Pour exemple :"
+    
+     Le code MarkDown du paragraphe d'[introduction](./#introduction)
+     comporte de nombreux liens de ce type,
+      tous listés à la fin du texte de ce paragraphe... 
+
+
 ??? tip "Astuce pour faire ouvrir la page liée dans un nouvel onglet :"
     Par défaut, et contrairement à jupyter notebook, Mkdocs ouvre la page web liée dans le même onglet que le document consulté.  
     L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"}
-    activée dans le fichier `mkdocs.yml` permet de préciser des valeurs personnalisées aux attributs HTML.  
+    activée dans le fichier `mkdocs.yml` permet de préciser des valeurs personnalisées aux attributs HTML et CSS.  
     Ainsi la syntaxe `{target="_blank"}` après le code d'un lien MarkDown modifie la valeur par défaut de l'attribut
     [`target`](https://www.w3schools.com/tags/att_a_target.asp){target="_blank"} afin d'ouvrir la page liée dans un nouvel onglet.  
-    !!! summary "En résumé, la syntaxe complète d'un lien en markdown avec ce comportement est donc :"
+    !!! summary "En résumé, la syntaxe complète en markdown d'un lien avec ce comportement est donc :"
         ```markdown
-        [mon texte support](https://monlien.com "mon info-bulle"){:target="_blank"}
+        [mon texte support](https://monlien.com "mon info-bulle"){target="_blank"}
         ```
 
+***
 
-## Le corps de texte enrichi d'emphases et de paragraphes :
+# Les images :
 
-=== "Rendu"
+La syntaxe pour les images est la même que pour les liens hypertextes,
+ mais avec un `!` devant :
+```markdown
+![texte alternatif](adresse "info-bulle")
+```
+L'info-bulle optionnelle s'affichera au survol de l'image.
 
-    On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
-     du __texte__ avec **forte emphase** rendu en **Gras**,
-      du **_Texte_** à la fois en **gras** et en *italique*,
-       du `code source` rendu en caractères [`monospaces`][2],
-        du ~~texte barré~~  rendu avec une ligne en travers du texte,
-         du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
-          On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
+Il est important de bien choisir le [texte alternatif](http://www.pompage.net/traduction/Bien-utiliser-le-texte-alternatif){target="_blank"}
+ qui s'affichera lorsque l'image n'est pas disponible,
+ car il permet aussi l'accessibilité pour les non-voyants
+  et apporte de la sémantique pour les moteurs de recherche...
 
+L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié en cheminant dans l'arborescence du site web...
 
+???+ example "Exemple :"
 
-    En regardant le code
-    qui produit cette phrase,
-    vous remarquerez que
-    même
-    si
-    on
-    fait 
-    des
-    retours
-    à
-    la
-    ligne
-    dans
-    le
-    code,
-    le texte                s'affiche              sans rupture
-    dans un seul            et                  même paragraphe
-    et les espaces      laissés en trop         sont supprimés...
+    === "Chemin relatif"
+        ```markdown
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg "image via URL relative")
+        ```
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg "image via URL relative")
 
-    Pour former des paragraphes séparés, il faut insérer une ligne vide  entre eux.
+    === "Chemin absolu"
+        ```markdown
+        ![Illustration d'une photo](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_Polaroid.svg "image via URL absolue")
+        ```
+        ![Illustration d'une photo](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_Polaroid.svg "image via URL absolue")
 
-    Pour forcer le retour à la ligne dans un paragraphe,  
-    il faut ajouter deux espaces à la fin d'une ligne  
-    avant de faire un retour à la ligne...
-
-
-    [2]: https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe "Police d'écriture à chasse fixe"
-
-=== "MarkDown"
-    ```markdown
-    On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
-     du __texte__ avec **forte emphase** rendu en **Gras**,
-      du **_Texte_** à la fois en **gras** et en *italique*,
-       du `code source` rendu en caractères [`monospaces`][2],
-        du ~~texte barré~~  rendu avec une ligne en travers du texte,
-         du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
-          On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
-
-
-    En regardant le code
-    qui produit cette phrase,
-    vous remarquerez que
-    même
-    si
-    on
-    fait 
-    des
-    retours
-    à
-    la
-    ligne
-    dans
-    le
-    code,
-    le texte                s'affiche              sans rupture
-    dans un seul            et                  même paragraphe
-    et les espaces      laissés en trop         sont supprimés...
-
-    Pour former des paragraphes séparés, il faut insérer une ligne vide  entre eux.
-
-    Pour forcer le retour à la ligne dans un paragraphe,  
-    il faut ajouter deux espaces à la fin d'une ligne  
-    avant de faire un retour à la ligne...
-
-
-    [2]: https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe "Police d'écriture à chasse fixe"
+    Ici le fichier de l'image est placé dans un dossier nommé `images` lui même situé dans le dossier `docs` :
     ```
+    ├── docs/
+    │   └── images
+    │   │   └── undraw_Polaroid.svg
+    │   └── MarkDown-Mkdocs_Material.md
+    │   └── index.md
+    └─ mkdocs.yml
+    ```
+    Une fois déployé ce dossier `images` sera à la racine du site :
+    ```  
+    └── site
+        ├── images
+        │   └── undraw_Polaroid.svg
+        ├── MarkDown-Mkdocs_Material
+        │   ├── MarkDown-Mkdocs_Material.md
+        │   ├── index.html
+        ├── index.md
+        ├── index.html
+        ├── 404.html    
+    ```     
+    Alors, le chemin relatif vers cette image depuis la page web `index.html`
+     générée à partir du fichier `MarkDown-Mkdocs_Material.md`
+      sera `../images/undraw_Polaroid.svg` car il faut sortir du dossier `MarkDown-Mkdocs_Material` pour pouvoir rentrer dans le dossier `images`.
+    
+    !!! note "Remarque :"
+        Un chemin relatif vers cette même image depuis la page web `index.html`
+         générée à partir du fichier `index.md` serait `./images/undraw_Polaroid.svg`...
+    
 
-??? info 
+???+ tip "Pour gérer l'alignement et la taille d'une image :"
 
-    Il faut activer dans le fichier `mkdocs.yml` les extensions :
+    L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"}
+     activée dans le fichier `mkdocs.yml` permet de préciser des valeurs personnalisées aux attributs HTML et CSS.
 
-    - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret) pour `^^souligné^^` ou mettre en `^exposant^`;
-    - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/) pour `==surligné==`;
-    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
+    === "Rendu"
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}  
+        Ainsi le code MarkDown suivant :
+        ````markdown
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}
+        ````
+        placé au début du texte de ce paragraphe, produit l'affichage de l'image tel que ci-contre.
+    === "MarkDown"
+        ```markdown
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}  
+        Ainsi le code MarkDown suivant :
+        ````markdown
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}
+        ````
+        placé au début du texte de ce paragraphe, produit l'affichage de l'image tel que ci-contre.
+        ```
+
+    
+    
+??? question "Quel format d'image pour le web ?"
+
+    **JPEG**  (**J**oint **P**hotographic **E**xpert **G**roup)
+    : Parfait pour les photos et visuels colorés, c’est le format compressé le plus utilisé sur le web.
+
+    **PNG** (**P**ortable **N**etwork **G**raphics)
+    : Idéal pour les images à fond transparent, graphique et logo.
+
+    **SVG** (**G**raphics **I**nterchange **F**ormat)
+    : Format adapté aux images vectorielles, permet de les déformer sans altérer la qualité.
+
+    **GIF** (**G**raphics **I**nterchange **F**ormat)
+    : Images animées idéale pour illustrer vos propos, fortement utilisé sur les réseaux sociaux.
 
 
-## Les traits horizontaux :
+
+
+# Les traits horizontaux :
 
 === "Rendu"
     Une série d'au moins trois `*`,
     ***
-    ou trois `-` avec une ligne vide,
-
-    ---
     ou trois `_`,
     ___
+    ou trois `-` après un saut de ligne,
+
+    ---
     trace une ligne de séparation.
 
 === "MarkDown"
     ```markdown
     Une série d'au moins trois `*`,
     ***
-    ou trois `-` avec une ligne vide,
-
-    ---
     ou trois `_`,
     ___
+    ou trois `-` après un saut de ligne,
+
+    ---
     trace une ligne de séparation.
     ```
 
-## Les listes :
+***
 
+# Les listes :
 
-### Listes à puces :
+## Listes à puces :
 On commence par sauter une ligne, puis on place devant chaque item
       un caractère `-`, `+` ou `*`, suivi d'au moins d'un espace :
 
@@ -481,7 +591,7 @@ On commence par sauter une ligne, puis on place devant chaque item
         * Un autre élément de ma sous-liste ;
     + Encore un autre élément de ma liste.
 
-### Listes ordonnées :
+## Listes ordonnées :
 On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`,
  la numérotation se fait alors automatiquement indépendamment du nombre indiqué :
 === "MarkDown"
@@ -501,8 +611,9 @@ On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`
         72. Le second élément de ma sous-liste ;
     1024. Le troisième élément de ma liste.
 
-### Listes avec des cases à cocher :
-On insère `[ ]` ou `[x]` devant chaque item :
+## Listes avec des cases à cocher :
+On insère `[ ]` ou `[x]` devant chaque item
+ d'une liste non ordonnée :
 === "MarkDown"
     ```markdown
     - [ ] Une tâche de ma todo liste ;
@@ -518,8 +629,14 @@ On insère `[ ]` ou `[x]` devant chaque item :
         - [ ] une autre sous tâche de ma todo liste ;
     - [ ] Encore une autre tâche de ma todo liste.
 
+??? info 
+
+    Il faut activer dans le fichier `mkdocs.yml` l'extension
+     [pymdownx.tasklist](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tasklist)
+      pour générer des listes de tâches avec des cases à cocher.
     
-#### Listes de description :
+    
+## Listes de description :
 Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins un espace :
 === "MarkDown"
     ```markdown
@@ -539,29 +656,15 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
     : Voici une autre définition pour le second terme...
 
 
-<!--
-## Les images :
+??? info 
 
-=== "Rendu"
-    La syntaxe pour les images est la même que pour les liens mais avec un `!` avant :
+    Il faut activer dans le fichier `mkdocs.yml` l'extension
+     [def_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists)
+      pour générer des listes de définitions.
 
-    Pour gérer l'alignement et la taille d'une image :
+***
 
-    ![image](img/image.png){width=50% align=center}
-    
-
-=== "MarkDown"
-    ```markdown
-    
-    ```
-
-Si votre codage renferme déjà l’apostrophe inversée, vous devez précéder la zone de code de deux fois ce caractère. Dans ce cas, Markdown n’interprétera pas l’apostrophe inversée comme une balise.
-
-``C’est tout le `code`.``
-  -->
-
-
-## Ressources :
+# Ressources :
 
 <https://www.jdbonjour.ch/cours/markdown-pandoc/>
 
@@ -574,4 +677,28 @@ Si votre codage renferme déjà l’apostrophe inversée, vous devez précéder 
 <https://www.markdowntutorial.com/>
 
 <https://www.ionos.fr/digitalguide/sites-internet/developpement-web/markdown/>
+
+***
+
+# Toujours en construction...
+
+![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
+
+
+<!-- Si votre codage renferme déjà l’apostrophe inversée, vous devez précéder la zone de code de deux fois ce caractère. Dans ce cas, Markdown n’interprétera pas l’apostrophe inversée comme une balise.
+
+``C’est tout le `code`.``
+
+
+***
+
+# Les admonitions :
+
+!!! warning inline end "Attention"
+    
+    **Toto** est dans la place !
+
+
+*** -->
+
 

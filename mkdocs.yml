@@ -51,7 +51,9 @@ theme:
 
     features:
         - navigation.instant
+        - navigation.tracking
         - navigation.tabs
+        # - navigation.tabs.sticky
         - navigation.expand
         - navigation.top
         - toc.integrate
@@ -64,6 +66,7 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - meta # Métadonnées
     - def_list                      # Les listes de définition.
     - attr_list                     # Un peu de CSS et des attributs HTML.
+    - md_in_html                    # Pour écrire en MarkDown dans des balises HTML https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
     - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
     - admonition                    # Blocs colorés  !!! info "ma remarque"
     - toc: # Table des matières
@@ -78,7 +81,7 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
     - pymdownx.snippets             # Inclusion de fichiers externe.
     - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
-        custom_checkbox:    false   #   avec cases d'origine
+        custom_checkbox:    true   #   avec cases d'origine
         clickable_checkbox: true    #   et cliquables.
     - pymdownx.tabbed               # Volets glissants.  === "Mon volet"
     - pymdownx.superfences          # Imbrication de blocs.

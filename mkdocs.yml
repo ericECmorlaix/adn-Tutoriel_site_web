@@ -22,7 +22,7 @@ nav:
       - Sur PC avec Visual Studio Code : PCW10-VSC.md
       - Sur iPad en ligne de commande : iPad.md
     - Coder pour générer ses pages web :
-      - Le MarkDown de Mkdocs Material : MarkDown-Mkdocs_Material.md
+      - Le MarkDown de Mkdocs avec Material : MarkDown-Mkdocs_Material.md
     - Ressources : Ressources.md
    
 

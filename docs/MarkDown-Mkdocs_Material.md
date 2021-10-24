@@ -1,6 +1,4 @@
-
-# Introduction :
-
+## Introduction :
 === "Rendu MarkDown"
     ![Logo]{ align=left }
     
@@ -99,7 +97,6 @@
     [bn-md]: ../MarkDown-Le_BN_pour_rapporter "Notebook d'initiation au Markdown de Jupyter"
     [bn-html]: ../HTML-Le_BN_pour_multimedier "Notebook d'initiation au HTML de Jupyter"
     [Logo]: https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg "Logo du langage MarkDown"
-
     ```
 === "HTML"
     ```HTML
@@ -226,12 +223,10 @@
     <!-- Ceci est un commentaire qui ne sera donc pas affiché
     Liste des liens pour l'introduction :
     -->
-
 ***
+## Les titres :
 
-# Les titres :
-
-=== "Rendu"
+<!-- === "Rendu"
 
     # Titre de niveau 1
     ## Titre de niveau 2
@@ -239,8 +234,8 @@
     #### Titre de niveau 4
     ##### Titre de niveau 5
     ###### Titre de niveau 6
-    ####### Il n'y a pas de titre de niveau 7 
-
+    ####### Il n'y a pas de titre de niveau 7  
+-->
 === "MarkDown"
 
     ```markdown
@@ -265,22 +260,13 @@
         ---------------------------------------------------
         ```
 
-    === "Rendu"
-
-        Souligner avec des `=` produit un titre de niveau 1
-        ===================================================
-
-        Souligner avec des `-` produit un titre de niveau 2
-        ---------------------------------------------------
-
     !!! note "Remarque :"
     
         Un seul `=` ou `-` suffirait.  
         Leur répétition permet de souligner ces titres
          également dans le code en mode édition.
-    
 ***
-# Le corps de texte :
+## Le corps de texte :
 
 === "Rendu"
 
@@ -368,11 +354,10 @@
 
     - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret) pour `^^souligné^^` ou mettre en `^exposant^`;
     - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/) pour `==surligné==`;
-    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
+    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.    
 
 ***
-
-# Les liens :
+## Les liens :
 
 === "Rendu"
 
@@ -438,10 +423,8 @@
         ```markdown
         [mon texte support](https://monlien.com "mon info-bulle"){target="_blank"}
         ```
-
 ***
-
-# Les images :
+## Les images :
 
 La syntaxe pour les images est la même que pour les liens hypertextes,
  mais avec un `!` devant :
@@ -501,29 +484,172 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
          générée à partir du fichier `index.md` serait `./images/undraw_Polaroid.svg`...
     
 
-???+ tip "Pour gérer l'alignement et la taille d'une image :"
 
-    L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"}
-     activée dans le fichier `mkdocs.yml` permet de préciser des valeurs personnalisées aux attributs HTML et CSS.
 
+??? tip "Pour gérer l'alignement et la taille d'une image :"
+
+    L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"} 
+        qui permet de préciser des valeurs personnalisées aux attributs HTML et CSS doit être activée dans le fichier `mkdocs.yml` :
+
+    ```yaml
+        markdown_extensions:
+            - attr_list
+    ```
+    
+  
     === "Rendu"
-        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}  
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=20% align=right}  
         Ainsi le code MarkDown suivant :
         ````markdown
-        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=20% align=right}
         ````
         placé au début du texte de ce paragraphe, produit l'affichage de l'image tel que ci-contre.
     === "MarkDown"
         ```markdown
-        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}  
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=20% align=right}  
         Ainsi le code MarkDown suivant :
         ````markdown
-        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=15% align=right}
+        ![Illustration d'une photo](../images/undraw_Polaroid.svg){width=20% align=right}
         ````
         placé au début du texte de ce paragraphe, produit l'affichage de l'image tel que ci-contre.
         ```
+??? tip "Une image cliquable, support d'un lien  :"
 
+    Il suffit de remplacer le texte support d'un lien hypertexte par le code MarDown d'une image tel que :
     
+    ```markdown
+    [![texte alternatif](adresse)](adresse "info-bulle")
+    ```
+    === "Rendu"
+        [![Illustration d'une photo](../images/undraw_Polaroid.svg){width=20%}](https://undraw.co/illustrations "Vers le site de unDraw"){target="_blank"}
+    === "MarkDown"
+        ```markdown
+        [![Illustration d'une photo](../images/undraw_Polaroid.svg){width=20%}](https://undraw.co/illustrations "Vers le site de unDraw"){target="_blank"}
+        ```
+
+
+
+
+
+??? tip "Des solutions pour centrer une image :"
+
+    ??? example "Solution 1 : un code HTML..."
+
+        === "Code"
+            ```html
+            <figure>
+                <img src="../images/undraw_Polaroid.svg" alt ="Illustration d'une photo" width="300" >
+                <figcaption>
+                    Un Polaroïd selon <a href="https://undraw.co/illustrations">unDraw</a>
+                </figcaption>
+            </figure>
+            ```
+
+        === "Rendu"
+            <figure>
+                <img src="../images/undraw_Polaroid.svg" alt ="Illustration d'une photo" width="300" >
+                <figcaption>
+                    Un Polaroïd selon <a href="https://undraw.co/illustrations" target="_blank">unDraw</a>
+                </figcaption>
+            </figure>
+
+        ??? note "Pour une largeur en %, l'image est décalée par rapport à sa légende..."
+            
+            === "Code"
+                ```html
+                <figure>
+                    <img src="../images/undraw_Polaroid.svg" alt ="Illustration d'une photo" width="50%" >
+                    <figcaption>
+                        Un Polaroïd selon <a href="https://undraw.co/illustrations">unDraw</a>
+                    </figcaption>
+                </figure>
+                ```
+
+            === "Rendu"
+                <figure>
+                    <img src="../images/undraw_Polaroid.svg" alt ="Illustration d'une photo" width="50%" >
+                    <figcaption>
+                        Un Polaroïd selon <a href="https://undraw.co/illustrations" target="_blank">unDraw</a>
+                    </figcaption>
+                </figure>
+                                
+            Ce décalage n'apparait pas pour une largeur indiquée [en *px* ou en *em*](https://www.codeur.com/tuto/css/unite-de-mesure-taille-px-em-rem/){target="_blank"}.
+
+    ??? example "Solution 2 : un code MarkDown..."
+        L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"} 
+        qui permet de préciser des valeurs personnalisées aux attributs HTML et CSS doit être activée dans le fichier `mkdocs.yml` :
+
+        ```yaml
+        markdown_extensions:
+            - attr_list
+        ```
+        Il faut ajouter la spécification CSS supplémentaire dans le fichier `docs/stylesheet/extra.css`
+         (Merci à [Gilles](https://mooc-forums.inria.fr/moocnsi/t/mkdocs-astuce-pour-centrer-une-image-en-markdown-pur/2831)) :
+
+        ```css
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+        ```
+
+        L’insertion d’une image peut se faire maintenant avec la syntaxe :
+        ```markdown
+        ![texte alternatif](adresse "info-bulle"){ .center }
+        ```
+        === "Rendu"
+            ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="30%" .center }
+
+        === "Code"
+            ```markdown
+            ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="30%" .center }  
+            ```
+        
+        !!! note "Même avec une largeur en %, l'image est centrée mais il n'y a pas de légende centrée possible."
+             
+
+    ??? example "Solution 3 : un code hybride..."
+
+        En plus de l'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"} 
+        qui permet de préciser des valeurs personnalisées aux attributs HTML et CSS, il faut également activer dans le fichier `mkdocs.yml` l'extension [md_in_html](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html) qui permet d'écrire du code MarkDown à l'intérieur de balises HTML :
+
+        ```yaml
+        markdown_extensions:
+            - attr_list
+            - md_in_html
+        ```
+        
+        Comme pour la solution précédente, il faut ajouter la spécification CSS supplémentaire dans le fichier `docs/stylesheet/extra.css`
+         (Merci à [Gilles](https://mooc-forums.inria.fr/moocnsi/t/mkdocs-astuce-pour-centrer-une-image-en-markdown-pur/2831)) :
+
+        ```css
+        .center {
+            display: block;
+            margin: 0 auto;
+        }
+        ```
+
+        Pour notre exemple, une synthaxe possible serait :
+
+        === "Code"
+            ```html
+            <figure markdown>
+             ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="50%" .center }
+             <figcaption markdown>
+              Un Polaroïd selon [unDraw](https://undraw.co/illustrations){target="_blank"}
+             </figcaption>
+            </figure>            
+            ```
+
+        === "Rendu"
+            <figure markdown>
+             ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="50%" .center }
+             <figcaption markdown>
+              Un Polaroïd selon [unDraw](https://undraw.co/illustrations){target="_blank"}
+             </figcaption>
+            </figure>
+
+
     
 ??? question "Quel format d'image pour le web ?"
 
@@ -539,10 +665,8 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
     **GIF** (**G**raphics **I**nterchange **F**ormat)
     : Images animées idéale pour illustrer vos propos, fortement utilisé sur les réseaux sociaux.
 
-
-
-
-# Les traits horizontaux :
+***
+## Les traits horizontaux :
 
 === "Rendu"
     Une série d'au moins trois `*`,
@@ -567,10 +691,9 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
     ```
 
 ***
+## Les listes :
 
-# Les listes :
-
-## Listes à puces :
+### Listes à puces :
 On commence par sauter une ligne, puis on place devant chaque item
       un caractère `-`, `+` ou `*`, suivi d'au moins d'un espace :
 
@@ -591,7 +714,7 @@ On commence par sauter une ligne, puis on place devant chaque item
         * Un autre élément de ma sous-liste ;
     + Encore un autre élément de ma liste.
 
-## Listes ordonnées :
+### Listes ordonnées :
 On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`,
  la numérotation se fait alors automatiquement indépendamment du nombre indiqué :
 === "MarkDown"
@@ -611,7 +734,7 @@ On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`
         72. Le second élément de ma sous-liste ;
     1024. Le troisième élément de ma liste.
 
-## Listes avec des cases à cocher :
+### Listes avec des cases à cocher :
 On insère `[ ]` ou `[x]` devant chaque item
  d'une liste non ordonnée :
 === "MarkDown"
@@ -636,7 +759,7 @@ On insère `[ ]` ou `[x]` devant chaque item
       pour générer des listes de tâches avec des cases à cocher.
     
     
-## Listes de description :
+### Listes de description :
 Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins un espace :
 === "MarkDown"
     ```markdown
@@ -663,8 +786,7 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
       pour générer des listes de définitions.
 
 ***
-
-# Ressources :
+## Ressources :
 
 <https://www.jdbonjour.ch/cours/markdown-pandoc/>
 
@@ -679,8 +801,7 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
 <https://www.ionos.fr/digitalguide/sites-internet/developpement-web/markdown/>
 
 ***
-
-# Toujours en construction...
+## Toujours en construction...
 
 ![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
 
@@ -702,3 +823,4 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
 *** -->
 
 
+***

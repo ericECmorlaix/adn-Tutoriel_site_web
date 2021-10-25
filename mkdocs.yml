@@ -49,21 +49,22 @@ theme:
           icon: material/weather-night
           name: Basculer en mode clair
 
-    features:
-        - navigation.instant
-        - navigation.tracking
-        - navigation.tabs
-        # - navigation.tabs.sticky
-        - navigation.expand
-        - navigation.top
-        - toc.integrate
+    features: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+        - navigation.instant 
+        # - navigation.tracking
+        - navigation.tabs # Menu de navigation horizontal sous l'en-tête sauf sur appareil mobile
+        # - navigation.tabs.sticky # Menu de navigation horizontal collant
+        # - navigation.sections
+        # - navigation.expand
+        - navigation.top # 
+        - toc.integrate # Table of Content, table des matières intégrée dans la barre verticale de navigation
         - header.autohide
 
 
 markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
     # extensions de la bibliothèque markdown standard
-    - abbr # infobulles sur abbréviations 
-    - meta # Métadonnées
+    - abbr                          # infobulles sur abbréviations 
+    - meta                          # Métadonnées
     - def_list                      # Les listes de définition.
     - attr_list                     # Un peu de CSS et des attributs HTML.
     - md_in_html                    # Pour écrire en MarkDown dans des balises HTML https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html

@@ -1,3 +1,8 @@
+---
+hide:
+  - navigation
+  - toc
+---
 
 Ceci est un tutoriel pour déployer un site web depuis un dépôt git avec le framework material pour mkdocs en incluant, ou pas, des notebook jupyter...
 

@@ -224,7 +224,7 @@
     Liste des liens pour l'introduction :
     -->
 ***
-## Les titres :
+## Titres :
 
 <!-- === "Rendu"
 
@@ -266,14 +266,14 @@
         Leur répétition permet de souligner ces titres
          également dans le code en mode édition.
 ***
-## Le corps de texte :
+## Corps de texte :
 
 === "Rendu"
 
     On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
      du __texte__ avec **forte emphase** rendu en **Gras**,
       du **_Texte_** à la fois en **gras** et en *italique*,
-       du `code source` rendu en caractères [`monospaces`][2],
+       du `code source` rendu en caractères [`monospaces`][2]{target="_blank"},
         du ~~texte barré~~  rendu avec une ligne en travers du texte,
          du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
           On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
@@ -313,7 +313,7 @@
     On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
      du __texte__ avec **forte emphase** rendu en **Gras**,
       du **_Texte_** à la fois en **gras** et en *italique*,
-       du `code source` rendu en caractères [`monospaces`][2],
+       du `code source` rendu en caractères `monospaces`,
         du ~~texte barré~~  rendu avec une ligne en travers du texte,
          du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
           On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
@@ -343,9 +343,6 @@
     Pour forcer le retour à la ligne dans un paragraphe,  
     il faut ajouter deux espaces à la fin d'une ligne  
     avant de faire un retour à la ligne...
-
-
-    [2]: https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe "Police d'écriture à chasse fixe"
     ```
 
 ??? info 
@@ -354,13 +351,18 @@
 
     - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret) pour `^^souligné^^` ou mettre en `^exposant^`;
     - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/) pour `==surligné==`;
-    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.    
+    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
+
+    ```yaml
+    markdown_extensions:
+        - pymdownx.caret
+        - pymdownx.mark
+        - pymdownx.tilde
+    ```
 
 ***
-## Les liens :
-
+## Liens :
 === "Rendu"
-
     Le plus simple pour intégrer un lien hypertexte est de coller son adresse
      directement entre deux chevrons `<URL>` comme par exemple : <https://www.mkdocs.org/> ;
      De cette façon on peut aussi indiquer une adresse `<mail>` : <prenom.nom@ecmorlaix.fr>.
@@ -424,7 +426,7 @@
         [mon texte support](https://monlien.com "mon info-bulle"){target="_blank"}
         ```
 ***
-## Les images :
+## Images :
 
 La syntaxe pour les images est la même que pour les liens hypertextes,
  mais avec un `!` devant :
@@ -476,12 +478,17 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         ├── 404.html    
     ```     
     Alors, le chemin relatif vers cette image depuis la page web `index.html`
-     générée à partir du fichier `MarkDown-Mkdocs_Material.md`
-      sera `../images/undraw_Polaroid.svg` car il faut sortir du dossier `MarkDown-Mkdocs_Material` pour pouvoir rentrer dans le dossier `images`.
+     située dans le dossier `MarkDown-Mkdocs_Material` et
+      générée à partir du fichier `MarkDown-Mkdocs_Material.md`
+       sera `../images/undraw_Polaroid.svg`
+        car il faut sortir du dossier `MarkDown-Mkdocs_Material`
+         pour pouvoir rentrer dans le dossier `images`.
     
     !!! note "Remarque :"
         Un chemin relatif vers cette même image depuis la page web `index.html`
-         générée à partir du fichier `index.md` serait `./images/undraw_Polaroid.svg`...
+        située à la racine du site et
+         générée à partir du fichier `index.md`
+          serait `./images/undraw_Polaroid.svg`...
     
 
 
@@ -629,24 +636,25 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         }
         ```
 
-        Pour notre exemple, une synthaxe possible serait :
+        Pour notre exemple, une synthaxe possible serait,
+         sans oublier d'inscrire `markdown` dans les balises HTML qui contiendront du MarkDown :
 
         === "Code"
             ```html
             <figure markdown>
-             ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="50%" .center }
-             <figcaption markdown>
-              Un Polaroïd selon [unDraw](https://undraw.co/illustrations){target="_blank"}
-             </figcaption>
+                ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="50%" .center }
+                <figcaption markdown>
+                    Un Polaroïd selon [unDraw](https://undraw.co/illustrations){target="_blank"}
+                </figcaption>
             </figure>            
             ```
 
         === "Rendu"
             <figure markdown>
-             ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="50%" .center }
-             <figcaption markdown>
-              Un Polaroïd selon [unDraw](https://undraw.co/illustrations){target="_blank"}
-             </figcaption>
+                ![Illustration d'une photo](../images/undraw_Polaroid.svg){ width="50%" .center }
+                <figcaption markdown>
+                    Un Polaroïd selon [unDraw](https://undraw.co/illustrations){target="_blank"}
+                </figcaption>
             </figure>
 
 
@@ -666,7 +674,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
     : Images animées idéale pour illustrer vos propos, fortement utilisé sur les réseaux sociaux.
 
 ***
-## Les traits horizontaux :
+## Traits horizontaux :
 
 === "Rendu"
     Une série d'au moins trois `*`,
@@ -691,7 +699,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
     ```
 
 ***
-## Les listes :
+## Listes :
 
 ### Listes à puces :
 On commence par sauter une ligne, puis on place devant chaque item
@@ -758,6 +766,11 @@ On insère `[ ]` ou `[x]` devant chaque item
      [pymdownx.tasklist](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tasklist)
       pour générer des listes de tâches avec des cases à cocher.
     
+    ``` yaml
+    markdown_extensions:
+        - pymdownx.tasklist        
+    ```
+    
     
 ### Listes de description :
 Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins un espace :
@@ -785,6 +798,119 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
      [def_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists)
       pour générer des listes de définitions.
 
+    ``` yaml
+    markdown_extensions:
+        - def_list        
+    ```
+
+***
+## Codes :
+
+### Code inline :
+Comme vu dans le [Corps de texte](./#corps-de-texte),
+ on peut afficher dans le flux d'un paragraphe,
+  du code en caractères [`monospaces`][2]
+   en l'encadrant entre deux `` ` ``
+    que l'on peut obtenir par la combinaison de touches ++"AltGr"+"7"++.
+
+!!! note "Remarque :"
+    Si le codage renferme déjà l’apostrophe inversée,
+     on peut précéder et terminer la zone de code de deux fois ce caractère.  
+    Dans ce cas, Markdown n’interprétera pas l’apostrophe inversée comme une balise.
+
+    === "MarkDown"
+        ```markdown
+        Exemple : ``Ceci est du `code`.``
+        ```
+    === "Rendu"
+        Exemple : ``Ceci est du `code`.``
+
+### Bloc de code :
+=== "MarkDown"
+    ```markdown
+    Pour produire un bloc de code,
+    il suffit de faire un saut de ligne vide et
+    de précéder le code d'une tabulation
+    équivalente à au moins quatre espaces :
+
+        Ceci est un bloc de code ;
+
+        A l'intérieur de ce dernier,
+        tous les retours à la ligne,
+
+
+        sont considérés ;
+
+        Tous les  espaces   laissés    vides     sont      conservés ;
+            L'indentation est donc respectée ;
+        
+        De plus :
+            - aucun caractère de balisage **MarkDown**, <HTML> ou $LaTeX$ n'est interprété ;
+            + ![image](url "info"){ heigt=300 align=left} ...
+            # tout le texte s'affiche en caractère monospace ;
+       On sort simplement de ce bloc de code en revenant à une indentation inférieure à 4 espaces.
+    ```
+=== "Rendu"
+    Pour produire un bloc de code,
+    il suffit de faire un saut de ligne vide et
+    de précéder le code d'une tabulation
+    équivalente à au moins quatre espaces :
+
+        Ceci est un bloc de code ;
+
+        A l'intérieur de ce dernier,
+        tous les retours à la ligne,
+
+
+        sont considérés ;
+
+        Tous les  espaces   laissés    vides     sont      conservés ;
+            L'indentation est donc respectée ;
+        
+        De plus :
+            - aucun caractère de balisage **MarkDown**, <HTML> ou $LaTeX$ n'est interprété ;
+            + ![image](url "info"){ heigt=300 align=left} ...
+            # tout le texte s'affiche en caractère monospace ;
+       On sort simplement de ce bloc de code en revenant à une indentation inférieure à 4 espaces. 
+
+!!! attention "Si + de 4 espaces d'indentation après une ligne vide => c'est du code !"
+
+***
+## Toujours en construction...
+
+![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
+
+### Coloration syntaxique :
+
+On peut également produire des blocs de code en encadrant 
+
+*** 
+## Citations et admonitions :
+
+!!! warning inline end "Attention"
+    
+    **Toto** est dans la place !
+
+    Ceci est une mise en garde,
+     vous voilà prévenu !!
+
+## Volets :
+
+***
+## Caractères spéciaux :
+### Echappement :
+
+### Favicons
+
+### Emojis :
+
+### Touches :
+
+***
+## Tableaux :
+
+***
+## 
 ***
 ## Ressources :
 
@@ -801,26 +927,4 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
 <https://www.ionos.fr/digitalguide/sites-internet/developpement-web/markdown/>
 
 ***
-## Toujours en construction...
 
-![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
-
-
-<!-- Si votre codage renferme déjà l’apostrophe inversée, vous devez précéder la zone de code de deux fois ce caractère. Dans ce cas, Markdown n’interprétera pas l’apostrophe inversée comme une balise.
-
-``C’est tout le `code`.``
-
-
-***
-
-# Les admonitions :
-
-!!! warning inline end "Attention"
-    
-    **Toto** est dans la place !
-
-
-*** -->
-
-
-***

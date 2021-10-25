@@ -84,7 +84,8 @@ pip install mkdocs-jupyter
 
 > Votre site distant devrait se mettre à jour avec vos modifications après quelques temps...
 
-!!! danger "Par la suite, commencer toujours par cliquer sur les `...` et choisir `Pull` avant de faire de nouveau changements..."
+!!! danger
+    Par la suite, surtout si vous avez apporté entre temps des modifications à votre dépôt distant depuis un autre environnement, **commencez toujours par cliquer sur les `...` et choisir `Pull` avant de faire de nouveau changements**...
 
 ****
 

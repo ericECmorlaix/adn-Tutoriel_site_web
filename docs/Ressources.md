@@ -2,7 +2,7 @@
 
 - [Les vidéos de Fred LELEU](https://youtube.com/playlist?list=PL-Q7fIakgvUAcUluPeUMIP1128wWxboJY){:target="_blank"}
 
-- De Jupyter à MkDocs, par Franck CHAMBON :
+- De Jupyter à MkDocs, par Franck CHAMBON (merci [Frankie](https://mooc-forums.inria.fr/moocnsi/t/debuter-avec-mkdocs/1842)): 
     - [Bases de Markdown](https://ens-fr.gitlab.io/mkdocs/markdown-bases/){:target="_blank"} 
     - [Markdown pour MkDocs](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/){:target="_blank"}
     - [Écrire des maths](https://ens-fr.gitlab.io/mkdocs/maths/){:target="_blank"}

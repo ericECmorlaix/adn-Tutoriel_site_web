@@ -103,7 +103,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" align="left" title="Logo du langage MarkDown" alt="Logo du langage MarkDown">
     
     <p>
-        <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" title="Page Markdown sur Wikipedia"><strong>Markdown</strong></a>
+        <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" title="Page MarkDown sur Wikipedia"><strong>Markdown</strong></a>
         est un langage de description à balisage plus léger à coder que des balises HTML.
         <br>
         Son code est plus lisible dans l'éditeur,
@@ -344,6 +344,13 @@
     il faut ajouter deux espaces à la fin d'une ligne  
     avant de faire un retour à la ligne...
     ```
+
+??? tip "Astuces pour obtenir au clavier les caractères spéciaux comme `~` ou `` ` ``: ..." 
+
+    - Le [tilde](https://fr.wikipedia.org/wiki/Tilde) s'obtient avec la combinaison de touches ++"AltGr"+"2"++ ou ++"Alt"+"126"++ ;
+    - L'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave)) s'obtient avec la combinaison de touches ++"AltGr"+"7"++ ou ++"Alt"+"96"++ 
+
+
 
 ??? info 
 
@@ -811,12 +818,14 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
  on peut afficher dans le flux d'un paragraphe,
   du code en caractères [`monospaces`][2]
    en l'encadrant entre deux `` ` ``
-    que l'on peut obtenir par la combinaison de touches ++"AltGr"+"7"++.
+    que l'on peut obtenir par la combinaison
+     de touches ++"AltGr"+"7"++ ou ++"Alt"+"96"++.
 
 !!! note "Remarque :"
-    Si le codage renferme déjà l’apostrophe inversée,
+    Si le codage renferme déjà une apostrophe inversée
+     ( = un caractère d'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave)),
      on peut précéder et terminer la zone de code de deux fois ce caractère.  
-    Dans ce cas, Markdown n’interprétera pas l’apostrophe inversée comme une balise.
+    Dans ce cas, Markdown n’interprétera pas cette apostrophe inversée comme une balise.
 
     === "MarkDown"
         ```markdown
@@ -825,15 +834,17 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
     === "Rendu"
         Exemple : ``Ceci est du `code`.``
 
-### Bloc de code :
+Ecrire du code en ligne avec coloration syntaxique `#!python [ for i in range(toto) if truc]` test 
+
+### Bloc de texte brut :
 === "MarkDown"
     ```markdown
-    Pour produire un bloc de code,
-    il suffit de faire un saut de ligne vide et
-    de précéder le code d'une tabulation
-    équivalente à au moins quatre espaces :
+    Pour produire un bloc de texte brut,
+     il suffit de faire un saut de ligne vide et
+      de précéder le code d'une tabulation      
+       équivalente à au moins quatre espaces :
 
-        Ceci est un bloc de code ;
+        Ceci est un bloc de texte brut ;
 
         A l'intérieur de ce dernier,
         tous les retours à la ligne,
@@ -848,15 +859,15 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
             - aucun caractère de balisage **MarkDown**, <HTML> ou $LaTeX$ n'est interprété ;
             + ![image](url "info"){ heigt=300 align=left} ...
             # tout le texte s'affiche en caractère monospace ;
-       On sort simplement de ce bloc de code en revenant à une indentation inférieure à 4 espaces.
+       On sort simplement de ce bloc de texte brut en revenant à une indentation inférieure à 4 espaces.
     ```
 === "Rendu"
-    Pour produire un bloc de code,
-    il suffit de faire un saut de ligne vide et
-    de précéder le code d'une tabulation
-    équivalente à au moins quatre espaces :
+    Pour produire un bloc de texte brut,
+     il suffit de faire un saut de ligne vide et
+      de précéder le code d'une tabulation      
+       équivalente à au moins quatre espaces :
 
-        Ceci est un bloc de code ;
+        Ceci est un bloc de texte brut ;
 
         A l'intérieur de ce dernier,
         tous les retours à la ligne,
@@ -871,9 +882,9 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
             - aucun caractère de balisage **MarkDown**, <HTML> ou $LaTeX$ n'est interprété ;
             + ![image](url "info"){ heigt=300 align=left} ...
             # tout le texte s'affiche en caractère monospace ;
-       On sort simplement de ce bloc de code en revenant à une indentation inférieure à 4 espaces. 
+       On sort simplement de ce bloc de texte brut en revenant à une indentation inférieure à 4 espaces. 
 
-!!! attention "Si + de 4 espaces d'indentation après une ligne vide => c'est du code !"
+!!! attention "Si + de 4 espaces d'indentation après une ligne vide => c'est du texte brut !"
 
 ***
 ## Toujours en construction...
@@ -882,27 +893,405 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 
 ### Coloration syntaxique :
 
-On peut également produire des blocs de code en encadrant 
+On peut également produire des blocs de texte brut
+ en encadrant les lignes de code
+  entre deux triplets d'apostrophes inversées (d'accent grave) ;
+
+Aussi, si on précise après le premier triplet le langage
+ de programmation correspondant au contenu des lignes de code,
+ la coloration syntaxique idoine s'applique :
+
+!!! example "Exemple :"
+
+    === "MarkDown basique"
+        ````
+        ```
+        def ma_fonction(paramètres):
+            # bloc d'instructions (optionnel)
+            return valeur
+        ```
+        ````
+    === "Rendu basique"
+        ```
+        def ma_fonction(paramètres):
+            # bloc d'instructions (optionnel)
+            return valeur
+        ```
+    
+    === "MarkDown avec langage"
+        ````
+        ``` python
+        def ma_fonction(paramètres):
+            # bloc d'instructions (optionnel)
+            return valeur
+        ```
+        ````
+    === "Rendu avec coloration"
+        ``` python
+        def ma_fonction(paramètres):
+            # bloc d'instructions (optionnel)
+            return valeur
+        ```
+
+
+
+***
+## Volets :
+
 
 *** 
-## Citations et admonitions :
+## Citations et 
 
-!!! warning inline end "Attention"
+> :warning: **If you are using mobile browser**: Be very careful here!
+
+| WARNING: be careful to baz the quux before initializing the retro encabulator! |
+| --- |
+
+
+> **⚠ WARNING: Aliens are coming.**  
+> A description of the colour, smell and dangerous behaviour of the aliens.
+
+
+
+A simple highlighted warning can be achieved like this:
+
+>[!WARNING]
+>This is a warning
+
+
+
+***
+### Admonitions :
+???+ warning inline end "Attention !"
+    
+    **Toto** est dans la place...
+
+    Ceci est une mise en garde,
+     vous voilà prévenu !!
+Une des grandes caractéristiques de MkDocs avec Material sont ces admonitions : ce sont des boites colorées d'avertissements, pour des alertes, mises en garde et autres appartés, qui viennent compléter le flux normal de l'information sur une page web pour illustrer ou souligner un point particulier, une difficulté...
+
+De base, il existe [12 styles de boites](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) différentes définies par des noms de types. Si aucun de ces mots clés types n'est précisé, ou si le mot clé n'est pas reconnu, c'est le type `note` qui sera utilisé par défaut.
+=== "note"
+    === "Rendu"
+        !!! note
+            Un avertissement de type `note`.
+    === "Mardown"
+        ```markdown
+        !!! note
+            Un avertissement de type `note`.
+        ```
+=== "abstract"
+    === "Rendu"
+        !!! abstract
+            Un avertissement de type `abstract` (résumé), `summary` (sommaire) ou `tdlr` (too long ; didn't read).
+    === "Mardown"
+        ```markdown
+        !!! abstract
+            Un avertissement de type `abstract` (résumé), `summary` (sommaire) ou `tdlr` (too long ; didn't read).
+        ```
+=== "info"
+    === "Rendu"
+        !!! info
+            Un avertissement de type `info` ou `todo` (à faire).
+    === "Mardown"
+        ```markdown
+        !!! info
+            Un avertissement de type `info` ou `todo` (à faire).
+        ```
+=== "tip"
+    === "Rendu"
+        !!! tip
+            Un avertissement de type `tip` (astuce), `hint` (indice), `important`.
+    === "Mardown"
+        ```markdown
+        !!! tip
+            Un avertissement de type `tip` (astuce), `hint` (indice), `important`.
+        ```
+=== "success"
+    === "Rendu"
+        !!! success
+            Un avertissement de type `success`, `check` (vérifié) ou `done` (terminé).
+    === "Mardown"
+        ```markdown
+        !!! success
+            Un avertissement de type `success`, `check` (vérifié) ou `done` (terminé).
+        ```
+=== "question"
+    === "Rendu"
+        !!! question
+            Un avertissement de type `question`, `help` (aide) ou `faq` (Frequently Asked Questions)
+    === "Mardown"
+        ```markdown
+        !!! question
+            Un avertissement de type `question`, `help` (aide) ou `faq` (Frequently Asked Questions)
+        ```
+=== "attention"
+    === "Rendu"
+        !!! attention
+            Un avertissement de type `attention`, `warning`, `caution` (avertir).
+    === "Mardown"
+        ```markdown
+        !!! attention
+            Un avertissement de type `attention`, `warning`, `caution` (avertir).
+        ```
+=== "failure"
+    === "Rendu"
+        !!! failure
+            Un avertissement de type `failure` (échec), `missing` (manquant), `fail` (échouer).
+    === "Mardown"
+        ```markdown
+        !!! failure
+            Un avertissement de type `failure` (échec), `missing` (manquant), `fail` (échouer).
+        ```
+=== "danger"
+    === "Rendu"
+        !!! danger
+            Un avertissement de type `danger` ou `error`.
+    === "Mardown"
+        ```markdown
+        !!! danger
+            Un avertissement de type `danger` ou `error`.
+        ```
+=== "bug"
+    === "Rendu"
+        !!! bug
+            Un avertissement de type `bug`.
+    === "Mardown"
+        ```markdown
+        !!! bug
+            Un avertissement de type `bug`.
+        ```
+=== "example"
+    === "Rendu"
+        !!! example
+            Un avertissement de type `example`.
+    === "Mardown"
+        ```markdown
+        !!! example
+            Un avertissement de type `example`.
+        ```
+=== "quote"
+    === "Rendu"
+        !!! quote
+            Un avertissement de type `quote` (citation) ou `cite` (citer).
+    === "Mardown"
+        ```markdown
+        !!! quote
+            Un avertissement de type `quote` (citation) ou `cite` (citer).
+        ```
+Pour la syntaxe, on commmence par trois points d'exclamation `!!!`
+ suivi d'un espace et du mot clé type de l'admonition qui s'affichera en titre par défaut.
+
+Puis, après un retour à la ligne et une indentation de 4 espaces,
+ on peut écrire en MarkDown le code du contenu de la boite d'avertissement.
+
+??? tip "Des titres personnalisés : ..."
+    Après le type, il est possible d'ajouter un titre personnalisé entre guillemets
+     ce qui va nous permettre au moins de franciser les titres de nos boites :     
+    === "Rendu"
+        !!! example "Exemple :"
+            Un exemple de boite
+             avec un titre
+              personnalisé.
+    === "Mardown"
+        ```markdown
+        !!! example "Exemple :"
+            Un exemple de boite
+             avec un titre
+              personnalisé.
+        ```    
+    !!! tip ""
+        Un titre personalisé vide `""` permet de produire une boite d'avertissement sans barre de titre :
+        === "Mardown"
+            ```markdown
+            !!! example ""
+                Un exemple de boite sans titre.
+            ```
+        === "Rendu"
+            !!! example ""
+                Un exemple de boite sans titre.
+
+??? tip "Des boites déroulantes : ..."
+    En remplaçant les trois points d'exclamation `!!!`
+    par trois points d'interrogation `???`
+    on obtient une boite déroulante enroulée par défaut.  
+    === "Rendu"
+        ??? example "Exemple NF : ..."
+            Un exemple de boite déroulante
+             enroulée par défaut.
+    === "Mardown"
+        ```markdown
+        ??? example "Exemple NF : ..."
+            Un exemple de boite déroulante
+             enroulée par défaut.
+        ```
+    Pour qu'elle soit déroulée par défaut, il suffit d'ajouter un `+`
+    après les trois points d'interrogation `???`.
+    === "Mardown"
+        ```markdown
+        ???+ example "Exemple NO : ..."
+            Un exemple de boite déroulante
+             déroulée par défaut.
+        ```
+    === "Rendu"
+        ???+ example "Exemple NO : ..."
+            Un exemple de boite déroulante
+             déroulée par défaut.
+    
+    !!! attention ""
+        Une boite d'avertissement déroulante
+        possède toujours une barre de titre
+         même avec un titre personnalisé vide !
+        === "Rendu"
+            ???+ example ""
+                Un exemple de boite déroulante
+                 sans titre.
+        === "Mardown"
+            ```markdown
+            ???+ example ""
+                Un exemple de boite déroulante
+                sans titre.
+            ```
+
+    
+??? tip "Des boites "inline" : ..."
+    En indiquant `inline` ou `inline end` entre le mot clé du type et le titre personnalisé
+    === "Rendu à gauche"
+        !!! note inline "Remarque :"
+            Une note avec
+             un titre
+              personnalisé.
+    === "Mardown à gauche"
+        ```markdown
+        !!! note inline "Remarque :"
+            Une note avec
+             un titre
+              personnalisé.
+        ```    
+    === "Rendu à droite"
+        !!! note inline end "Remarque :"
+            Une note avec
+             un titre
+              personnalisé.
+    === "Mardown à droite"
+        ```markdown
+        !!! note inline "Remarque :"
+            Une note avec
+             un titre
+              personnalisé.
+        ```
+    
+    
+
+
+!!! warning "Attention"
     
     **Toto** est dans la place !
 
     Ceci est une mise en garde,
      vous voilà prévenu !!
+ 
 
-## Volets :
+
+<https://squidfunk.github.io/mkdocs-material/reference/admonitions/>
+
+<https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#les-admonitions>
+
 
 ***
 ## Caractères spéciaux :
 ### Echappement :
 
-### Favicons
+En dehors des structures de type code inline ou bloc de texte brut,
+ il peut être nécessaire de mettre un caractère backslash `\` devant
+  des caractères qui sinon sont interprétés en Markdown, HTML ou Latex.
 
-### Emojis :
+!!! example "Par exemple :"
+
+    === "avec \"
+        
+        *Code :*
+
+        ```markdown
+        \#### Usage de l'antislash \\ :
+
+        1\. \`code`  
+        5\. <@\>  
+        3\. !\[image](url "info"){ heigt=30 align=left}  
+            
+        \> \~\~barré~~, 
+        \^\^souligné^^,
+        \==surligné==, ...
+
+        \- \__MarkDown__ ;  
+        \+ <em\>HTML<em\> ;  
+        \* \$\LaTeX$ ;
+        ```
+        
+        *Rendu :*
+    
+        \#### Usage de l'antislash \\ :
+
+        1\. \`code`  
+        5\. <@\>  
+        3\. !\[image](url "info"){ heigt=30 align=left}  
+            
+        \> \~\~barré~~, 
+        \^\^souligné^^,
+        \==surligné==, ...
+
+        \- \__MarkDown__ ;  
+        \+ <em\>HTML<em\> ;  
+        \* \$\LaTeX$ ;
+
+    === "sans \"
+
+        *Code :*
+
+        ```markdown
+        #### Usage de l'antislash \ :
+
+        1. `code`  
+        5. <@>  
+        3. ![image](url "info"){ heigt=30 align=left}
+
+        > ~~barré~~,
+        ^^souligné^^,
+        ==surligné==, ...
+
+        - __MarkDown__  
+        + <em>HTML<em>  
+        * $\LaTeX$  
+        ```
+
+        *Rendu :*
+
+        #### Usage de l'antislash \ :
+
+        1. `code`  
+        5. <@>  
+        3. ![image](url "info"){ heigt=30 align=left}
+
+        > ~~barré~~,
+        ^^souligné^^,
+        ==surligné==, ...
+
+        - __MarkDown__  
+        + <em>HTML<em>  
+        * $\LaTeX$  
+
+
+    
+
+
+
+
+
+
+
+### Icônes - Emojis :
+
+<https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#icons-emojis>
 
 ### Touches :
 
@@ -926,5 +1315,8 @@ On peut également produire des blocs de code en encadrant
 
 <https://www.ionos.fr/digitalguide/sites-internet/developpement-web/markdown/>
 
+<https://docs.microsoft.com/en-us/contribute/markdown-reference>
+
+<https://jupyterbook.org/content/myst.html> Markedly Structured Text
 ***
 

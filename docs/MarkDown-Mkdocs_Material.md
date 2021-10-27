@@ -347,8 +347,8 @@
 
 ??? tip "Astuces pour obtenir au clavier les caractères spéciaux comme `~` ou `` ` ``: ..." 
 
-    - Le [tilde](https://fr.wikipedia.org/wiki/Tilde) s'obtient avec la combinaison de touches ++"AltGr"+"2"++ ou ++"Alt"+"126"++ ;
-    - L'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave)) s'obtient avec la combinaison de touches ++"AltGr"+"7"++ ou ++"Alt"+"96"++ 
+    - Le [tilde](https://fr.wikipedia.org/wiki/Tilde){ target=_blank} s'obtient avec la combinaison de touches ++"AltGr"+"2"++ ou ++"Alt"+"126"++ ;
+    - L'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave){ target=_blank} s'obtient avec la combinaison de touches ++"AltGr"+"7"++ ou ++"Alt"+"96"++ 
 
 
 
@@ -363,9 +363,9 @@
         - pymdownx.tilde
     ```
 
-    - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret) pour `^^souligné^^` ou mettre en `^exposant^`;
-    - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/) pour `==surligné==`;
-    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
+    - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret){ target=_blank} pour `^^souligné^^` ou mettre en `^exposant^`;
+    - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/){ target=_blank} pour `==surligné==`;
+    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/){ target=_blank} pour `~~barré~~` ou mettre en `~indice~`.
 
 
 ***
@@ -626,7 +626,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
     ??? example "Solution 3 : un code hybride..."
 
         En plus de l'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"} 
-        qui permet de préciser des valeurs personnalisées aux attributs HTML et CSS, il faut également activer dans le fichier `mkdocs.yml` l'extension [md_in_html](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html) qui permet d'écrire du code MarkDown à l'intérieur de balises HTML :
+        qui permet de préciser des valeurs personnalisées aux attributs HTML et CSS, il faut également activer dans le fichier `mkdocs.yml` l'extension [md_in_html](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html){ target=_blank} qui permet d'écrire du code MarkDown à l'intérieur de balises HTML :
 
         ```yaml
         markdown_extensions:
@@ -635,7 +635,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         ```
         
         Comme pour la solution précédente, il faut ajouter la spécification CSS supplémentaire dans le fichier `docs/stylesheet/extra.css`
-         (Merci à [Gilles](https://mooc-forums.inria.fr/moocnsi/t/mkdocs-astuce-pour-centrer-une-image-en-markdown-pur/2831)) :
+         (Merci à [Gilles](https://mooc-forums.inria.fr/moocnsi/t/mkdocs-astuce-pour-centrer-une-image-en-markdown-pur/2831){ target=_blank}) :
 
         ```css
         .center {
@@ -771,7 +771,7 @@ On insère `[ ]` ou `[x]` devant chaque item
 ??? info 
 
     Il faut activer dans le fichier `mkdocs.yml` l'extension
-     [pymdownx.tasklist](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tasklist)
+     [pymdownx.tasklist](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#tasklist){ target=_blank}
       pour générer des listes de tâches avec des cases à cocher.
     
     ``` yaml
@@ -803,7 +803,7 @@ Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moin
 ??? info 
 
     Il faut activer dans le fichier `mkdocs.yml` l'extension
-     [def_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists)
+     [def_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#definition-lists){ target=_blank}
       pour générer des listes de définitions.
 
     ``` yaml
@@ -824,7 +824,7 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 
 !!! note ""
     Si le codage renferme déjà une apostrophe inversée
-     ( = un caractère d'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave)),
+     ( = un caractère d'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave){ target=_blank}),
      on peut précéder et terminer la zone de code de deux fois ce caractère.  
     Dans ce cas, Markdown n’interprétera pas cette apostrophe inversée comme une balise.
 
@@ -838,8 +838,9 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 !!! tip ""    
     La coloration syntaxique s'applique aussi sur du code en ligne, par exemple, `#!py for lettre in "Bonjour" :`, s'obtient en écrivant en markdown  ``#!md `#!python3 for lettre in "Bonjour" :` `` dans le flux du texte.
 
-    Après le premier `` ` ``, on place un [shebang](https://fr.wikipedia.org/wiki/Shebang) `#!` suivi d'un [nom court](https://pygments.org/docs/lexers/#pygments.lexers.python.PythonLexer) désignant le langage utilisé.  Aussi, ici on aurait pu se contenter d'écrire le nom court `py` qui correspont à `python3` par défaut.
+    Après le premier `` ` ``, on place un [shebang](https://fr.wikipedia.org/wiki/Shebang){ target=_blank} `#!` (ou `:::`) suivi d'un [nom court](https://pygments.org/docs/lexers/#pygments.lexers.python.PythonLexer){ target=_blank} désignant le langage utilisé.  Aussi, ici on aurait pu se contenter du nom court `py` qui correspont à `python3` par défaut, ainsi le code ``:::md `:::py for lettre in "Bonjour" :` `` produit le même résultat : `:::py for lettre in "Bonjour" :`.
 
+    !!! note "Remarque :"
     ??? info
         Pour la coloration syntaxique du code en ligne, il faut activer dans le fichier `mkdocs.yml` les extensions : 
         
@@ -855,9 +856,11 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 === "MarkDown"
     ```markdown
     Pour produire un bloc de texte brut,
-     il suffit de faire un saut de ligne vide et
-      de précéder le code d'une tabulation      
-       équivalente à au moins quatre espaces :
+     il suffit de faire
+      un **saut de ligne**
+       et de précéder le code
+        d'une tabulation équivalente
+         à au moins **quatre espaces** :
 
         Ceci est un bloc de texte brut ;
 
@@ -878,9 +881,11 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
     ```
 === "Rendu"
     Pour produire un bloc de texte brut,
-     il suffit de faire un saut de ligne vide et
-      de précéder le code d'une tabulation      
-       équivalente à au moins quatre espaces :
+     il suffit de faire
+      un **saut de ligne**
+       et de précéder le code
+        d'une tabulation équivalente
+         à au moins **quatre espaces** :
 
         Ceci est un bloc de texte brut ;
 
@@ -901,7 +906,9 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 
 !!! attention "Si + de 4 espaces d'indentation après une ligne vide => c'est du texte brut !"
 ***
-### Bloc de code coloré, numéroté, surligné, annoté :
+### Bloc de code :
+
+#### Coloré :
 
 Une autre pratique pour produire des blocs de texte brut
  consiste à encadrer les lignes de code
@@ -947,10 +954,127 @@ Aussi, si on précise après le premier triplet le nom court
             return valeur
         ```
 !!! tip ""
-    La [liste des langages supportés](https://pygments.org/languages/) est plutôt exhaustive. Aussi il est pratique d'utiliser la barre de recherche pour trouver le nom court correspondant au langage souhaité...
+    La [liste des langages supportés](https://pygments.org/languages/){ target=_blank} est plutôt exhaustive. Aussi il est pratique d'utiliser la barre de recherche pour trouver le nom court correspondant au langage souhaité...
 
-??? info 
-    Pour permettre les fonctionnalités des [lignes et blocs de code](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) décrites ci-dessus,
+
+#### Numéroté, surligné :
+
+Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#options-sur-les-blocs-de-code){ target=_blank} pour faire cela en s'appuyant sur l'exemple de code utilisé dans la [référence mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers){ target=_blank} à ce sujet :
+
+!!! tip "Numérotation des lignes et marquage"
+    - Il suffit d'ajouter `linenums="1"` (ou un autre nombre) pour faire débuter la numérotation.
+    - Pour marquer des lignes en particulier, on utilise `hl_lines="<tranches et numéros>"`
+
+
+!!! example "Exemples"
+    === "Sans numérotation"
+        !!! note "Entrée"
+            ````markdown
+            ```python
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python
+            --8<--- "docs/scripts/exemple.py"
+            ```
+
+    === "Numérotation classique"
+        !!! note "Entrée"
+            ````markdown
+            ```python linenums="1"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python linenums="1"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+
+    === "Numérotation décalée"
+        !!! note "Entrée"
+            ````markdown
+            ```python linenums="42"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python linenums="42"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+
+    === "Marquage d'une ligne"
+        !!! note "Entrée"
+            ````markdown
+            ```python hl_lines="2"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python hl_lines="2"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+
+    === "Marquage d'une ligne, avec numérotation"
+        !!! note "Entrée"
+            ````markdown
+            ```python linenums="1" hl_lines="2"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python linenums="1" hl_lines="2"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+
+    === "Marquage de lignes éparses"
+        !!! note "Entrée"
+            ````markdown
+            ```python linenums="1" hl_lines="2 5"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python linenums="1" hl_lines="2 5"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+
+    === "Marquage d'une tranche"
+        !!! note "Entrée"
+            ````markdown
+            ```python linenums="1" hl_lines="2-4"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python linenums="1" hl_lines="2-4"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+
+    === "Marquage lignes et tranches"
+        !!! note "Entrée"
+            ````markdown
+            ```python linenums="1" hl_lines="1 2 3-3 5-5"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+            ````
+        
+        !!! done "Rendu"
+            ```python linenums="1" hl_lines="1 2 3-3 5-5"
+            --8<--- "docs/scripts/exemple.py"
+            ```
+??? faq "Annoté ? ..."
+    Cette [fonctionnalité](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#code-annotations){ target=_blank} est pour l'instant exclusivement réservée aux [insiders](https://squidfunk.github.io/mkdocs-material/insiders/){ target=_blank}...
+
+??? info
+    Pour permettre les fonctionnalités des [lignes et blocs de code](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/){ target=_blank} décrites ci-dessus,
      il faut activer dans le fichier `mkdocs.yml` les extensions :
 
     ```yaml
@@ -960,8 +1084,6 @@ Aussi, si on précise après le premier triplet le nom court
       - pymdownx.superfences
       - pymdownx.snippets    
     ```
-
-https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#options-sur-les-blocs-de-code
 ***
 ## Admonitions :
 ???+ warning inline end "Attention !"
@@ -972,7 +1094,7 @@ https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#options-sur-les-blocs-de-code
      vous voilà prévenu !!
 Une des grandes caractéristiques de MkDocs avec Material sont ces admonitions : ce sont des boites colorées d'avertissements, pour des alertes, mises en garde et autres appartés, qui viennent compléter le flux normal de l'information sur une page web pour illustrer ou souligner un point particulier, une difficulté...
 
-De base, il existe [12 styles de boites](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types) différentes définies par des noms de types. Si aucun de ces mots clés types n'est précisé, ou si le mot clé n'est pas reconnu, c'est le type `note` qui sera utilisé par défaut.
+De base, il existe [12 styles de boites](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types){ target=_blank} différentes définies par des noms de types. Si aucun de ces mots clés types n'est précisé, ou si le mot clé n'est pas reconnu, c'est le type `note` qui sera utilisé par défaut.
 === "note"
     === "Rendu"
         !!! note
@@ -1208,7 +1330,7 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
 
 ??? info 
 
-    Pour permettre les fonctionnalités des [boites d'avertissement](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) décrites ci-dessus,
+    Pour permettre les fonctionnalités des [boites d'avertissement](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){ target=_blank} décrites ci-dessus,
      il faut activer dans le fichier `mkdocs.yml` les extensions :
 
     ```yaml
@@ -1219,11 +1341,11 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
     ```
 ???+ tip "Des boites très personnalisées : ..."
 
-    Il est possible de choisir des [icones](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons)
-     personnalisés pour chaque type de boite d'avertissement.
-
-    On peut même [customiser](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#customization)
-     ses propres types de boites d'avertissement comme par exemple :
+    En attendant qu'il soit possible de choisir
+     des [icones](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons){ target=_blank}
+     personnalisés pour chaque type de boite d'avertissement,
+      on peut déjà [customiser](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#customization){ target=_blank}
+       ses propres types de boites d'avertissement comme par exemple :
     === "Rendu"
         !!! adn
             La boite très spéciale pour l'Atelier du numérique.

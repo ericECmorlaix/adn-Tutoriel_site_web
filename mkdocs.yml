@@ -51,14 +51,14 @@ theme:
 
     features: # https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
         - navigation.instant 
-        # - navigation.tracking
         - navigation.tabs # Menu de navigation horizontal sous l'en-tête sauf sur appareil mobile
         # - navigation.tabs.sticky # Menu de navigation horizontal collant
         # - navigation.sections
         # - navigation.expand
-        - navigation.top # 
-        - toc.integrate # Table of Content, table des matières intégrée dans la barre verticale de navigation
-        - header.autohide
+        - navigation.top # bouton pour remonter tout en haut de la page
+        - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
+        - header.autohide # masquage automatique de l'entête du site lorsque l'on descend dans la page        
+
 
 
 markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/

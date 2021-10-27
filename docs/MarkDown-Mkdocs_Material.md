@@ -1097,12 +1097,12 @@ Pour afficher dans un bloc de code
     === "MarkDown"
         ````md
         ```md
-        --8<--- "docs/index.md" 
+        --8<-- "docs/index.md" 
         ```
         ````
     === "Rendu"
         ```md
-        --8<--- "docs/index.md"
+        --8<-- "docs/index.md"
         ```
 ??? example "Exemple 2 : un fichier Python ..."
     Pour le fichier `exemple.py` du dossier `scripts/`
@@ -1110,13 +1110,25 @@ Pour afficher dans un bloc de code
     === "MarkDown"
         ````md
         ```py
-        --8<--- "docs/scripts/exemple.py" 
+        --8<-- "docs/scripts/exemple.py" 
         ```
         ````
     === "Rendu"
         ```py
-        --8<--- "docs/scripts/exemple.py"
+        --8<-- "docs/scripts/exemple.py"
         ```
+!!! note "Remarque :"
+    Si on intègre le contenu d'un fichier MarkDown
+     comme `index.md` en dehors d'un bloc de code :
+    === "MarkDown"
+        ```md
+        --8<-- "docs/index.md" 
+        ```        
+    === "Rendu"
+        --8<-- "docs/index.md"
+
+
+
 
 ??? info
     Pour permettre cette fonctionnalité d'intégration
@@ -1128,7 +1140,8 @@ Pour afficher dans un bloc de code
     markdown_extensions:
       - pymdownx.snippets    
     ```
-*** 
+***
+
 ## Citation :
 
 Pour créer un bloc de citation, il suffit d'ajouter un `>` devant un paragraphe.

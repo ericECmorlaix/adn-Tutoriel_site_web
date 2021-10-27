@@ -369,7 +369,7 @@
 
 
 ***
-## Liens :
+## Lien :
 === "Rendu"
     Le plus simple pour intégrer un lien hypertexte est de coller son adresse
      directement entre deux chevrons `<URL>` comme par exemple : <https://www.mkdocs.org/> ;
@@ -434,7 +434,7 @@
         [mon texte support](https://monlien.com "mon info-bulle"){target="_blank"}
         ```
 ***
-## Images :
+## Image :
 
 La syntaxe pour les images est la même que pour les liens hypertextes,
  mais avec un `!` devant :
@@ -682,7 +682,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
     : Images animées idéale pour illustrer vos propos, fortement utilisé sur les réseaux sociaux.
 
 ***
-## Traits horizontaux :
+## Trait horizontal :
 
 === "Rendu"
     Une série d'au moins trois `*`,
@@ -709,7 +709,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
 ***
 ## Listes :
 
-### Listes à puces :
+### Liste à puces :
 On commence par sauter une ligne, puis on place devant chaque item
       un caractère `-`, `+` ou `*`, suivi d'au moins d'un espace :
 
@@ -730,7 +730,7 @@ On commence par sauter une ligne, puis on place devant chaque item
         * Un autre élément de ma sous-liste ;
     + Encore un autre élément de ma liste.
 
-### Listes ordonnées :
+### Liste ordonnées :
 On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`,
  la numérotation se fait alors automatiquement indépendamment du nombre indiqué :
 === "MarkDown"
@@ -750,7 +750,7 @@ On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`
         72. Le second élément de ma sous-liste ;
     1024. Le troisième élément de ma liste.
 
-### Listes avec des cases à cocher :
+### Liste avec des cases à cocher :
 On insère `[ ]` ou `[x]` devant chaque item
  d'une liste non ordonnée :
 === "MarkDown"
@@ -780,7 +780,7 @@ On insère `[ ]` ou `[x]` devant chaque item
     ```
     
     
-### Listes de description :
+### Liste de description :
 Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins un espace :
 === "MarkDown"
     ```markdown
@@ -824,7 +824,7 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 
 !!! note ""
     Si le codage renferme déjà une apostrophe inversée
-     ( = un caractère d'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave){ target=_blank}),
+     ( backtick, [accent grave](https://fr.wikipedia.org/wiki/Accent_grave){ target=_blank}),
      on peut précéder et terminer la zone de code de deux fois ce caractère.  
     Dans ce cas, Markdown n’interprétera pas cette apostrophe inversée comme une balise.
 
@@ -840,7 +840,6 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 
     Après le premier `` ` ``, on place un [shebang](https://fr.wikipedia.org/wiki/Shebang){ target=_blank} `#!` (ou `:::`) suivi d'un [nom court](https://pygments.org/docs/lexers/#pygments.lexers.python.PythonLexer){ target=_blank} désignant le langage utilisé.  Aussi, ici on aurait pu se contenter du nom court `py` qui correspont à `python3` par défaut, ainsi le code ``:::md `:::py for lettre in "Bonjour" :` `` produit le même résultat : `:::py for lettre in "Bonjour" :`.
 
-    !!! note "Remarque :"
     ??? info
         Pour la coloration syntaxique du code en ligne, il faut activer dans le fichier `mkdocs.yml` les extensions : 
         
@@ -849,8 +848,6 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
           - pymdownx.highlight
           - pymdownx.inlinehilite         
         ```
-            
-
 
 ### Bloc de texte brut :
 === "MarkDown"
@@ -912,7 +909,7 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 
 Une autre pratique pour produire des blocs de texte brut
  consiste à encadrer les lignes de code
-  entre deux triplets d'apostrophes inversées (d'accent grave) ;
+  entre deux triplets d'apostrophes inversées (backtick, accent grave) ;
 
 Aussi, si on précise après le premier triplet le nom court
  du langage informatique correspondant au contenu des lignes de code,
@@ -959,7 +956,7 @@ Aussi, si on précise après le premier triplet le nom court
 
 #### Numéroté, surligné :
 
-Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#options-sur-les-blocs-de-code){ target=_blank} pour faire cela en s'appuyant sur l'exemple de code utilisé dans la [référence mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers){ target=_blank} à ce sujet :
+Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#options-sur-les-blocs-de-code){ target=_blank} pour faire cela. Il s'appuie sur l'exemple de code utilisé dans la [référence mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers){ target=_blank} à ce sujet :
 
 !!! tip "Numérotation des lignes et marquage"
     - Il suffit d'ajouter `linenums="1"` (ou un autre nombre) pour faire débuter la numérotation.
@@ -969,7 +966,7 @@ Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.
 !!! example "Exemples"
     === "Sans numérotation"
         !!! note "Entrée"
-            ````markdown
+            ````
             ```python
             --8<--- "docs/scripts/exemple.py"
             ```
@@ -1084,14 +1081,100 @@ Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.
       - pymdownx.superfences
       - pymdownx.snippets    
     ```
+#### Intégré :
+
+Pour afficher dans un bloc de code
+ le contenu du fichier `mkdocs.yml`
+  qui est situé à la racine du site on écrirait,
+   sans laisser d'espace après le nom du fichier :
+````md
+```yaml
+--8<-- "mkdocs.yml" 
+```
+````
+??? example "Exemple 1 : un fichier MarkDown ..."
+    Pour le fichier `index.md` du dossier `docs/` :
+    === "MarkDown"
+        ````md
+        ```md
+        --8<--- "docs/index.md" 
+        ```
+        ````
+    === "Rendu"
+        ```md
+        --8<--- "docs/index.md"
+        ```
+??? example "Exemple 2 : un fichier Python ..."
+    Pour le fichier `exemple.py` du dossier `scripts/`
+     inclu dans le dossier `docs/` :
+    === "MarkDown"
+        ````md
+        ```py
+        --8<--- "docs/scripts/exemple.py" 
+        ```
+        ````
+    === "Rendu"
+        ```py
+        --8<--- "docs/scripts/exemple.py"
+        ```
+
+??? info
+    Pour permettre cette fonctionnalité d'intégration
+     [de code externe](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#embedding-external-files){ target=_blank}
+      décrite ci-dessus,
+       il faut activer dans le fichier `mkdocs.yml` l'extension :
+
+    ```yaml
+    markdown_extensions:
+      - pymdownx.snippets    
+    ```
+*** 
+## Citation :
+
+Pour créer un bloc de citation, il suffit d'ajouter un `>` devant un paragraphe.
+
+Les blocs de citation peuvent s'imbriqués tels que par exemple :
+
+=== "MarkDown"
+    ```md
+    > Cette première ligne est incluse dans un bloc de citation.
+    >
+    > Cette seconde ligne l'est également.
+    >> Celle ci se situe dans un bloc de citation imbriqué...
+    ```
+=== "Rendu"
+    > Cette première ligne est incluse dans un bloc de citation.
+    >
+    > Cette seconde ligne l'est également.
+    >> Celle ci se situe dans un bloc de citation imbriqué...
+
+On peut utiliser les blocs de citation pour souligner un point, comme par exemple :
+=== "Rendu"
+    > :warning: &nbsp; **ATTENTION !**
+    >
+    > **Toto** est dans la place...
+    >
+    > *Ceci est une mise en garde, 
+    vous voilà prévenu !!*
+=== "MarkDown"
+    ```md
+    > :warning: &nbsp; **ATTENTION !**
+    >
+    > **Toto** est dans la place...
+    >
+    > *Ceci est une mise en garde, 
+    vous voilà prévenu !!*
+    ```
+Mais pour cela, MkDocs-Material offre bien mieux...
+
 ***
-## Admonitions :
-???+ warning inline end "Attention !"
+## Admonition :
+???+ warning inline end "ATTENTION !"
     
     **Toto** est dans la place...
 
-    Ceci est une mise en garde,
-     vous voilà prévenu !!
+    *Ceci est une mise en garde,
+     vous voilà prévenu !!*
 Une des grandes caractéristiques de MkDocs avec Material sont ces admonitions : ce sont des boites colorées d'avertissements, pour des alertes, mises en garde et autres appartés, qui viennent compléter le flux normal de l'information sur une page web pour illustrer ou souligner un point particulier, une difficulté...
 
 De base, il existe [12 styles de boites](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types){ target=_blank} différentes définies par des noms de types. Si aucun de ces mots clés types n'est précisé, ou si le mot clé n'est pas reconnu, c'est le type `note` qui sera utilisé par défaut.
@@ -1388,35 +1471,13 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
 ![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
 
 ***
+
+
+
+
 ## Volets :
 
 
-*** 
-## Citations et 
-
-> :warning: **If you are using mobile browser**: Be very careful here!
-
-| WARNING: be careful to baz the quux before initializing the retro encabulator! |
-| --- |
-
-
-> **⚠ WARNING: Aliens are coming.**  
-> A description of the colour, smell and dangerous behaviour of the aliens.
-
-
-
-A simple highlighted warning can be achieved like this:
-
->[!WARNING]
->This is a warning
-
-
-
-
-    
-
-    
-    
      
 
 
@@ -1519,7 +1580,10 @@ En dehors des structures de type code inline ou bloc de texte brut,
 ### Touches :
 
 ***
-## Tableaux :
+## Tableau :
+
+| WARNING: be careful to baz the quux before initializing the retro encabulator! |
+| --- |
 
 ***
 ## 
@@ -1527,6 +1591,8 @@ En dehors des structures de type code inline ou bloc de texte brut,
 ## Ressources :
 
 <https://www.jdbonjour.ch/cours/markdown-pandoc/>
+
+<http://pageperso.lif.univ-mrs.fr/~edouard.thiel/mkdocs-et/>
 
 <https://agea.github.io/tutorial.md/>
 
@@ -1541,5 +1607,7 @@ En dehors des structures de type code inline ou bloc de texte brut,
 <https://docs.microsoft.com/en-us/contribute/markdown-reference>
 
 <https://jupyterbook.org/content/myst.html> Markedly Structured Text
+
+
 ***
 

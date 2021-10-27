@@ -4,7 +4,8 @@ hide:
   - toc
 ---
 
-Ceci est un tutoriel pour déployer un site web depuis un dépôt git avec le framework material pour mkdocs en incluant, ou pas, des notebook jupyter...
+Ceci est un tutoriel pour déployer un site web depuis un dépôt git
+ avec le framework material pour mkdocs en incluant, ou pas, des notebook jupyter...
 
 ![building_websites](images/undraw_building_websites_i78t.svg){: align=right width=50%}
 

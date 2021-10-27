@@ -103,7 +103,7 @@
     <img src="https://upload.wikimedia.org/wikipedia/commons/4/48/Markdown-mark.svg" align="left" title="Logo du langage MarkDown" alt="Logo du langage MarkDown">
     
     <p>
-        <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" title="Page MarkDown sur Wikipedia"><strong>Markdown</strong></a>
+        <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank" title="Page Markdown sur Wikipedia"><strong>Markdown</strong></a>
         est un langage de description à balisage plus léger à coder que des balises HTML.
         <br>
         Son code est plus lisible dans l'éditeur,
@@ -112,7 +112,7 @@
 
     <blockquote>
         <p>
-            Cliquer sur les onglets ci-dessus pour comparer les codes <strong>Markdown</strong>
+            Cliquer sur les onglets ci-dessus pour comparer les codes <strong>MarkDown</strong>
             et <strong>HTML</strong> qui produisent ce même <strong>Rendu</strong>
         </p>
     </blockquote>
@@ -174,7 +174,7 @@
 
     <blockquote>
         <p>
-            Cliquer sur les onglets ci-dessus pour comparer les codes <strong>Markdown</strong>
+            Cliquer sur les onglets ci-dessus pour comparer les codes <strong>MarkDown</strong>
             et <strong>HTML</strong> qui produisent ce même <strong>Rendu</strong>
         </p>
     </blockquote>
@@ -356,16 +356,17 @@
 
     Il faut activer dans le fichier `mkdocs.yml` les extensions :
 
-    - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret) pour `^^souligné^^` ou mettre en `^exposant^`;
-    - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/) pour `==surligné==`;
-    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
-
     ```yaml
     markdown_extensions:
         - pymdownx.caret
         - pymdownx.mark
         - pymdownx.tilde
     ```
+
+    - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret) pour `^^souligné^^` ou mettre en `^exposant^`;
+    - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/) pour `==surligné==`;
+    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/) pour `~~barré~~` ou mettre en `~indice~`.
+
 
 ***
 ## Liens :
@@ -885,12 +886,7 @@ Ecrire du code en ligne avec coloration syntaxique `#!python [ for i in range(to
        On sort simplement de ce bloc de texte brut en revenant à une indentation inférieure à 4 espaces. 
 
 !!! attention "Si + de 4 espaces d'indentation après une ligne vide => c'est du texte brut !"
-
 ***
-## Toujours en construction...
-
-![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
-
 ### Coloration syntaxique :
 
 On peut également produire des blocs de texte brut
@@ -933,35 +929,8 @@ Aussi, si on précise après le premier triplet le langage
             return valeur
         ```
 
-
-
 ***
-## Volets :
-
-
-*** 
-## Citations et 
-
-> :warning: **If you are using mobile browser**: Be very careful here!
-
-| WARNING: be careful to baz the quux before initializing the retro encabulator! |
-| --- |
-
-
-> **⚠ WARNING: Aliens are coming.**  
-> A description of the colour, smell and dangerous behaviour of the aliens.
-
-
-
-A simple highlighted warning can be achieved like this:
-
->[!WARNING]
->This is a warning
-
-
-
-***
-### Admonitions :
+## Admonitions :
 ???+ warning inline end "Attention !"
     
     **Toto** est dans la place...
@@ -1145,57 +1114,156 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
         === "Rendu"
             ???+ example ""
                 Un exemple de boite déroulante
-                 sans titre.
+                 sans titre mais avec une barre.
         === "Mardown"
             ```markdown
             ???+ example ""
                 Un exemple de boite déroulante
-                sans titre.
+                sans titre mais avec une barre.
             ```
 
     
 ??? tip "Des boites "inline" : ..."
-    En indiquant `inline` ou `inline end` entre le mot clé du type et le titre personnalisé
     === "Rendu à gauche"
-        !!! note inline "Remarque :"
-            Une note avec
-             un titre
-              personnalisé.
+        !!! example inline "Exemple :"
+            Un exemple de boite
+            s'alignant à gauche.
+        En indiquant `inline` entre
+         le mot clé du type et le titre personnalisé,
+          cela modifie le comportement d'affichage de la boite
+           d'avertissement.
+        
+        Elle s'aligne à **gauche** en parallèle
+            du bloc de paragraphes qu'elle précède.
     === "Mardown à gauche"
         ```markdown
-        !!! note inline "Remarque :"
-            Une note avec
-             un titre
-              personnalisé.
+        !!! example inline "Exemple :"
+            Un exemple de boite
+            s'alignant à gauche.
+        En indiquant `inline` entre
+         le mot clé du type et le titre personnalisé,
+          cela modifie le comportement d'affichage de la boite
+           d'avertissement.
+        
+        Elle s'aligne à **gauche** en parallèle
+            du bloc de paragraphes qu'elle précède.
         ```    
     === "Rendu à droite"
-        !!! note inline end "Remarque :"
-            Une note avec
-             un titre
-              personnalisé.
+        !!! note inline end "Exemple :"
+            Un exemple de boite
+            s'alignant à droite.
+        En indiquant `inline end` entre
+         le mot clé du type et le titre personnalisé,
+          cela modifie le comportement d'affichage de la boite
+           d'avertissement.
+
+        Elle s'aligne à **droite** en parallèle
+            du bloc de paragraphes qu'elle précède.  
     === "Mardown à droite"
         ```markdown
-        !!! note inline "Remarque :"
-            Une note avec
-             un titre
-              personnalisé.
+        !!! example inline end "Exemple :"
+            Un exemple de boite
+            s'alignant à droite.
+        En indiquant `inline end` entre
+         le mot clé du type et le titre personnalisé,
+          cela modifie le comportement d'affichage de la boite
+           d'avertissement.
+
+        Elle s'aligne à **droite** en parallèle
+            du bloc de paragraphes qu'elle précède.
         ```
+
+??? info 
+
+    Pour permettre les fonctionnalités des [boites d'avertissement](https://squidfunk.github.io/mkdocs-material/reference/admonitions/) décrites ci-dessus,
+     il faut activer dans le fichier `mkdocs.yml` les extensions :
+
+    ```yaml
+    markdown_extensions:
+      - admonition              
+      - pymdownx.details        
+      - pymdownx.superfences    
+    ```
+???+ tip "Des boites très personnalisées : ..."
+
+    Il est possible de choisir des [icones](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons)
+     personnalisés pour chaque type de boite d'avertissement.
+
+    On peut même [customiser](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#customization)
+     ses propres types de boites d'avertissement comme par exemple :
+    === "Rendu"
+        !!! adn
+            La boite très spéciale pour l'Atelier du numérique.
+    === "Mardown"
+        ```markdown
+        !!! adn
+            La boite très spéciale pour l'Atelier du numérique.
+        ```
+    === "docs/stylesheets/extra.css"
+        ``` css
+        /*Ajout pour admonition spéciale adn */
+        :root {
+            --md-admonition-icon--adn: url('data:image/svg+xml;charset=utf-8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 576 512"><path d="m290.2,256c51.2-33.4 164.8-119.4 164.8-224.6 0-11.3-9.1-20.4-20.4-20.4-11.3,0-20.4,9.1-20.4,20.4 0,93.3-122.2,175.6-158.2,197.9-36.1-22.2-158.2-104.4-158.2-197.9-1.42109e-14-11.3-9.1-20.4-20.4-20.4-11.3,0-20.4,9.1-20.4,20.4 0,105.2 113.6,191.2 164.8,224.6-51.3,33.4-164.9,119.4-164.9,224.6-7.10543e-15,11.3 9.1,20.4 20.4,20.4 11.3,0 20.4-9.1 20.4-20.4 0-93.3 122.2-175.6 158.2-197.9 36.1,22.2 158.2,104.4 158.2,197.9 0,11.3 9.1,20.4 20.4,20.4 11.3,0 20.4-9.1 20.4-20.4 0.2-105.2-113.4-191.2-164.7-224.6z"/><path d="m177,51.8h158c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-158c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4z"/><path d="m211.7,113.3c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88.6c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-88.6v1.42109e-14z"/><path d="m335,460.2h-158c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h158c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4z"/><path d="m300.3,398.7c11.3,0 20.4-9.1 20.4-20.4 0-11.3-9.1-20.4-20.4-20.4h-88.6c-11.3,0-20.4,9.1-20.4,20.4 0,11.3 9.1,20.4 20.4,20.4h88.6z"/></svg>')
+        }
+        .md-typeset .admonition.adn,
+        .md-typeset details.adn {
+            border-color: rgb(233, 32, 99);
+        }
+        .md-typeset .adn > .admonition-title,
+        .md-typeset .adn > summary {
+            background-color: rgba(233, 32, 99, 0.1);
+            border-color: rgb(233, 32, 99);
+        }
+        .md-typeset .adn > .admonition-title::before,
+        .md-typeset .adn > summary::before {
+            background-color: rgb(233, 32, 99);
+            -webkit-mask-image: var(--md-admonition-icon--adn);
+                    mask-image: var(--md-admonition-icon--adn);
+        }
+        ```
+    === "mkdocs.yml"
+        ```yaml
+        extra_css:
+          - stylesheets/extra.css
+        ```
+
+***
+## Toujours en construction...
+
+![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
+
+***
+## Volets :
+
+
+*** 
+## Citations et 
+
+> :warning: **If you are using mobile browser**: Be very careful here!
+
+| WARNING: be careful to baz the quux before initializing the retro encabulator! |
+| --- |
+
+
+> **⚠ WARNING: Aliens are coming.**  
+> A description of the colour, smell and dangerous behaviour of the aliens.
+
+
+
+A simple highlighted warning can be achieved like this:
+
+>[!WARNING]
+>This is a warning
+
+
+
+
+    
+
     
     
+     
 
-
-!!! warning "Attention"
-    
-    **Toto** est dans la place !
-
-    Ceci est une mise en garde,
-     vous voilà prévenu !!
- 
-
-
-<https://squidfunk.github.io/mkdocs-material/reference/admonitions/>
-
-<https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#les-admonitions>
 
 
 ***
@@ -1206,7 +1274,7 @@ En dehors des structures de type code inline ou bloc de texte brut,
  il peut être nécessaire de mettre un caractère backslash `\` devant
   des caractères qui sinon sont interprétés en Markdown, HTML ou Latex.
 
-!!! example "Par exemple :"
+??? example "Par exemple : ..."
 
     === "avec \"
         

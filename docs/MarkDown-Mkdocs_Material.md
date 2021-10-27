@@ -822,7 +822,7 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
     que l'on peut obtenir par la combinaison
      de touches ++"AltGr"+"7"++ ou ++"Alt"+"96"++.
 
-!!! note "Remarque :"
+!!! note ""
     Si le codage renferme déjà une apostrophe inversée
      ( = un caractère d'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave)),
      on peut précéder et terminer la zone de code de deux fois ce caractère.  
@@ -835,7 +835,21 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
     === "Rendu"
         Exemple : ``Ceci est du `code`.``
 
-Ecrire du code en ligne avec coloration syntaxique `#!python [ for i in range(toto) if truc]` test 
+!!! tip ""    
+    La coloration syntaxique s'applique aussi sur du code en ligne, par exemple, `#!py for lettre in "Bonjour" :`, s'obtient en écrivant en markdown  ``#!md `#!python3 for lettre in "Bonjour" :` `` dans le flux du texte.
+
+    Après le premier `` ` ``, on place un [shebang](https://fr.wikipedia.org/wiki/Shebang) `#!` suivi d'un [nom court](https://pygments.org/docs/lexers/#pygments.lexers.python.PythonLexer) désignant le langage utilisé.  Aussi, ici on aurait pu se contenter d'écrire le nom court `py` qui correspont à `python3` par défaut.
+
+    ??? info
+        Pour la coloration syntaxique du code en ligne, il faut activer dans le fichier `mkdocs.yml` les extensions : 
+        
+        ```yaml
+        markdown_extensions:
+          - pymdownx.highlight
+          - pymdownx.inlinehilite         
+        ```
+            
+
 
 ### Bloc de texte brut :
 === "MarkDown"
@@ -887,30 +901,32 @@ Ecrire du code en ligne avec coloration syntaxique `#!python [ for i in range(to
 
 !!! attention "Si + de 4 espaces d'indentation après une ligne vide => c'est du texte brut !"
 ***
-### Coloration syntaxique :
+### Bloc de code coloré, numéroté, surligné, annoté :
 
-On peut également produire des blocs de texte brut
- en encadrant les lignes de code
+Une autre pratique pour produire des blocs de texte brut
+ consiste à encadrer les lignes de code
   entre deux triplets d'apostrophes inversées (d'accent grave) ;
 
-Aussi, si on précise après le premier triplet le langage
- de programmation correspondant au contenu des lignes de code,
- la coloration syntaxique idoine s'applique :
+Aussi, si on précise après le premier triplet le nom court
+ du langage informatique correspondant au contenu des lignes de code,
+  une coloration syntaxique idoine s'applique :
 
 !!! example "Exemple :"
 
-    === "MarkDown basique"
+    === "MarkDown sans langage"
         ````
         ```
         def ma_fonction(paramètres):
-            # bloc d'instructions (optionnel)
+            ''' docstring '''
+            # bloc d'instructions (optionnel)            
             return valeur
         ```
         ````
-    === "Rendu basique"
+    === "Rendu texte brut"
         ```
         def ma_fonction(paramètres):
-            # bloc d'instructions (optionnel)
+            ''' docstring '''
+            # bloc d'instructions (optionnel)            
             return valeur
         ```
     
@@ -918,17 +934,34 @@ Aussi, si on précise après le premier triplet le langage
         ````
         ``` python
         def ma_fonction(paramètres):
-            # bloc d'instructions (optionnel)
+            ''' docstring '''
+            # bloc d'instructions (optionnel)            
             return valeur
         ```
         ````
     === "Rendu avec coloration"
         ``` python
         def ma_fonction(paramètres):
-            # bloc d'instructions (optionnel)
+            ''' docstring '''
+            # bloc d'instructions (optionnel)            
             return valeur
         ```
+!!! tip ""
+    La [liste des langages supportés](https://pygments.org/languages/) est plutôt exhaustive. Aussi il est pratique d'utiliser la barre de recherche pour trouver le nom court correspondant au langage souhaité...
 
+??? info 
+    Pour permettre les fonctionnalités des [lignes et blocs de code](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/) décrites ci-dessus,
+     il faut activer dans le fichier `mkdocs.yml` les extensions :
+
+    ```yaml
+    markdown_extensions:
+      - pymdownx.highlight
+      - pymdownx.inlinehilite
+      - pymdownx.superfences
+      - pymdownx.snippets    
+    ```
+
+https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#options-sur-les-blocs-de-code
 ***
 ## Admonitions :
 ???+ warning inline end "Attention !"

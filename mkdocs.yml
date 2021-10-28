@@ -72,7 +72,7 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - admonition                    # Blocs colorés  !!! info "ma remarque"
     - toc: # Table des matières
         permalink: ⚓︎
-        toc_depth: 3
+        toc_depth: 4
     # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.details              #   qui peuvent se plier/déplier.
     - pymdownx.caret                # Passage ^^souligné^^ ou en ^exposant^.

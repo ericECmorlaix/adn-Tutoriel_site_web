@@ -56,6 +56,4 @@
         on utilise la syntaxe HTML : <code>&lt;!-- mon commentaire --&gt;</code>
     </p>  
 </blockquote>
-<!-- Ceci est un commentaire qui ne sera donc pas affiché
-Liste des liens pour l'introduction :
--->
+<!-- Ceci est un commentaire qui ne sera donc pas affiché -->

@@ -34,8 +34,8 @@ Mais c'est surtout le langage que nous utiliserons pour rédiger du texte enrich
 on utilise la syntaxe HTML : `<!-- mon commentaire -->`
 
 <!-- Ceci est un commentaire qui ne sera donc pas affiché
-Liste des liens pour l'introduction :
--->
+Liste des liens pour l'introduction : -->
+
 [1]: https://fr.wikipedia.org/wiki/Markdown "Page Markdown sur Wikipedia" 
 [GitHub]: https://guides.github.com/features/mastering-markdown/ "Guide MarkDown de GitHub"
 [Reddit]: https://www.reddit.com/wiki/markdown "Guide MarkDown de Reddit"

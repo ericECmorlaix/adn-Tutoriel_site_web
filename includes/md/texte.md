@@ -1,34 +1,24 @@
-On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
- du __texte__ avec **forte emphase** rendu en **Gras**,
-  du **_Texte_** à la fois en **gras** et en *italique*,
-   du `code source` rendu en caractères `monospaces`,
-    du ~~texte barré~~  rendu avec une ligne en travers du texte,
-     du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
-      On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
+=== "Rendu"
+    --8<-- "includes/md/texteIn.md"
+=== "MarkDown"
+    ```md
+    --8<-- "includes/md/texteIn.md"
+    ```
 
+??? tip "Astuces pour obtenir au clavier les caractères spéciaux comme `~` ou `` ` ``: ..." 
+    - Le [tilde](https://fr.wikipedia.org/wiki/Tilde){ target=_blank} s'obtient avec la combinaison de touches ++"AltGr"+"2"++ ou ++"Alt"+"126"++ ;
+    - L'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave){ target=_blank} s'obtient avec la combinaison de touches ++"AltGr"+"7"++ ou ++"Alt"+"96"++ 
 
+??? info 
+    Il faut activer dans le fichier `mkdocs.yml` les extensions :
 
-En regardant le code
-qui produit cette phrase,
-vous remarquerez que
-même
-si
-on
-fait 
-des
-retours
-à
-la
-ligne
-dans
-le
-code,
-le texte                s'affiche              sans rupture
-dans un seul            et                  même paragraphe
-et les espaces      laissés en trop         sont supprimés...
+    ```yaml
+    markdown_extensions:
+        - pymdownx.caret
+        - pymdownx.mark
+        - pymdownx.tilde
+    ```
 
-Pour former des paragraphes séparés, il faut laisser une ligne vide entre eux.
-
-Pour forcer le retour à la ligne dans un paragraphe,  
-il faut ajouter deux espaces à la fin d'une ligne  
-avant de faire un retour à la ligne...
+    - [pymdownx.caret](https://facelessuser.github.io/pymdown-extensions/extensions/caret){ target=_blank} pour `^^souligné^^` ou mettre en `^exposant^`;
+    - [pymdownx.mark](https://facelessuser.github.io/pymdown-extensions/extensions/mark/){ target=_blank} pour `==surligné==`;
+    - [pymdownx.tilde](https://facelessuser.github.io/pymdown-extensions/extensions/tilde/){ target=_blank} pour `~~barré~~` ou mettre en `~indice~`.

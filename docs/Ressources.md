@@ -1,4 +1,4 @@
---8<-- "includes/md/abbLinkRef.md"
+--8<-- "includes/md/abr_ref.md"
 
 - Documentation officielle de [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){ target="_blank"}
 

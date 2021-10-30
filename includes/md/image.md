@@ -12,7 +12,7 @@ Il est important de bien choisir le [texte alternatif](http://www.pompage.net/tr
 
 L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié en cheminant dans l'arborescence du site web...
 
-???+ example "Exemple :"
+??? example "Exemple :"
 
     === "chemin relatif"
         ```md

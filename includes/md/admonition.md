@@ -211,7 +211,7 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
             du bloc de paragraphes qu'elle précède.
         ```    
     === "Rendu à droite"
-        !!! note inline end "Exemple :"
+        !!! example inline end "Exemple :"
             Un exemple de boite
             s'alignant à droite.
         En indiquant `inline end` entre
@@ -235,18 +235,8 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
             du bloc de paragraphes qu'elle précède.
         ```
 
-??? info 
 
-    Pour permettre les fonctionnalités des [boites d'avertissement](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){ target=_blank} décrites ci-dessus,
-     il faut activer dans le fichier `mkdocs.yml` les extensions :
-
-    ```yaml
-    markdown_extensions:
-      - admonition              
-      - pymdownx.details        
-      - pymdownx.superfences    
-    ```
-???+ tip "Des boites très personnalisées : ..."
+??? tip "Des boites très personnalisées : ..."
 
     En attendant qu'il soit possible de choisir
      des [icones](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons){ target=_blank}
@@ -288,7 +278,19 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
         extra_css:
           - stylesheets/extra.css
         ```
-???+ cite "Une explication en vidéo par Fred LELEU :"
+??? info 
+
+    Pour permettre les fonctionnalités des [boites d'avertissement](https://squidfunk.github.io/mkdocs-material/reference/admonitions/){ target=_blank} décrites ci-dessus,
+     il faut activer dans le fichier `mkdocs.yml` les extensions :
+
+    ```yaml
+    markdown_extensions:
+      - admonition              
+      - pymdownx.details        
+      - pymdownx.superfences    
+    ```
+
+??? cite "Une explication en vidéo par Fred LELEU :"
     <figure>    
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZYJ_rFBlEXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         <br>

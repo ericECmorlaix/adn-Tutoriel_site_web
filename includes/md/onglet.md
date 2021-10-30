@@ -7,8 +7,23 @@ On quitte l'onglet en revenant à l'indentation de base. On peut alors en commen
 On peut aussi imbriquer des onglets les uns dans les autres...
 
 
-!!! example "Exemple :"
-<!-- ===  "Rendu"
+??? example "Exemple : ..."
+    === "Rendu :"
+        --8<-- "includes/md/ongletIn.md"
+    === "Markdown :"
+        ```md
+        --8<-- "includes/md/ongletIn.md"
+        ```
+    ??? "Code MarkDown de cet exemple : ..."
+        ````md
+        === "Rendu :"
+            --8<-- "includes/md/ongletIn.md"
+        === "Markdown :"
+            ```md
+            --8<-- "includes/md/ongletIn.md"
+            ```
+        ````
+
 
 === "MarDown"
 

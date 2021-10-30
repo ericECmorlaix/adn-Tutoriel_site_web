@@ -18,7 +18,7 @@ avec la syntaxe `:::md [texte][référence]` ou encore tout simplement `:::md  [
 Cette solution offre aussi l'avantage de pouvoir partager la même adresse
 par plusieurs liens en ne la définissant qu’une fois dans le document.
 
-???+ example "Pour exemple :"
+??? example "Pour exemple :"
     
      Le code MarkDown du paragraphe d'[introduction](./#introduction)
      comporte de nombreux liens de ce type,

@@ -59,116 +59,25 @@
 --8<-- "includes/md/inclusion.md"
 
 ***
+## Tableau :
+--8<-- "includes/md/tableau.md"
+
+***
 ## Toujours en construction...
 
 ![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
 
 ***
-
 ## Caractères spéciaux :
-### Echappement :
-
-En dehors des structures de type code inline ou bloc de texte brut,
- il peut être nécessaire de mettre un caractère backslash `\` devant
-  des caractères qui sinon sont interprétés en Markdown, HTML ou Latex.
-
-??? example "Par exemple : ..."
-
-    === "avec \"
-        
-        *Code :*
-
-        ```markdown
-        \#### Usage de l'antislash \\ :
-
-        1\. \`code`  
-        5\. <@\>  
-        3\. !\[image](url "info"){ heigt=30 align=left}  
-            
-        \> \~\~barré~~, 
-        \^\^souligné^^,
-        \==surligné==, ...
-
-        \- \__MarkDown__ ;  
-        \+ <em\>HTML<em\> ;  
-        \* \$\LaTeX$ ;
-        ```
-        
-        *Rendu :*
-    
-        \#### Usage de l'antislash \\ :
-
-        1\. \`code`  
-        5\. <@\>  
-        3\. !\[image](url "info"){ heigt=30 align=left}  
-            
-        \> \~\~barré~~, 
-        \^\^souligné^^,
-        \==surligné==, ...
-
-        \- \__MarkDown__ ;  
-        \+ <em\>HTML<em\> ;  
-        \* \$\LaTeX$ ;
-
-    === "sans \"
-
-        *Code :*
-
-        ```markdown
-        #### Usage de l'antislash \ :
-
-        1. `code`  
-        5. <@>  
-        3. ![image](url "info"){ heigt=30 align=left}
-
-        > ~~barré~~,
-        ^^souligné^^,
-        ==surligné==, ...
-
-        - __MarkDown__  
-        + <em>HTML<em>  
-        * $\LaTeX$  
-        ```
-
-        *Rendu :*
-
-        #### Usage de l'antislash \ :
-
-        1. `code`  
-        5. <@>  
-        3. ![image](url "info"){ heigt=30 align=left}
-
-        > ~~barré~~,
-        ^^souligné^^,
-        ==surligné==, ...
-
-        - __MarkDown__  
-        + <em>HTML<em>  
-        * $\LaTeX$  
-
-
-    
-
-
-
-
-
-
-
-### Icônes - Emojis :
-
-<https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#icons-emojis>
-
-### Touches :
+--8<-- "includes/md/caracteres.md"
 
 ***
-## Tableau :
+## Boutons :
 
-| WARNING: be careful to baz the quux before initializing the retro encabulator! |
-| --- |
+<https://squidfunk.github.io/mkdocs-material/reference/buttons/#buttons>
 
-***
-## 
+<https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#les-boutons>
+
 ***
 ## Ressources :
 

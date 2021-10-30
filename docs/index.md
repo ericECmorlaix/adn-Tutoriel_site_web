@@ -10,7 +10,7 @@ Ceci est un tutoriel pour déployer un site web depuis un dépôt git
 ![building_websites](images/undraw_building_websites_i78t.svg){: align=right width=50%}
 
 
-???+ adn_cogs "Créer, déployer puis maintenir son site :"
+???+ adn "Créer, déployer puis maintenir son site :"
 
     1. [Premiers pas depuis un navigateur web](./PremiersPas) ;
 
@@ -19,7 +19,7 @@ Ceci est un tutoriel pour déployer un site web depuis un dépôt git
     3. [Et même sur un iPad en ligne de commande](./iPad.md) ;
 
 
-???+ adn_code "Coder pour générer ses pages web  :"
+???+ adn "Coder pour générer ses pages web  :"
 
     1. [Le MarkDown de Mkdocs Material](./MarkDown-Mkdocs_Material.md) ;
 

@@ -1,3 +1,5 @@
+
+
 ## Introduction :
 === "Rendu MarkDown"
     --8<-- "includes/md/introductionM.md"
@@ -45,8 +47,16 @@
 --8<-- "includes/md/admonition.md"
 
 ***
+## Onglet :
+--8<-- "includes/md/onglet.md"
+
+***
 ## Codes :
 --8<-- "includes/md/code.md"
+
+***
+## Inclusion :
+--8<-- "includes/md/inclusion.md"
 
 ***
 ## Toujours en construction...
@@ -54,27 +64,7 @@
 ![Illustration par unDrawn de la construction d'un mur](../images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
 
 ***
-## Inclusion :
 
-!!! faq "Quid : si on intègre le contenu d'un fichier MarkDown
-     comme `index.md` en dehors d'un bloc de code ?"
-    
-    === "MarkDown"
-        ```md
-        --8<-- "docs/index.md" 
-        ```        
-    === "Rendu"
-        --8<-- "docs/index.md"
-
-***
-## Volets :
-
-
-     
-
-
-
-***
 ## Caractères spéciaux :
 ### Echappement :
 
@@ -203,7 +193,8 @@ En dehors des structures de type code inline ou bloc de texte brut,
 
 ***
 
+--8<-- "includes/md/abr_ref.md"
 
 
 
-[2]: https://fr.wikipedia.org/wiki/Police_d%27%C3%A9criture_%C3%A0_chasse_fixe "Police d'écriture à chasse fixe"
+

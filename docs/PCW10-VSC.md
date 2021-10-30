@@ -1,4 +1,3 @@
-
 Vous disposez maintenant d'un site web généré avec le framework MkDocs et le thème Material qui est publié sur un de vos dépots GitHub.
 
 Ceci est un tutoriel complémentaire pour développer et maintenir votre site depuis votre PC Windows 10 avec l'éditeur Visual Studio Code.

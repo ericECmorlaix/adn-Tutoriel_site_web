@@ -1,9 +1,4 @@
-???+ warning inline end "ATTENTION !"
-    
-    **Toto** est dans la place...
-
-    *Ceci est une mise en garde,
-     vous voilà prévenu !!*
+--8<-- "includes/md/totoAlerte.md"
 Une caractéristique remarquable de MkDocs avec Material sont ces admonitions : ce sont des boites colorées d'avertissements, pour des alertes, mises en garde et autres appartés, qui viennent compléter le flux normal de l'information sur une page web de documentation pour illustrer ou souligner un point particulier, une difficulté...
 
 De base, il existe [12 styles de boites](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#supported-types){ target=_blank} différentes définies par des noms de types. Si aucun de ces mots clés types n'est précisé, ou si le mot clé n'est pas reconnu, c'est le type `note` qui sera utilisé par défaut.
@@ -293,3 +288,11 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
         extra_css:
           - stylesheets/extra.css
         ```
+???+ cite "Une explication en vidéo par Fred LELEU :"
+    <figure>    
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/ZYJ_rFBlEXs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <figcaption markdown> [Les vidéos de Fred LELEU]{ target="_blank"}</figcaption>
+        <br>
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/5beP0ujH48c" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </figure>

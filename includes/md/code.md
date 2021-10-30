@@ -267,17 +267,25 @@ Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.
     ```
 
 #### Intégré :
-
+!!! bug inline end "Ne pas copier/coller"
+    le code ci-contre
+    sans enlever l'espace laissé volontairement
+    après le nom du fichier.
+    
+    C'est un caractère d'échappement
+    qui évite l'intégration effective
+     du code contenu dans le fichier
+      `:::md mkdocs.yml` ici :wink:
 Pour afficher dans un bloc de code
  le contenu du fichier `mkdocs.yml`
-  qui est situé à la racine du dépôt on écrirait,
-   mais sans laisser, donc pas comme ici :wink:,
-    d'espace après le nom du fichier :
+  qui est situé à la racine du dépôt on écrirait :   
 ````md
 ```yaml
 --8<-- "mkdocs.yml" 
 ```
 ````
+
+
 ```console
 ├── docs/
 │   └── images/

@@ -104,8 +104,15 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         ```markdown
         ![polaroïd](../images/undraw_Polaroid.svg){width=20% align=right}
         ```
-        placé au début du texte de ce paragraphe, produit l'affichage de l'image tel que ci-contre.
+        placé au début du texte de ce paragraphe, produit l'affichage de l'image tel que ci-contre.        
         ````
+    ??? cite "Une explication en vidéo par Fred LELEU :"
+        <figure>    
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/L5S8qjyG6xM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <br>
+            <figcaption markdown> [Les vidéos de Fred LELEU]{ target="_blank"}</figcaption>
+            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oHN-qfeS7bk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </figure>
 ??? tip "Une image cliquable, support d'un lien  :"
 
     Il suffit de remplacer le texte support d'un lien hypertexte par le code MarDown d'une image tel que :
@@ -167,6 +174,13 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
                 </figure>
                                 
             Ce décalage n'apparait pas pour une largeur indiquée [en *px* ou en *em*](https://www.codeur.com/tuto/css/unite-de-mesure-taille-px-em-rem/){target="_blank"}.
+
+        ??? cite "Une explication en vidéo par Fred LELEU :"
+            <figure>    
+                <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/rcAelt5wcUU" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <br>
+                <figcaption markdown> [Les vidéos de Fred LELEU]{ target="_blank"}</figcaption>
+            </figure>                
 
     ??? example "Solution 2 : un code MarkDown..."
         L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"} 

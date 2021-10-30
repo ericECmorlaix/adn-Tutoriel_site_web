@@ -1,6 +1,6 @@
 # Informations du site 
 site_name: ADN - Tutoriel site web
-site_description: Tutoriel créer et gérer un site web depuis un dépôt git avec le framework material pour mkdocs et des notebook jupyter
+site_description: Tutoriel pour créer et gérer un site web depuis un dépôt git avec le framework material pour mkdocs et des notebook jupyter
 site_author: "Eric MADEC" 
 copyright: Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a> &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a> <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
 site_url: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/
@@ -89,7 +89,7 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
         separator: "\uff0b"
     - pymdownx.emoji:               # Émojis  :boom:
-        emoji_index:     !!python/name:materialx.emoji.twemoji
+        emoji_index: !!python/name:materialx.emoji.twemoji
         emoji_generator: !!python/name:materialx.emoji.to_svg
     - pymdownx.arithmatex:  # Formules en LaTeX 
         generic: true

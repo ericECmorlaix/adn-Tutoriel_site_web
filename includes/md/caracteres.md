@@ -5,7 +5,7 @@ Puisque MarkDown interprète quatre espaces laissés au début d'une ligne de te
  comme une intention de généré l'affichage d'un bloc de code
  et supprime automatiquement les espaces supplémentaires laissés vide,
   une solution pour en introduire malgré tout est d'utiliser
-  l'[entité HTML](https://developer.mozilla.org/fr/docs/Glossary/Entity) `&nbsp;`
+  l'[entité HTML](https://developer.mozilla.org/fr/docs/Glossary/Entity){ target=_blank} `&nbsp;`
    correspondante à un espace insécable (`&NonBreakingSpace;`).
 
 === "MarkDown"
@@ -24,7 +24,7 @@ Puisque MarkDown interprète quatre espaces laissés au début d'une ligne de te
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&excl;&hyphen;&hyphen; ceci est&mldr;
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mldr;un faux commentaire &hyphen;&hyphen;&gt;
 
-De la même façon tout autre [symbole ou entité HTML](https://dev.w3.org/html5/html-author/charref) peut être introduit ainsi
+De la même façon tout autre [symbole ou entité HTML](https://dev.w3.org/html5/html-author/charref){ target=_blank} peut être introduit ainsi
 au milieu du code MarkDown.
 
 ### Icônes - Emojis :
@@ -51,7 +51,7 @@ En dehors des structures de type code inline ou bloc de texte brut,
         *Code :*
 
         ```markdown
-        \#### Usage de l'antislash \\ :
+        \##### Usage de l'antislash \\ :
 
         1\. \`code`  
         5\. <@\>  
@@ -68,7 +68,7 @@ En dehors des structures de type code inline ou bloc de texte brut,
         
         *Rendu :*
     
-        \#### Usage de l'antislash \\ :
+        \##### Usage de l'antislash \\ :
 
         1\. \`code`  
         5\. <@\>  
@@ -87,7 +87,7 @@ En dehors des structures de type code inline ou bloc de texte brut,
         *Code :*
 
         ```markdown
-        #### Usage de l'antislash \ :
+        ##### Usage de l'antislash \ :
 
         1. `code`  
         5. <@>  
@@ -104,7 +104,7 @@ En dehors des structures de type code inline ou bloc de texte brut,
 
         *Rendu :*
 
-        #### Usage de l'antislash \ :
+        ##### Usage de l'antislash \ :
 
         1. `code`  
         5. <@>  

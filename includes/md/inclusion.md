@@ -64,8 +64,8 @@
 
     C'est le cas ici du contenu du fichier `:::md introductionM.md`
     qui est appelé deux fois dans la partie `:::md ## Introduction :`,
-    et également dans le fichier `:::md lien.md`
-    qui est lui même intégré dans la partie `:::md ## Lien :`.
+    et également dans le fichier `:::md lien.md`,
+    qui est lui même intégré plus loin dans la partie `:::md ## Lien :`.
 
     Au total, on retrouve trois fois le contenu du paragraphe d'introduction MarkDown
     dans cette page et s'il faut y apporter une modification,
@@ -95,7 +95,7 @@
             --8<-- 
             ```
 
-        === "Code généré"
+        === "Code MarkDown généré"
             ```md
             --8<--
             includes/md/loremIpsum.md
@@ -127,6 +127,11 @@
 
             includes/md/loremIpsum.md
             --8<--
+        !!! note "Remarque :"
+            [Snippets]{ target=_blank} concatène (agrège)
+             tout le code contenu dans les fichiers à inclure,
+              il peut donc être nécessaire d'insérer des sauts de lignes
+               et/ou des indentations entre les extraits inclus.
 
     ??? tip "Un fichier unique de références hypertextes et d'abréviations : ..."
         L'extension [Snippets]{ target=_blank} permet ainsi
@@ -172,11 +177,11 @@
     Pour un affichage plus basique en texte brut,
      il suffit d'indenter de 4 espaces à gauche avant les ciseaux  `:::md --8<--` :
 
-    === "MarkDown avec inclusions"
+    === "MarkDown avec inclusion"
         ```md
             --8<-- "includes/py/exemple.py" 
         ```        
-    === "Code généré"
+    === "Code MarkDown généré"
         ```md
             --8<-- "includes/py/exemple.py"
         ```
@@ -188,7 +193,7 @@
     Voici donc une autre façon d'intégrer une image SVG
     mais sans la gestion ici de la taille d'affichage :
 
-    === "MarkDown avec inclusions"
+    === "MarkDown avec inclusion"
         ```md
         <figure markdown>
             --8<-- "docs/images/undraw_Polaroid.svg" 
@@ -198,7 +203,7 @@
         </figure>
         ```
 
-    === "Code généré"
+    === "Code MarkDown généré"
         ```md
         <figure markdown>
             --8<-- "docs/images/undraw_Polaroid.svg"
@@ -214,3 +219,12 @@
                 Un Polaroïd selon [unDraw]{target="_blank"}
             </figcaption>
         </figure>
+
+!!! summary ""
+En conclusion, quelque soit l'extension du fichier inclu, MkDocs-Material avec l'extension [Snippets]{ target=_blank} va parser (analyser, chercher à interpréter) le code contenu comme s'il s'agissait d'un fichier `.md`.
+
+S'il rencontre des caractères de balisage assimilable à **MarkDown**, <em>HTML</em> ou $\LaTeX$, il va les convertir pour générer le code HTML final destiné au navigateur.
+
+Lors de la construction du site, MkDocs convertit chacun des fichiers `truc.md` qui se trouve dans le dossier `docs` en créant un dossier nommé `truc` contenant une copie du fichier `truc.md` et un fichier `index.html` généré à partir du code MarkDown de `truc.md` pour permettre son bon affichage dans un navigateur.  
+De même avec l'extension [mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter){ target=_blank} pour les fichiers en `.py` et `.ipynb`.  
+En conséquence, il est préférable de placer tous les fichiers d'extraits à inclure à l'extérieur du dossier `docs` par exemple dans un dossier nommé `includes`.

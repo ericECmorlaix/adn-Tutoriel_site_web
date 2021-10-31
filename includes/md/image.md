@@ -236,7 +236,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         }
         ```
 
-        Pour notre exemple, une synthaxe possible serait,
+        Pour notre exemple, une syntaxe possible serait,
          sans oublier d'inscrire `markdown` dans les balises HTML qui contiendront du MarkDown :
 
         === "Code"

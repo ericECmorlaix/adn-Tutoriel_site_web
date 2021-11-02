@@ -132,7 +132,25 @@
              tout le code contenu dans les fichiers à inclure,
               il peut donc être nécessaire d'insérer des sauts de lignes
                et/ou des indentations entre les extraits inclus.
+    ??? faq "Le fonctionnement de [Snippets]{ target=_blank} est-il récursif ? :thinking:" 
+        
+        Si comme moi vous êtes joueur, vous brulez d'envie de l'expérimenter
+         pour le vérifier par vous même...  :wink:, sinon :
+        === "divulgachage n°1 :"
+            La réponse se trouve [là](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#overview)&mldr; :face_with_monocle: :monocle_face:
+        === "divulgachage n°2 :"
+            Oui, c'est récursif au sens ou un `fichier_a.md`
+             peut inclure un `fichier_b.md` qui lui même
+              inclut un autre `fichier_c.md` et ainsi de suite... :smirk:
+        === "divulgachage n°3 :"
+            Non, ce n'est pas vraiment récursif car le `fichier_b.md`
+            ne peut pas s'inclure lui même, ni être inclus dans le `fichier_c` qu'il inclut déjà.  
+            Dès que [Snippets] rencontre une nouvelle fois un même fichier,
+            dans la pile d'appels, le processus d'inclusion s'arrête par sécurité
+             pour éviter une boucle infinie... :confused:
 
+
+    
     ??? tip "Un fichier unique de références hypertextes et d'abréviations : ..."
         L'extension [Snippets]{ target=_blank} permet ainsi
         de créer facilement un fichier commun de références

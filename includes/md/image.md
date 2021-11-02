@@ -10,15 +10,21 @@ Il est important de bien choisir le [texte alternatif](http://www.pompage.net/tr
  car il permet aussi l'accessibilité pour les non-voyants
   et apporte de la sémantique pour les moteurs de recherche...
 
-L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié en cheminant dans l'arborescence du site web...
+L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié en cheminant dans l'arborescence du site web, sachant que le dossier `docs` du projet MkDocs (cf. [branche `main` du dépot GitHub](https://github.com/ericECmorlaix/adn-Tutoriel_site_web/tree/main){target="_blank"}) devient la racine du `site` une fois déployé (cf. [branche `gh-pages`du dépot GitHub](https://github.com/ericECmorlaix/adn-Tutoriel_site_web/tree/gh-pages){target="_blank"}) :
 
 ??? example "Exemple :"
 
-    === "chemin relatif"
+    === "chemin relatif à la page"
         ```md
         ![Illustration d'une photo instantané](../images/undraw_Polaroid.svg "image via URL relative")
         ```
         ![Illustration d'une photo instantané](../images/undraw_Polaroid.svg "image via URL relative")
+
+    === "chemin relatif à la racine"
+        ```md
+        ![Illustration d'une photo instantané](/images/undraw_Polaroid.svg "image via URL relative")
+        ```
+        ![Illustration d'une photo instantané](/images/undraw_Polaroid.svg "image via URL relative")
 
     === "chemin absolu"
         ```md
@@ -33,14 +39,14 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         ![polaroïd]
 
         <!-- Une seule et même référence pour le lien et l'image, une référence plusieurs fois réutilisable dans ce document... -->
-        [polaroïd]: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_Polaroid.svg "Illustration d'une photo instantané"
+        [polaroïd]: /images/undraw_Polaroid.svg "Illustration d'une photo instantané"
         ```
         Ce qui permet d'ajouter facilement un [lien pour ouvrir cette image][polaroïd]{ target="_blank"} dans un nouvel onglet...
         
         ![polaroïd]
         
         <!-- Une seule et même référence pour le lien et l'image, une référence plusieurs fois réutilisable dans ce document... -->
-        [polaroïd]: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_Polaroid.svg "Illustration d'une photo instantané"
+        [polaroïd]: /images/undraw_Polaroid.svg "Illustration d'une photo instantané"
 
     Ici le fichier de l'image est placé dans un dossier nommé `images` lui même situé dans le dossier `docs` :
     ```console
@@ -53,7 +59,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
     ```
     Une fois déployé ce dossier `images` sera à la racine du site :
     ```console  
-    └── site
+    └── site/
         ├── images/
         │   └── undraw_Polaroid.svg
         ├── MarkDown-Mkdocs_Material/
@@ -68,17 +74,31 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
       générée à partir du fichier `MarkDown-Mkdocs_Material.md`
        sera `../images/undraw_Polaroid.svg`
         car il faut sortir du dossier `MarkDown-Mkdocs_Material`
-         pour pouvoir rentrer dans le dossier `images`.
-    
-    !!! note "Remarque :"
+         pour pouvoir rentrer dans le dossier `images`.  
+        
+    !!! note "Remarque 1 :"
         Un chemin relatif vers cette même image depuis la page web `index.html`
         située à la racine du site et
          générée à partir du fichier `index.md`
-          serait `./images/undraw_Polaroid.svg`...
+          serait `./images/undraw_Polaroid.svg`.
     
+    !!! note "Remarque 2 :"
+        Un chemin relatif depuis la racine du site web 
+        vers cette même image serait `/images/undraw_Polaroid.svg`.
+        
+        **Un tel chemin est très pratique** :
+        il fonctionne aussi bien depuis la page web `index.html`
+        située à la racine du site que depuis la page web `index.html`
+        située dans le dossier `MarkDown-Mkdocs_Material`
+         car, définit à partir de la racine,
+        il est commun à toutes les pages du site.
 
+        ??? cite "Une vidéo simple, claire et calme, à ce sujet : ..."
 
+            &ldquo;Remember that, as far as mkdocs in concerned, the docs folder is considered to be the root folder&rdquo;
 
+            [https://calmcode.io/mkdocs/hosting-images.html](https://calmcode.io/mkdocs/hosting-images.html){ target=_blank}
+    
 ??? tip "Pour gérer l'alignement et la taille d'une image :"
 
     L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"} 

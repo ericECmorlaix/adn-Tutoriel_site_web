@@ -19,13 +19,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         ![Illustration d'une photo instantané](../images/undraw_Polaroid.svg "image via URL relative")
         ```
         ![Illustration d'une photo instantané](../images/undraw_Polaroid.svg "image via URL relative")
-
-    === "chemin relatif à la racine"
-        ```md
-        ![Illustration d'une photo instantané](/images/undraw_Polaroid.svg "image via URL relative")
-        ```
-        ![Illustration d'une photo instantané](/images/undraw_Polaroid.svg "image via URL relative")
-
+    
     === "chemin absolu"
         ```md
         ![Illustration d'une photo instantané](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_Polaroid.svg "image via URL absolue")
@@ -39,14 +33,20 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         ![polaroïd]
 
         <!-- Une seule et même référence pour le lien et l'image, une référence plusieurs fois réutilisable dans ce document... -->
-        [polaroïd]: /images/undraw_Polaroid.svg "Illustration d'une photo instantané"
+        [polaroïd]: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_Polaroid.svg "Illustration d'une photo instantané"
         ```
         Ce qui permet d'ajouter facilement un [lien pour ouvrir cette image][polaroïd]{ target="_blank"} dans un nouvel onglet...
         
         ![polaroïd]
         
         <!-- Une seule et même référence pour le lien et l'image, une référence plusieurs fois réutilisable dans ce document... -->
-        [polaroïd]: /images/undraw_Polaroid.svg "Illustration d'une photo instantané"
+        [polaroïd]: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_Polaroid.svg "Illustration d'une photo instantané"
+
+    <!-- === "chemin relatif à la racine"
+        ```md
+        ![Illustration d'une photo instantané](/images/undraw_Polaroid.svg "image via URL relative")
+        ```
+        ![Illustration d'une photo instantané](/images/undraw_Polaroid.svg "image via URL relative") -->
 
     Ici le fichier de l'image est placé dans un dossier nommé `images` lui même situé dans le dossier `docs` :
     ```console
@@ -81,7 +81,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
         située à la racine du site et
          générée à partir du fichier `index.md`
           serait `./images/undraw_Polaroid.svg`.
-    
+<!--
     !!! note "Remarque 2 :"
         Un chemin relatif depuis la racine du site web 
         vers cette même image serait `/images/undraw_Polaroid.svg`.
@@ -98,7 +98,7 @@ L'adresse est l'URL relative ou absolue qui permet d'atteindre le fichier lié e
             &ldquo;Remember that, as far as mkdocs in concerned, the docs folder is considered to be the root folder&rdquo;
 
             [https://calmcode.io/mkdocs/hosting-images.html](https://calmcode.io/mkdocs/hosting-images.html){ target=_blank}
-    
+-->
 ??? tip "Pour gérer l'alignement et la taille d'une image :"
 
     L'extension [attr_list](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#attribute-lists){target="_blank"} 

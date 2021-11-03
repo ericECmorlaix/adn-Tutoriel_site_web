@@ -6,8 +6,6 @@ On peut obtenir du _texte_ avec *simple emphase* rendu en *italique*,
      du ^^texte souligné^^  rendu avec une ligne en dessous du texte.
       On peut aussi mettre en ~indice~ ou en ^exposant^ et même ==surligné==.
 
-
-
 En regardant le code
 qui produit cette phrase,
 vous remarquerez que

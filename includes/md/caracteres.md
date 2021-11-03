@@ -29,13 +29,15 @@ au milieu du code MarkDown.
 
 ### Icônes - Emojis :
 
-<https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#icons-emojis>
+Il y a la référence officielle [icons-emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#icons-emojis){target=_blank} ;
 
-<https://ens-fr.gitlab.io/mkdocs/markdown-bases/#emojis-et-unicode>
+Sur son site, Franck CHAMBON présente l'ajout d'[émojis et de caractères unicodes](https://ens-fr.gitlab.io/mkdocs/markdown-bases/#emojis-et-unicode){target=_blank} ;
 
 ### Touches :
 
-<https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#affichage-des-touches>
+Sur son site, Franck CHAMBON présente des exemples d'ajout de [touches](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#affichage-des-touches){target=_blank} ;
+
+Il y a également la [documentation](https://facelessuser.github.io/pymdown-extensions/extensions/keys/){target=_blank} et la [référence](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#keys){target=_blank} officielles
 
 
 ### Echappement :

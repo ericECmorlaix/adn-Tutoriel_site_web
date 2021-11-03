@@ -137,7 +137,7 @@
         Si comme moi vous êtes joueur, vous brulez d'envie de l'expérimenter
          pour le vérifier par vous même...  :wink:, sinon :
         === "divulgachage n°1 :"
-            La réponse se trouve [là](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#overview)&mldr; :face_with_monocle: :monocle_face:
+            La réponse se trouve [là](https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#overview)&mldr; :face_with_monocle: 
         === "divulgachage n°2 :"
             Oui, c'est récursif au sens ou un `fichier_a.md`
              peut inclure un `fichier_b.md` qui lui même
@@ -145,7 +145,7 @@
         === "divulgachage n°3 :"
             Non, ce n'est pas vraiment récursif car le `fichier_b.md`
             ne peut pas s'inclure lui même, ni être inclus dans le `fichier_c` qu'il inclut déjà.  
-            Dès que [Snippets] rencontre une nouvelle fois un même fichier,
+            Dès que [Snippets] rencontre une nouvelle fois un même fichier
             dans la pile d'appels, le processus d'inclusion s'arrête par sécurité
              pour éviter une boucle infinie... :confused:
 

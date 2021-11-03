@@ -63,6 +63,14 @@
 --8<-- "includes/md/tableau.md"
 
 ***
+## Note de bas de page :
+--8<-- "includes/md/footnote.md"
+
+***
+## Bouton :
+
+--8<-- "includes/md/bouton.md"
+***
 ## Toujours en construction...
 
 ![Illustration par unDrawn de la construction d'un mur](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_building_blocks_n0nc.svg "Toujours en construction..." )
@@ -72,13 +80,7 @@
 --8<-- "includes/md/caracteres.md"
 
 ***
-## Boutons :
 
-<https://squidfunk.github.io/mkdocs-material/reference/buttons/#buttons>
-
-<https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#les-boutons>
-
-***
 ## Ressources :
 
 <https://www.jdbonjour.ch/cours/markdown-pandoc/>

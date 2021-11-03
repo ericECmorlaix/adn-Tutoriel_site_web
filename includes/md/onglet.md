@@ -24,12 +24,6 @@ On peut aussi imbriquer des onglets les uns dans les autres...
             ```
         ````
 
-
-=== "MarDown"
-
-Le code de cet exemple : -->
-
-
 ??? cite "Une explication en vidéo par Fred LELEU :"
     <figure>    
         <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/aPnQAzTAqNk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>

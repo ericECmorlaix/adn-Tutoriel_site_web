@@ -75,7 +75,7 @@
     La syntaxe `--8<--` représente une paire de ciseaux en art ASCII.
     Il est aussi possible d'inclure plusieurs fichiers d'affilée
     en ajoutant selon le besoin des sauts de lignes et des indentations,
-    un point virgule suivi d'un espace pour ignorer un fichier...
+    un point virgule suivi d'une espace pour ignorer un fichier...
     ??? example "Comme par exemple ainsi : ..."
         === "MarkDown avec inclusions"
             ```md
@@ -243,6 +243,8 @@ En conclusion, quelque soit l'extension du fichier inclu, MkDocs-Material avec l
 
 S'il rencontre des caractères de balisage assimilable à **MarkDown**, <em>HTML</em> ou $\LaTeX$, il va les convertir pour générer le code HTML final destiné au navigateur.
 
-Lors de la construction du site, MkDocs convertit chacun des fichiers `truc.md` qui se trouve dans le dossier `docs` en créant un dossier nommé `truc` contenant une copie du fichier `truc.md` et un fichier `index.html` généré à partir du code MarkDown de `truc.md` pour permettre son bon affichage dans un navigateur.  
+Lors de la [construction du site, MkDocs convertit](https://www.mkdocs.org/user-guide/writing-your-docs/#file-layout){ target=_blank} chacun des fichiers `truc.md` qui se trouve dans le dossier `docs` en créant un dossier nommé `truc` contenant une copie du fichier `truc.md` et un fichier `index.html` généré à partir du code MarkDown de `truc.md` pour permettre son bon affichage dans un navigateur.  
 De même avec l'extension [mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter){ target=_blank} pour les fichiers en `.py` et `.ipynb`.  
 En conséquence, il est préférable de placer tous les fichiers d'extraits à inclure à l'extérieur du dossier `docs` par exemple dans un dossier nommé `includes`.
+!!! note 
+Une autre solution consiste à modifier l'extension du fichier `truc.md` à inclure en `truc.txt`, par exemple, et ainsi le conserver dans le dossier `docs` sans qu'il soit automatiquement converti.

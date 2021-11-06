@@ -1,0 +1,30 @@
+# Définition du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
+theme:
+    name: material
+    custom_dir: overrides
+    font: false  # RGPD ; pas de fonte Google
+    language: fr # français
+    logo: images/LogoIO.png 
+    favicon: images/LogoIO-pink.png # Icone qui apparait dans l'onglet du navigateur avant le nom du site
+    # Palettes de couleurs jour/nuit, cf : https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    palette: 
+      - scheme: default # nom du thème clair
+        primary: pink # couleur primaire des titres, des liens, ..., à prendre dans la liste
+        accent: cyan # couleur d'accentuation au survol des boutons, desliens, ..., à prendre dans la liste
+        toggle: # définition du bouton pour switcher de palette
+          icon: material/weather-sunny # apparence
+          name: Basculer en mode sombre # message
+      - scheme: slate # nom du thème sombre
+        primary: cyan
+        accent: pink
+        toggle:
+          icon: material/weather-night
+          name: Basculer en mode clair
+    # Configuration de la navigation, cf : https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+    features: 
+        - navigation.instant 
+        - navigation.tabs # Menu de navigation horizontal sous l'en-tête sauf sur appareil mobile
+        # - navigation.tabs.sticky # Menu de navigation horizontal collant
+        - navigation.top # bouton pour remonter tout en haut de la page
+        - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
+        - header.autohide # masquage automatique de l'entête du site lorsque l'on descend dans la page

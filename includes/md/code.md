@@ -5,7 +5,7 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
   du code en caractères [`monospaces`][2]
    en l'encadrant entre deux `` ` ``
     que l'on peut obtenir par la combinaison
-     de touches ++"AltGr"+"è"++.
+     de touches ++altgr+"è"++.
 
 ??? tip "Mettre du code dans du code : ..."
     Si le codage renferme déjà une apostrophe inversée

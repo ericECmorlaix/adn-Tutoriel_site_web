@@ -6,7 +6,7 @@ hide:
 Ceci est un tutoriel pour déployer un site web depuis un dépôt git
  avec le framework material pour mkdocs en incluant, ou pas, des notebook jupyter...
 
-[![building_websites](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_building_websites_i78t.svg){: align=right width=50%}](https://undraw.co/illustrations "Illustration par unDraw"){target="_blank"}
+[![building_websites](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_building_websites_i78t.svg){: align=right width=53%}](https://undraw.co/illustrations "Illustration par unDraw"){target="_blank"}
 
 
 ???+ adncogs "Créer, déployer puis maintenir son site :"
@@ -17,11 +17,19 @@ Ceci est un tutoriel pour déployer un site web depuis un dépôt git
 
     3. [Et même sur un iPad en ligne de commande](./iPad.md) ;
 
+![Bienvenue](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_handcrafts_welcome.svg "Degemer Mat !"){width=20% .center }
 
 ???+ adncode "Coder pour générer ses pages web  :"
 
-    1. [Le MarkDown de Mkdocs Material](./MarkDown-Mkdocs_Material.md) ;
-![Bienvenue](https://ericecmorlaix.github.io/adn-Tutoriel_site_web/images/undraw_handcrafts_welcome.svg "Degemer Mat !"){width=25% .center }
+    1. [MarkDown Mkdocs-Material, le contenu](./MarkDown-Mkdocs_Material.md) ;
+
+    2. [YAML, la configuration](./Yaml.md) ;
+
+    3. [$\LaTeX$, les sciences](./LaTeX.md) ;
+
+    4. [Python, les macros](./Python.md) ;
+
+
 
 
 

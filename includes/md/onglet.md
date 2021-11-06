@@ -1,4 +1,4 @@
-La syntaxe pour créer des onglets coulissants commence par trois signes d'égalité `:::md ===` suivi d'un espace et d'un titre écrit entre guillemets.
+La syntaxe pour créer des onglets coulissants commence par trois signes d'égalité `:::md ===` suivi d'une espace et d'un titre écrit entre guillemets.
 
 Puis, après un retour à la ligne et une indentation de 4 espaces, on peut écrire en MarkDown le code du contenu de cet onglet.
 

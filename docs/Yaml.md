@@ -1,0 +1,280 @@
+
+Les fichiers de configuration du site `mkdocs.yml` et `ci.yml` sont écrits en [YAML]{target=_blank},
+un langage avec une syntaxe la plus lisible possible par des humains pour représenter des données.
+
+Aussi ce langage est largement utilisé par ailleurs comme par exemple en domotique pour la configuration
+ du logiciel [Home Assistant](https://en.wikipedia.org/wiki/Home_Assistant){target="_blank"} :
+
+<figure markdown>
+  ![capture configuration.yaml](https://www.domotique123.fr/content/images/2021/05/xHome-Assistant-Yaml.jpg.pagespeed.ic.eiMdaVo9mc.webp){ width=70% .center }
+  <figcaption markdown>
+   exemple d’un fichier configuration.yaml pour [Home Assistant](https://www.domotique123.fr/presentation-dhome-assistant/){target="_blank"}
+  </figcaption>
+</figure>
+
+***
+## Notions de YAML utiles :
+- Les données sont sous la forme `:::yaml clé: valeur`, à raison d'un couple par ligne ;
+```yaml
+nom: toto
+```
+- Les commentaires sont signalés par le signe dièse `#` et se prolongent sur tout le reste de la ligne ;
+```yaml
+# Commentaire
+salut: "Degemer mat" # Commentaire : bienvenue en Breton !
+```
+> Il est pratique de placer un `#` au début d'une ligne pour désactiver sa prise en compte ;
+>
+> Dans Visual Studio Code, la combinaison de touches ++ctrl+slash++ active/désactive une ligne de code...
+
+- Les imbrications de la structure de données (tableau associatif, dictionnaire)
+sont assurées par l'indentation :
+```yaml
+mon_dictionnaire:
+    propriete_1: valeur  
+    propriete_2: valeur
+# ou
+mon_dictionnaire_bis: {propriete_1: valeur, propriete_2: valeur }
+# Comme en Python ? En fait, c'est au format JSON que YAML accepte.
+```
+- Les éléments d'une liste (tableau) sont dénotés par le tiret `-`, suivi d'une espace, à raison d'un élément par ligne :
+```yaml
+ma_liste:
+- a
+- b
+- c
+# ici l'indentation n'a pas d'importance
+# ou
+ma_liste_bis: [a,b,c]
+# Comme en Python ? En fait, c'est au format JSON que YAML accepte.
+```
+- Toute valeur qui ne peut être convertie ni en entier,
+ni en nombre à virgule flottante, ni en tout autre type reconnu par YAML
+est interprétée comme une chaine de caractères.  
+Pour éviter les situations ambiguës, les valeurs de type chaine de caractères (string)
+peuvent être entourés de guillemets doubles `"`, ou simples `'` :
+```yaml
+key: "1234"
+```
+- Les valeurs booléennes sont `true` ou `false` (de préférence...) ;
+- Un `~` représente une valeur `NULL` ;
+- Un `>` permet d'écrire sur plusieurs lignes une valeur longue
+ sans conserver les retours à la ligne :
+```yaml
+site_description: >
+    Tutoriel pour créer et gérer un site web depuis un dépôt git 
+    avec le framework material pour mkdocs et des notebook jupyter
+```
+
+??? cite "Ressources pour aller plus loin avec YAML : ..."
+    - [Apprendre YAML en Y minutes](https://learnxinyminutes.com/docs/fr-fr/yaml-fr/){target="_blank"}
+    - [Introduction à YAML](https://sweetohm.net/article/introduction-yaml.html){target="_blank"}
+    - [Online YAML Parser](http://yaml-online-parser.appspot.com/){target="_blank"}
+    - [YAML 1.2 Spec](https://yaml.org/spec/1.2.2/){target="_blank"}
+    - [YAML Home Assistant](https://www.home-assistant.io/docs/configuration/yaml/){target="_blank"}
+
+***
+## Le fichier `ci.yml` :
+
+Le fichier `ci.yml` doit être placé dans une arborescence de répertoires nommés `.github/workflows/ci.yml`.
+
+Les données qu'il contient sont destinées à configurer le bot de GitHub avec toutes les applications logicielles,
+ les plugins MkDocs et les extensions MarkDown, nécessaires pour qu'il puisse créer et mettre à jour automatiquement
+la branche `gh-pages` à partir du contenu de la branche `main` à chaque changement (commit + push).
+
+??? example "Exemple de ce site : ..."
+    ```yaml
+    --8<-- ".github/workflows/ci.yml"
+    ```
+    Ce code correspond à celui proposé dans la [documentation MkDocs-Material](
+    https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions){target=_blank}
+    si ce n'est :
+    
+    - la suppression de l'item `- master` car la branche par défaut du projet est ici la branche `main` ;
+    - l'ajout de l'item `:::yaml - run: pip install mkdocs-jupyter`
+    qui installe le plugin [mkdocs-jupyter](#mkdocs-jupyter)
+    pour ajouter directement des fichiers `.ipynb` et `.py` comme nouvelles pages du site...
+
+***
+## Le fichier `mkdocs.yml` :
+
+Les données de ce fichier définissent la configuration du site web afin de personnaliser son style, son organisation, ses fonctionnalités et son comportement...
+
+Au minimum, ce fichier de [configuration pour MkDocs](https://www.mkdocs.org/user-guide/configuration/#configuration){target="_blank"} doit contenir les deux paramètres :
+
+- [`site_name:`](https://www.mkdocs.org/user-guide/configuration/#site_name){target="_blank"}
+une chaine de caractères définissant le titre du site qui s'affichera dans l'onglet du navigateur :
+??? example "Exemple extrait du fichier `mkdocs.yml` de ce site : ..."
+    === "Ce code YAML :"
+        ```yaml
+        site_name: ADN - Tutoriel site web
+        ```
+    === "génère le code HTML :"
+        ```html
+        <head>
+            <title>ADN - Tutoriel site web</title>
+        </head>
+        ```  
+- [`site_url:`](https://www.mkdocs.org/user-guide/configuration/#site_url){target="_blank"}
+l'adresse web principale de publication du site : 
+??? example "Exemple extrait du fichier `mkdocs.yml` de ce site : ..."
+    === "Ce code YAML :"
+        ```yaml
+        site_url: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/
+        ```
+    === "génère le code HTML :"
+        ```html
+        <head>
+            <link rel="canonical" href="https://ericecmorlaix.github.io/adn-Tutoriel_site_web/">
+        </head>
+        ```  
+
+??? cite "Une explication en vidéo par Fred LELEU :"
+    <figure>    
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/K6l-5TCORMg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <figcaption markdown> [Les vidéos de Fred LELEU]{ target="_blank"}</figcaption>        
+    </figure>
+
+Tous les autres paramètres sont facultatifs mais ils apportent des fonctionnalités intéressantes :
+
+- [repo_url:](https://www.mkdocs.org/user-guide/configuration/#repo_url){target="_blank"}
+Ajoute en haut à droite de chaque page du site, icône, nom et lien vers le dépot GitHub du projet. 
+- [repo_name:](https://www.mkdocs.org/user-guide/configuration/#repo_name){target="_blank"}
+Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet. 
+- [edit_uri:](https://www.mkdocs.org/user-guide/configuration/#edit_uri){target="_blank"}
+Complément au chemin pour aller depuis `repo_url:` jusqu'au répertoire `docs` ;
+Ce qui permet avec MkDocs-Material un lien d'édition dans le navigateur du code source
+
+??? example "Exemple extrait du fichier `mkdocs.yml` de ce site : ..."
+    ```yaml
+    repo_url: https://github.com/ericECmorlaix/testMkDocsAdN/
+    repo_name: adn-Tutoriel_site_web
+    edit_uri: edit/main/docs/
+    ```
+[Métadonnées](https://fr.wikipedia.org/wiki/%C3%89l%C3%A9ment_meta) de description et d'auteur pour toutes les pages du site :
+
+- [site_description:](https://www.mkdocs.org/user-guide/configuration/#site_description){target="_blank"}
+- [site_author:](https://www.mkdocs.org/user-guide/configuration/#site_author){target="_blank"}
+??? example "Exemple extrait du fichier `mkdocs.yml` de ce site : ..."
+    === "Ce code YAML :"
+        ```yaml
+        site_description: >
+            Tutoriel pour créer et gérer un site web depuis un dépôt git 
+            avec le framework material pour mkdocs et des notebook jupyter
+        site_author: "Eric MADEC"
+        ```
+    === "génère le code HTML :"
+        ```html
+        <head>
+            <meta name="description" content="Tutoriel pour créer et gérer un site web depuis un dépôt git avec le framework material pour mkdocs et des notebook jupyter">      
+            <meta name="author" content="Eric MADEC">
+        </head>
+        ```  
+
+- [copyright:](https://www.mkdocs.org/user-guide/configuration/#copyright){target="_blank"} Information de droit d'auteur qui s'affiche dans le pied de page pour toutes les pages du site
+??? example "Exemple extrait du fichier `mkdocs.yml` de ce site : ..."
+    === "Ce code YAML :"
+        ```yaml
+        copyright: >
+            Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a>
+            &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
+            <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
+        ```
+    === "génère le code HTML :"
+        ```html
+        <div class="md-footer-copyright__highlight">
+            Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a> &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a> <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
+        </div>
+        ```
+
+### Menu de navigation :
+
+La structure et le contenu du menu principal de navigation du site sont définis par la valeur associée au paramètre [nav:](https://www.mkdocs.org/user-guide/configuration/#nav){target=_blank}.
+
+Tous les chemins menant aux fichiers à inclure dans cette navigation doivent être relatifs à la valeur de la clé [`docs_dir`](https://www.mkdocs.org/user-guide/configuration/#docs_dir){target=_blank} qui est le dossier `docs` par défaut.
+
+On peut également inclure des liens absolus vers des sources externes.
+
+??? example "Exemple extrait du fichier `mkdocs.yml` de ce site : ..."
+    ```yaml
+    # Chemin du dossier source relativement au fichier mkdocs.yml :
+    docs_dir: docs
+    # Menu principal de navigation - chemins relatifs au dossier source
+    nav: 
+      - Accueil: index.md
+      - Créer, déployer puis maintenir son site:
+        - Dans un navigateur: PremiersPas.md
+        - Sur PC avec Visual Studio Code: PCW10-VSC.md
+        - Sur iPad en ligne de commande: iPad.md
+      - Coder pour générer ses pages web:
+        - MarkDown Mkdocs-Material, le contenu: MarkDown-Mkdocs_Material.md
+        - YAML, la configuration: Yaml.md
+        - LaTeX, les sciences: LaTeX.md
+        - Python, les macros: Python.md
+      - Ressources : Ressources.md
+    ```
+
+??? cite "Une explication en vidéo par Fred LELEU :"
+    <figure>    
+        <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/4fdmO-n37Gg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        <br>
+        <figcaption markdown> [Les vidéos de Fred LELEU]{ target="_blank"}</figcaption>        
+    </figure>
+
+!!! note "Remarque :"
+    Toutes les `fichier.md` non répertoriés dans la configuration de navigation seront toujours convertis et inclus dans le site construit, cependant, les pages ainsi générées ne seront pas liées à partir de la navigation globale et ne seront pas incluses dans les liens de navigation en fin de page _Précédent_ et _Suivant_. Ces pages resteront "cachées" à moins qu'elles ne soient directement liées à un lien hypertexte comme c'est le cas dans ce site pour la page [iSH Shell](../iSH_Shell){target="_blank"}.
+
+### Thème :
+
+Il suffit de changer la valeur de la clé `name:` pour changer radicalement l'allure d'un site de documentation.  
+[MkDocs] inclut deux [thèmes de base](https://www.mkdocs.org/user-guide/choosing-your-theme/){target=_blank} mais de nombreux [autres thèmes](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes){target=_blank} existent qu'il suffit d'essayer...
+
+Le choix du thème nommé `material` permet de préciser des paramètres imbriqués de configuration tels que :
+
+- les [couleurs](https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/){target=_blank} ;
+- les [polices de caractères](https://squidfunk.github.io/mkdocs-material/setup/changing-the-fonts/){target=_blank} ;
+- la [langue](https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/){target=_blank} ;
+- les [icônes](https://squidfunk.github.io/mkdocs-material/setup/changing-the-logo-and-icons/){target=_blank} ;
+- la [navigation](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/){target=_blank} ;
+
+??? example "Exemple extrait du fichier `mkdocs.yml` de ce site : ..."
+    ```yaml
+    --8<-- "includes/yml/theme.yml"
+    ```
+
+
+    
+### Les plugins :
+#### Recherche :
+On peut ajouter et configurer un plugin pour inclure
+ une barre de [recherche](https://squidfunk.github.io/mkdocs-material/setup/setting-up-site-search/){target=_blank}.
+
+#### MkDocs-Jupyter :
+
+[mkdocs-jupyter](https://github.com/danielfrg/mkdocs-jupyter){target=_blank}
+
+***
+--8<-- "includes/md/chantier.md"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+--8<-- "includes/md/abr_ref.md"

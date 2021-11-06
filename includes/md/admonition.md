@@ -111,7 +111,7 @@ De base, il existe [12 styles de boites](https://squidfunk.github.io/mkdocs-mate
             Un avertissement de type `quote` (citation) ou `cite` (citer).
         ```
 Pour la syntaxe, on commmence par trois points d'exclamation `!!!`
- suivi d'un espace et du mot clé type de l'admonition qui s'affichera en titre par défaut.
+ suivi d'une espace et du mot clé type de l'admonition qui s'affichera en titre par défaut.
 
 Puis, après un retour à la ligne et une indentation de 4 espaces,
  on peut écrire en MarkDown le code du contenu de la boite d'avertissement.
@@ -242,7 +242,7 @@ Puis, après un retour à la ligne et une indentation de 4 espaces,
      des [icones](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#admonition-icons){ target=_blank}
      personnalisés pour chaque type de boite d'avertissement,
       on peut déjà [customiser](https://squidfunk.github.io/mkdocs-material/reference/admonitions/#customization){ target=_blank}
-       ses propres types de boites d'avertissement comme par exemple :
+       ses propres types de boites d'avertissement, cf. la recette pour ["Créer ses propres admonitions"](https://ens-fr.gitlab.io/mkdocs/recettes_2/#creer-ses-propres-admonitions){ target=_blank} de Franck CHAMBON, comme par exemple :
     === "Rendu"
         !!! adn
             La boite très spéciale pour l'Atelier du numérique.

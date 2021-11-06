@@ -18,9 +18,9 @@
 
 
 ??? tip "Astuces pour obtenir au clavier les caractères spéciaux comme `~`, `` ` ``, `{`ou `}`: ..." 
-    - Le [tilde](https://fr.wikipedia.org/wiki/Tilde){ target=_blank} s'obtient avec la combinaison de touches ++"AltGr"+"é"++ ;
-    - L'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave){ target=_blank} s'obtient avec la combinaison de touches ++"AltGr"+"è"++ ;
-    - Les [accolades](https://fr.wikipedia.org/wiki/Accolade){ target=_blank} (braces) ouvrante et fermante s'obtiennent respectivement avec les combinaisons de touches ++"AltGr"+"'"++ et ++"AltGr"+"="++  
+    - Le [tilde](https://fr.wikipedia.org/wiki/Tilde){ target=_blank} s'obtient avec la combinaison de touches ++altgr+"é"++ ;
+    - L'[accent grave](https://fr.wikipedia.org/wiki/Accent_grave){ target=_blank} s'obtient avec la combinaison de touches ++altgr+"è"++ ;
+    - Les [accolades](https://fr.wikipedia.org/wiki/Accolade){ target=_blank} (braces) ouvrante et fermante s'obtiennent respectivement avec les combinaisons de touches ++altgr+"'"++ et ++altgr+"="++  
 
 ??? info 
     Il faut activer dans le fichier `mkdocs.yml` les extensions :

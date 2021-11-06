@@ -2,23 +2,23 @@ name: ci
 on:
   push:
     branches:
-      - master
       - main
 jobs:
   deploy:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-
       - uses: actions/setup-python@v2
         with:
-          python-version: 3.x
-      
+          python-version: 3.x      
       - run: pip install --upgrade pip
-
       - run: pip install mkdocs-material
       - run: pip install mkdocs-jupyter
-            
+      # C'est ici qu'il faut ajouter si besoin
+      # les instructions pour installer avec pip
+      # les autres plug-in MkDocs ou extensions MarkDown
+      # souhaités pour le déploiement du site...
+
       - run: mkdocs gh-deploy --force
       
  

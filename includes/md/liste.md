@@ -1,7 +1,7 @@
 
 ### Liste à puces :
 On commence par sauter une ligne, puis on place devant chaque item
-      un caractère `-`, `+` ou `*`, suivi d'au moins d'un espace :
+      un caractère `-`, `+` ou `*`, suivi d'au moins d'une espace :
 
 === "MarkDown"
     ```markdown
@@ -71,7 +71,7 @@ On insère `[ ]` ou `[x]` devant chaque item
     
     
 ### Liste de description :
-Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins un espace :
+Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins une espace :
 === "MarkDown"
     ```markdown
     **Premier terme** :

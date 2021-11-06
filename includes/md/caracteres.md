@@ -5,27 +5,28 @@ Puisque MarkDown interprète quatre espaces laissés au début d'une ligne de te
  comme une intention de généré l'affichage d'un bloc de code
  et supprime automatiquement les espaces supplémentaires laissés vide,
   une solution pour en introduire malgré tout est d'utiliser
-  l'[entité HTML](https://developer.mozilla.org/fr/docs/Glossary/Entity){ target=_blank} `&nbsp;`
-   correspondante à un espace insécable (`&NonBreakingSpace;`).
+  l'[entité HTML]{ target=_blank} `&nbsp;`
+   correspondante à une [espace insécable]{target=_blank} (`&NonBreakingSpace;`).
 
 === "MarkDown"
     ```md
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une indentation de plus de quatre espaces,
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; et un vide laissé au milieu de cette ligne de texte.
-    <!-- un vrai commentaire qui ne s'affichera pas contrairement au trois saut de lignes suivant-->
-    &NewLine;&NewLine;&NewLine;
-    &Tab;&Tab;&lt;&excl;&hyphen;&hyphen; Ceci est&mldr;&Tab;&Tab;&Tab;&Tab;&mldr;un faux commentaire &hyphen;&hyphen;&gt;
+    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une indentation de plus de quatre espaces,
+    et un vide &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;laissé au milieu de cette ligne de texte.
+    
+    <!-- un vrai commentaire qui ne s'affichera pas-->
+    &emsp;&emsp;&emsp;&lt;&excl;&hyphen;&hyphen; ceci est&mldr;
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&mldr;un faux commentaire &hyphen;&hyphen;&gt;
     ```
 === "Rendu"
     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Une indentation de plus de quatre espaces,
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; et un vide laissé au milieu de cette ligne de texte.
+    et un vide &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;laissé au milieu de cette ligne de texte.
     
     <!-- un vrai commentaire qui ne s'affichera pas-->
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;&excl;&hyphen;&hyphen; ceci est&mldr;
-    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&mldr;un faux commentaire &hyphen;&hyphen;&gt;
+    &emsp;&emsp;&emsp;&lt;&excl;&hyphen;&hyphen; ceci est&mldr;
+    &ensp;&ensp;&ensp;&ensp;&ensp;&ensp;&mldr;un faux commentaire &hyphen;&hyphen;&gt;
 
-De la même façon tout autre [symbole ou entité HTML](https://dev.w3.org/html5/html-author/charref){ target=_blank} peut être introduit ainsi
-au milieu du code MarkDown.
+De la même façon tout autre [symbole ou entité HTML]{ target=_blank} peut être introduit ainsi
+dans du code MarkDown.
 
 ### Icônes - Emojis :
 

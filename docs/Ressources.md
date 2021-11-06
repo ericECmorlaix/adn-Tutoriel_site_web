@@ -15,9 +15,9 @@
 
 
 - Documentation officielle :
-    - [MkDocs](https://www.mkdocs.org/){ target="_blank"}
-    - [mkdocs-material](https://squidfunk.github.io/mkdocs-material/){ target="_blank"}
-    - [MkDocs Plugins](https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins){ target="_blank"}
+    - [MkDocs]{ target="_blank"}
+    - [Mkdocs-material]{ target="_blank"}
+    - [MkDocs Plugins]{ target="_blank"}
 
 - Autres documentations :
     - Excellentes vidéos simples, claires et calmes, pour bien comprendre de zéro : [mkdocs: intro to mkdocs](https://calmcode.io/mkdocs/intro-to-mkdocs.html)

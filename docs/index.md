@@ -21,13 +21,13 @@ Ceci est un tutoriel pour déployer un site web depuis un dépôt git
 
 ???+ adncode "Coder pour générer ses pages web  :"
 
-    1. [MarkDown Mkdocs-Material, le contenu](./MarkDown-Mkdocs_Material.md) ;
+    1. [MarkDown Mkdocs-Material pour le contenu](./MarkDown-Mkdocs_Material.md) ;
 
-    2. [YAML, la configuration](./Yaml.md) ;
+    2. [YAML pour la configuration](./Yaml.md) ;
 
-    3. [$\LaTeX$, les sciences](./LaTeX.md) ;
+    3. [$\LaTeX$ pour les sciences](./LaTeX.md) ;
 
-    4. [Python, les macros](./Python.md) ;
+    4. [Python pour les macros](./Python.md) ;
 
 
 

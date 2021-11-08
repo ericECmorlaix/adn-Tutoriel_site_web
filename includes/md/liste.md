@@ -1,5 +1,5 @@
 
-### Liste à puces :
+### Liste à puces
 On commence par sauter une ligne, puis on place devant chaque item
       un caractère `-`, `+` ou `*`, suivi d'au moins d'une espace :
 
@@ -20,7 +20,7 @@ On commence par sauter une ligne, puis on place devant chaque item
         * Un autre élément de ma sous-liste ;
     + Encore un autre élément de ma liste.
 
-### Liste ordonnées :
+### Liste ordonnées
 On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`,
  la numérotation se fait alors automatiquement indépendamment du nombre indiqué :
 === "MarkDown"
@@ -40,7 +40,7 @@ On procède de même, mais en précédant chaque item d'un nombre suivi d'un `.`
         72. Le second élément de ma sous-liste ;
     1024. Le troisième élément de ma liste.
 
-### Liste de taches :
+### Liste de taches
 On insère `[ ]` ou `[x]` devant chaque item
  d'une liste non ordonnée pour ajouter des cases à cocher  :
 === "MarkDown"
@@ -70,7 +70,7 @@ On insère `[ ]` ou `[x]` devant chaque item
     ```
     
     
-### Liste de description :
+### Liste de description
 Sous la ligne d'un terme, on précède sa définition par un `:` suivi d'au moins une espace :
 === "MarkDown"
     ```markdown

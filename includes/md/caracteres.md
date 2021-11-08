@@ -1,5 +1,4 @@
-
-### Entités HTML :
+### Entités HTML
 
 Puisque MarkDown interprète quatre espaces laissés au début d'une ligne de texte
  comme une intention de généré l'affichage d'un bloc de code
@@ -28,20 +27,20 @@ Puisque MarkDown interprète quatre espaces laissés au début d'une ligne de te
 De la même façon tout autre [symbole ou entité HTML]{ target=_blank} peut être introduit ainsi
 dans du code MarkDown.
 
-### Icônes - Emojis :
+### Icônes - Emojis
 
 Il y a la référence officielle [icons-emojis](https://squidfunk.github.io/mkdocs-material/reference/icons-emojis/#icons-emojis){target=_blank} ;
 
 Sur son site, Franck CHAMBON présente l'ajout d'[émojis et de caractères unicodes](https://ens-fr.gitlab.io/mkdocs/markdown-bases/#emojis-et-unicode){target=_blank} ;
 
-### Touches :
+### Touches
 
 Sur son site, Franck CHAMBON présente des exemples d'ajout de [touches](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#affichage-des-touches){target=_blank} ;
 
 Il y a également la [documentation](https://facelessuser.github.io/pymdown-extensions/extensions/keys/){target=_blank} et la [référence](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#keys){target=_blank} officielles
 
 
-### Echappement :
+### Echappement
 
 En dehors des structures de type code inline ou bloc de texte brut,
  il peut être nécessaire de mettre un caractère backslash `\` devant

@@ -1,0 +1,34 @@
+markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
+    # extensions de la bibliothèque markdown standard
+    - abbr                          # Infobulles sur abbréviations 
+    - meta                          # Métadonnées
+    - def_list                      # Listes de définition.
+    - attr_list                     # Sélecteurs CSS et attributs HTML personnalisés
+    - md_in_html                    # Pour écrire en MarkDown dans des balises HTML https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
+    - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
+    - admonition                    # Boite d'avertissements  !!! info "ma remarque"
+    - toc:                          # Table des matières générée automatiquement à partir des titres du niveau 2
+        permalink: "&num;"          # Ajoute une ancre pour de potentiels liens hypertextes vers #le-titre 
+        toc_depth: 4                # inclusion des titres jusqu'au niveau toc_depth
+    # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
+    - pymdownx.details              # plier/déplier les avertissements.
+    - pymdownx.caret                # texte ^^souligné^^ ou en ^exposant^.
+    - pymdownx.mark                 # texte ==surligné==.
+    - pymdownx.tilde                # texte ~~barré~~ ou en ~indice~.
+    - pymdownx.critic               # Pour du marquage et commentaires de révision de texte
+    - pymdownx.highlight            # Coloration syntaxique du code
+    - pymdownx.inlinehilite         # pour  `#!python  <python en ligne>`
+    - pymdownx.snippets             # Inclusion de fichiers externe.
+    - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
+        custom_checkbox:    true    #   avec cases d'origine
+        clickable_checkbox: true    #   et cliquables.
+    - pymdownx.tabbed               # Onglets coulissants.  === "Onglet"
+    - pymdownx.superfences          # Imbrication de blocs.
+    - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++
+        separator: "\uff0b"
+    - pymdownx.emoji:               # Émojis  :boom:
+        emoji_index: !!python/name:materialx.emoji.twemoji
+        emoji_generator: !!python/name:materialx.emoji.to_svg
+    - pymdownx.arithmatex:          # Formules en LaTeX 
+        generic: true
+        smart_dollar: false

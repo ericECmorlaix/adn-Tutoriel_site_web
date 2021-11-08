@@ -4,7 +4,7 @@ Ceci est un tutoriel complémentaire pour développer et maintenir votre site de
 
 
 
-## Préparation :
+## Préparation
 
 Il est nécessaire d'installer **Python**, un éditeur de code et tous les modules utiles au fonctionnement de **Git** et **MkDocs** :
 
@@ -25,7 +25,7 @@ pip install notebook
 pip install mkdocs-jupyter
 ```
 
-## La copie de travail = le clone local du dépôt distant :
+## La copie de travail = le clone local du dépôt distant
 
 - Dans Visual Studio Code (VSC), cliquer sur le bouton "Contrôle de code source" (1) (`Source Control` ++"Ctrl"+"Maj"+"G"++) ;
 
@@ -37,7 +37,7 @@ pip install mkdocs-jupyter
 
 - Cliquer sur le bouton "Explorateur" (++"Ctrl"+"Maj"+"E"++) de VSC, puis cliquer sur un fichier pour l'ouvrir dans l'éditeur afin d'y apporter vos modifications... ;
 
-## Développement du site en local :
+## Développement du site en local
 
 - Ouvrir un nouveau Terminal pour saisir : `mkdocs serve` ;
 
@@ -56,7 +56,7 @@ pip install mkdocs-jupyter
     4. Dans un navigateur de l'iPad saisir l'adresse : `<IP_de_votre_PC>:8000` ;
 
 
-## Mettre à jour votre site distant :
+## Mettre à jour votre site distant
 
 - Cliquer sur le bouton "Contrôle de code source" (`Source Control` ++"Ctrl"+"Maj"+"G"++) ;
 
@@ -88,7 +88,7 @@ pip install mkdocs-jupyter
 
 ****
 
-## ==Routine pour maintenir un site Git sur PC avec VSC== :
+## ==Routine pour maintenir un site Git sur PC avec VSC==
 
 ??? summary "1 - Ouvrir votre dossier local, le "clone" :"
     Démarrer Visual Studio Code, dans le menu `Fichier` choisir `Ouvrir le dossier...`  

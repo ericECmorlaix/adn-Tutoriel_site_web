@@ -1,12 +1,14 @@
-# Définition du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
 theme:
-    name: material
-    custom_dir: overrides
+    name: material # autres thèmes : https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
+    custom_dir: overrides #  
     font: false  # RGPD ; pas de fonte Google
     language: fr # français
-    logo: images/LogoIO.png 
-    favicon: images/LogoIO-pink.png # Icone qui apparait dans l'onglet du navigateur avant le nom du site
+    logo: images/LogoIO.png # image qui apparait dans l'en tête à gauche du titre de la page
+    # et qui est support du lien qui renvoie à la racine du site depuis toutes les pages
+    favicon: images/LogoIO-pink.png # image qui apparait dans l'onglet du navigateur avant le titre du site
     # Palettes de couleurs jour/nuit, cf : https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    icon:
+      repo: fontawesome/brands/github-alt # modifie l'icône du lien vers le dépot du projet de l'en tête
     palette: 
       - scheme: default # nom du thème clair
         primary: pink # couleur primaire des titres, des liens, ..., à prendre dans la liste
@@ -20,11 +22,11 @@ theme:
         toggle:
           icon: material/weather-night
           name: Basculer en mode clair
-    # Configuration de la navigation, cf : https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+    # Configuration du comportement de la navigation, cf : https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
     features: 
-        - navigation.instant 
+        - navigation.instant # active XHR https://fr.wikipedia.org/wiki/XMLHttpRequest
         - navigation.tabs # Menu de navigation horizontal sous l'en-tête sauf sur appareil mobile
         # - navigation.tabs.sticky # Menu de navigation horizontal collant
         - navigation.top # bouton pour remonter tout en haut de la page
         - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
-        - header.autohide # masquage automatique de l'entête du site lorsque l'on descend dans la page
+        - header.autohide # masquage automatique de l'en tête du site lorsque l'on descend dans la page

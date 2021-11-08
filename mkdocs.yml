@@ -1,51 +1,51 @@
-# Paramètres obligatoires 
-site_name: ADN - Tutoriel site web # Nom du site, apparait dans l'onglet du navigateur 
+### Configuration minimale
+site_name: ADN - Tutoriel site web # Nom du site <70 caractères, apparait dans l'onglet du navigateur 
 site_url: https://ericecmorlaix.github.io/adn-Tutoriel_site_web/ # Adresse web principale de publication du site
 
+### Configuration du dépôt
 # Ajoute en haut à droite de chaque page du site, icône, nom et lien vers le dépot GitHub du projet.
 repo_url: https://github.com/ericECmorlaix/adn-Tutoriel_site_web/
 repo_name: adn-Tutoriel_site_web # Personnalise le nom générique "GitHub" donné par défaut au lien vers le dépot GitHub du projet.
-edit_uri: edit/main/docs/ # Complément au chemin pour aller depuis `repo_url:` jusqu'au répertoire `docs` ; Ce qui permet avec MkDocs-Material un lien d'édition dans le navigateur du code source
+edit_uri: edit/main/docs/ # Complément au chemin pour aller depuis `repo_url:` jusqu'au répertoire `docs` ;
+# Ce qui permet avec MkDocs-Material d'ajouter un bouton (crayon) d'édition du code source.md d'une page du site depuis le navigateur
+# (edit => édition avec connexion | blob, tree => lecture anonyme)
 
-
-# Métadonnées de description et d'auteur pour toutes les pages du site 
+### Configuration de métadonnées
+# Métadonnées de description <300 caratères, et d'auteur pour toutes les pages du site 
 site_description: >
-    Tutoriel pour créer et gérer un site web depuis un dépôt git 
+    Tutoriel pour créer et gérer un site web depuis un dépôt git
     avec le framework material pour mkdocs et des notebook jupyter
 site_author: "Eric MADEC"
 
-# Information de droit d'auteur qui s'affiche dans le pied de page pour toutes les pages du site
-copyright: >
-    Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a>
-    &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
-    <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
-
-# Structure des dossiers :
+### Configuration de la stucture de navigation
+# Dossier source, chemin relatif au fichier mkdocs.yml
 docs_dir: docs
-# Menu principal de navigation
-nav: 
-  - Accueil: index.md
-  - Créer, déployer puis maintenir son site:
-    - Dans un navigateur: PremiersPas.md
-    - Sur PC avec Visual Studio Code: PCW10-VSC.md
-    - Sur iPad en ligne de commande: iPad.md
-  - Coder pour générer ses pages web:
-    - MarkDown Mkdocs-Material, le contenu: MarkDown-Mkdocs_Material.md
-    - YAML, la configuration: Yaml.md
-    - LaTeX, les sciences: LaTeX.md
-    - Python, les macros: Python.md
-  - Ressources : Ressources.md
-
+# Structure du menu principal de navigation, chemins relatifs au dossier docs_dir
+nav:
+- Accueil: index.md
+- Créer, déployer puis maintenir son site:
+    Dans un navigateur: PremiersPas.md
+    Sur PC avec Visual Studio Code: PCW10-VSC.md
+    Sur iPad en ligne de commande: iPad.md
+- Coder pour générer ses pages web:
+    MarkDown Mkdocs-Material, le contenu: MarkDown-Mkdocs_Material.md
+    YAML, la configuration: Yaml.md
+    LaTeX, les sciences: LaTeX.md
+    Python, les macros: Python.md
+- Ressources : Ressources.md 
    
-# Définition du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
+# Configuration du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
 theme:
-    name: material
-    custom_dir: overrides
+    name: material # autres thèmes : https://github.com/mkdocs/mkdocs/wiki/MkDocs-Themes
+    custom_dir: overrides #  
     font: false  # RGPD ; pas de fonte Google
     language: fr # français
-    logo: images/LogoIO.png 
-    favicon: images/LogoIO-pink.png # Icone qui apparait dans l'onglet du navigateur avant le nom du site
+    logo: images/LogoIO.png # image qui apparait dans l'en tête à gauche du titre de la page
+    # et qui est support du lien qui renvoie à la racine du site depuis toutes les pages
+    favicon: images/LogoIO-pink.png # image qui apparait dans l'onglet du navigateur avant le titre du site
     # Palettes de couleurs jour/nuit, cf : https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
+    icon:
+      repo: fontawesome/brands/github-alt # modifie l'icône du lien vers le dépot du projet de l'en tête
     palette: 
       - scheme: default # nom du thème clair
         primary: pink # couleur primaire des titres, des liens, ..., à prendre dans la liste
@@ -59,16 +59,16 @@ theme:
         toggle:
           icon: material/weather-night
           name: Basculer en mode clair
-    # Configuration de la navigation, cf : https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
+    # Configuration du comportement de la navigation, cf : https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
     features: 
-        - navigation.instant 
+        - navigation.instant # active XHR https://fr.wikipedia.org/wiki/XMLHttpRequest
         - navigation.tabs # Menu de navigation horizontal sous l'en-tête sauf sur appareil mobile
         # - navigation.tabs.sticky # Menu de navigation horizontal collant
         - navigation.top # bouton pour remonter tout en haut de la page
         - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
-        - header.autohide # masquage automatique de l'entête du site lorsque l'on descend dans la page        
+        - header.autohide # masquage automatique de l'en tête du site lorsque l'on descend dans la page
 
-
+### Configuration des extensions MarkDown :        
 markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
     # extensions de la bibliothèque markdown standard
     - abbr                          # Infobulles sur abbréviations 
@@ -78,9 +78,9 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - md_in_html                    # Pour écrire en MarkDown dans des balises HTML https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
     - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
     - admonition                    # Boite d'avertissements  !!! info "ma remarque"
-    - toc:                          # Table des matières
-        permalink: ⚓︎
-        toc_depth: 4
+    - toc:                          # Table des matières générée automatiquement à partir des titres du niveau 2
+        permalink: "&num;"          # Ajoute une ancre pour de potentiels liens hypertextes vers #le-titre 
+        toc_depth: 4                # inclusion des titres jusqu'au niveau toc_depth
     # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.details              # plier/déplier les avertissements.
     - pymdownx.caret                # texte ^^souligné^^ ou en ^exposant^.
@@ -107,11 +107,17 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
 plugins:
   - search # Inclure une barre de recherche
   - mkdocs-jupyter: # Convertir les fichiers .ipynb et .py en pages du site https://github.com/danielfrg/mkdocs-jupyter
-      kernel_name: python3
-      execute: False
-      include_source: True
+      include_source: True # Inclu une copie du fichier source.ipynb (ou .py) dans le dossier de la page sur le site pour son téléchargement
 
 
+### Configuration d'une licence
+# Information de droit d'auteur qui s'affiche dans le pied de page pour toutes les pages du site
+copyright: >
+    Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a>
+    &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a>
+    <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
+
+### Configuration de liens sociaux https://squidfunk.github.io/mkdocs-material/setup/setting-up-the-footer/#social-links 
 extra:
   social: 
     - icon: fontawesome/solid/paper-plane

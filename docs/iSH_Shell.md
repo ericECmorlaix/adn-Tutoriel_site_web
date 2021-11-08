@@ -11,7 +11,7 @@
 - on trouve de l'aide sur le wiki : [https://github.com/ish-app/ish/wiki](https://github.com/ish-app/ish/wiki)
 
 
-## Installation :
+## Installation
 
 1. Depuis l'application `Self Service`, installer **iSH Shell** sur votre iPad ;
 

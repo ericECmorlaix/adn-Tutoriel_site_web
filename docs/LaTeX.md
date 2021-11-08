@@ -1,22 +1,21 @@
 
-## Principe :
-
+# $\LaTeX$ pour les sciences
+## Principe
 De même que dans les cellules MarkDown d'un [notebook Jupyter](../LaTeX-Le_BN_pour_formuler),
- il est possible d'écrire des expressions scientifiques en $\LaTeX{}$ dans un `fichier.md` de MkDocs.
+ il est possible d'écrire des expressions scientifiques en $\LaTeX$ dans un `fichier.md` de MkDocs.
 
 !!! example ""
     === "Rendu"
-
-        On peut inclure un code $\LaTeX$ en ligne comme ceci : $y = x^2$ ;
-        ou en bloc comme ça :
+        On peut inclure un code $\LaTeX$ en ligne $y = x^2$,
+        ou en bloc :
         
         $$y = x^2$$
-
     === "MarkDown"
         ```md
+        On peut inclure un code $\LaTeX$ en ligne $y = x^2$,
+        ou en bloc :
         
-        On peut inclure un code $\LaTeX$ en ligne comme ceci : $y = x^2$ ;
-        ou en bloc comme ça : $$y = x^2$$
+        $$y = x^2$$
         ```
 
 ??? cite "Une explication en vidéo par Fred LELEU :"
@@ -26,9 +25,15 @@ De même que dans les cellules MarkDown d'un [notebook Jupyter](../LaTeX-Le_BN_p
         <figcaption markdown> [Les vidéos de Fred LELEU]{ target="_blank"}</figcaption>        
     </figure>
 ***
-## Installation :
+## Installation
+Il est nécessaire d'ajouter l'extension [pymdownx.arithmatex](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex){target=_blank} ainsi que quelques lignes de Javascript et aussi une retouche de CSS (merci [GiYoM](https://mooc-forums.inria.fr/moocnsi/t/mkdocs-une-solution-ideale/1758/17){ target="_blank"}).
 
-Il est nécessaire d'ajouter l'extension [pymdownx.arithmatex](https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown-extensions/#arithmatex){target=_blank} ainsi que quelques lignes de Javascript et aussi une retouche de CSS (merci [GiYoM](https://mooc-forums.inria.fr/moocnsi/t/mkdocs-une-solution-ideale/1758/17){ target="_blank"}) :
+Il faut donc créer dans le dossier `docs` :
+
+- un dossier nommé [`stylesheets`](https://squidfunk.github.io/mkdocs-material/customization/?h=css#additional-css){target=_blank} contenant un fichier `extra.css` ;
+- un dossier nommé [`javascripts`](https://squidfunk.github.io/mkdocs-material/customization/?h=css#additional-css){target=_blank} contenant un fichier `config.js`.
+
+Puis coller dans ces fichiers les codes suivants et les déclarer dans le fichier `mkdocs.yml` :
 
 === "dans mkdocs.yml"
     ```yaml
@@ -71,7 +76,7 @@ Il est nécessaire d'ajouter l'extension [pymdownx.arithmatex](https://squidfunk
     }
     ```
 ***
-## Applications :
+## Applications
 ### Opérations Arithmétiques
 === "MarkDown"
     ```md
@@ -148,7 +153,7 @@ Il est nécessaire d'ajouter l'extension [pymdownx.arithmatex](https://squidfunk
 === "Rendu"
     $$f(x) = \sqrt[3]{2x} + \sqrt{x-2}$$
 
-### Algèbre de Boole :
+### Algèbre de Boole
 === "MarkDown"
     ```md
     $$a\oplus b=\bar{a}\cdot b+a\cdot\bar{b}$$
@@ -156,7 +161,7 @@ Il est nécessaire d'ajouter l'extension [pymdownx.arithmatex](https://squidfunk
 === "Rendu"
     $$a\oplus b=\bar{a}\cdot b+a\cdot\bar{b}$$
 
-### Moments et Forces :
+### Moments et Forces
 === "MarkDown"
     ```md
     $\sum\overrightarrow{M_G(\overrightarrow{F_{ext \to S}})}$
@@ -223,17 +228,17 @@ Il est nécessaire d'ajouter l'extension [pymdownx.arithmatex](https://squidfunk
     | psi     | $\psi$                | $\Psi$               |                             |
     | omega   | $\omega$              | $\Omega$             |                             |
 
-## Ressources :
+## Ressources
 
-- [Aide pour écrire des mathématiques simples](https://ens-fr.gitlab.io/mkdocs/maths/){target=_blank} par Franck CHAMBON
+- La très précieuse et précise [Aide pour écrire des mathématiques simples](https://ens-fr.gitlab.io/mkdocs/maths/){target=_blank} par Franck CHAMBON
 
 - [Equation Sheet](http://www.equationsheet.com/){target=_blank}
 
 - [Editeur d'équation en ligne](http://www.codecogs.com/eqnedit.php?latex=){target=_blank}
 
-- [LaTeX Wiki](http://en.wikibooks.org/wiki/LaTeX/Mathematics){target=_blank}
+- L'ultime ressource : [LaTeX Wiki](http://en.wikibooks.org/wiki/LaTeX/Mathematics){target=_blank}
 
-- [Apprentissage LaTeX en ligne avec ShareLaTeX](http://tsi.si.lycee.ecmorlaix.fr/APprentissageLaTeX/){target=_blank}
+- Pour s'initier au vrai $\LaTeX$ :[Apprentissage LaTeX en ligne avec ShareLaTeX](http://tsi.si.lycee.ecmorlaix.fr/APprentissageLaTeX/){target=_blank}
 
 
 --8<-- "includes/md/abr_ref.md"

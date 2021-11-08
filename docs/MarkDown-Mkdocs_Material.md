@@ -1,6 +1,10 @@
+---
+description: Page en Français décrivant l'utilisation du MarkDown de MkDocs avec le thème Material pour produire une documentation web.
 
-
-## Introduction :
+title: Le MarkDown avec Mkdocs-Material
+---
+# MarkDown Mkdocs-Material pour le contenu
+## Introduction
 === "Rendu MarkDown"
     --8<-- "includes/md/introductionM.md"
 === "MarkDown"
@@ -15,59 +19,59 @@
     --8<-- "includes/md/introductionH.md"
 
 ***
-## Titres :
+## Titres
 --8<-- "includes/md/titres.md"
 
 ***
-## Corps de texte :
+## Corps de texte
 --8<-- "includes/md/texte.md"
 
 ***
-## Lien :
+## Lien
 --8<-- "includes/md/lien.md"
 
 ***
-## Image :
+## Image
 --8<-- "includes/md/image.md"
 
 ***
-## Trait horizontal :
+## Trait horizontal
 --8<-- "includes/md/trait.md"
 
 ***
-## Listes :
+## Listes
 --8<-- "includes/md/liste.md"
 
 ***
-## Citation :
+## Citation
 --8<-- "includes/md/citation.md"
 
 ***
-## Admonition :
+## Admonition
 --8<-- "includes/md/admonition.md"
 
 ***
-## Onglet :
+## Onglet
 --8<-- "includes/md/onglet.md"
 
 ***
-## Codes :
+## Codes
 --8<-- "includes/md/code.md"
 
 ***
-## Inclusion :
+## Inclusion
 --8<-- "includes/md/inclusion.md"
 
 ***
-## Tableau :
+## Tableau
 --8<-- "includes/md/tableau.md"
 
 ***
-## Note de bas de page :
+## Note de bas de page
 --8<-- "includes/md/footnote.md"
 
 ***
-## Bouton :
+## Bouton
 
 --8<-- "includes/md/bouton.md"
 ***
@@ -75,12 +79,12 @@
 --8<-- "includes/md/chantier.md"
 
 ***
-## Caractères spéciaux :
+## Caractères spéciaux
 --8<-- "includes/md/caracteres.md"
 
 ***
 
-## Ressources :
+## Ressources
 
 <https://www.jdbonjour.ch/cours/markdown-pandoc/>
 

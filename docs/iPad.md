@@ -2,16 +2,16 @@ Vous disposez maintenant d'un site web généré avec le framework MkDocs et le 
 
 Ceci est un tutoriel complémentaire pour développer et maintenir votre site depuis votre votre iPad grâce aux supers pouvoirs de la ligne de commande.
 
-## Prérequis :
+## Prérequis
 
 Pour commencer,  il va vous falloir installer un OS Linux sur votre iPad et tous les paquets logiciels utiles au fonctionnement de **MkDocs**, pour ce faire suivez les instructions de la page [iSH Shell](../iSH_Shell){target="_blank"} ;
 
 
-## Votre premier site :
+## Votre premier site
 
 Puisque vous êtes maintenant en mesure de faire fonctionner MkDocs sur votre machine, il est temps de générer un site *"from scratch"*, de zéro, afin de comprendre comment cela fonctionne...
 
-### Générer les fichiers :
+### Générer les fichiers
 Dans un terminal d'[iSH Shell](../iSH_Shell){target="_blank"}, saisir la commande :
 ```bash
 mkdocs new monPremierSite
@@ -34,7 +34,7 @@ mkdocs new monPremierSite
     │  └─ index.md
     └─ mkdocs.yml
     ```
-### Construction du site :
+### Construction du site
 Toujours dans un terminal d'[iSH Shell](../iSH_Shell){target="_blank"}, ==depuis le dossier de votre site==, saisir la commande :
 ```bash
 mkdocs build
@@ -90,7 +90,7 @@ mkdocs build
         └── sitemap.xml.gz
     ```
 
-### Publication locale :
+### Publication locale
 
 Maintenant que les fichiers de votre site web sont hébergés sur votre tablette, on peut très simplement publier ses pages localement et les visualiser depuis n'importe quelle autre machine connectée sur le même réseau que votre iPad.
 
@@ -119,7 +119,7 @@ Enfin depuis un navigateur d'une autre machine, saisir l'URL : `http://<IP_de_vo
     Pour arrêter le serveur, appuyer sur les touches ++"^ Ctrl"+"C"++     
 
 
-### Editer/Modifier le code :
+### Editer/Modifier le code
 
 Pour modifier les fichier de notre site, nous avons besoin d'un éditeur de code. Au moins deux solutions s'offrent à nous :
 
@@ -155,14 +155,14 @@ En ligne de commande dans un terminal d'[iSH Shell](../iSH_Shell){target="_blank
 
 > Pour la gestion en ligne de commande, depuis le 13 août 2021, l'identification par simple mot de passe n'est plus supportée, il vous faudra définir une [clef personnelle d'identification](https://docs.github.com/en/github/authenticating-to-github/keeping-your-account-and-data-secure/creating-a-personal-access-token).
 
-### Installer git :
+### Installer git
 
 ```bash
 apk update # On met à jour le gestionnaire de paquets
 apk add git # On installe le paquet git pour pouvoir piloter un dossier depuis GitHub
 ```
 
-### Cloner votre dépot GitHub :
+### Cloner votre dépot GitHub
 
 Sans préciser de nom de dossier ni d'identification :
 ```bash
@@ -184,7 +184,7 @@ Password: your_token
 cd monPremierSite # ce placer dans le dossier cloné
 ```
 
-### Configurer le dossier :
+### Configurer le dossier
 
 ```bash
 git config --global user.name "votrePseudoGitHub" # pour limiter la configuration à ce dossier uniquement, enlever le --global
@@ -192,7 +192,7 @@ git config --global user.email "prenom.nom@eleves.ecmorlaix.fr" # pour limiter l
 git config --list # vérifier la configuration du dossier
 ```
 
-### Développer en local à partir de la copie de travail :
+### Développer en local à partir de la copie de travail
 
 - Modifier le contenu du fichier `docs/index.md` et créer de nouveaux fichiers `docs/ma_nouvelle_page.md` ;
 
@@ -203,19 +203,19 @@ git config --list # vérifier la configuration du dossier
 - Vérifier progressivement l'effet de vos modifications dans votre navigateur en démarrant un serveur local avec la commande `mkdocs serve` ;
 
 
-### Récupérer les données actualisées du dépôt GitHub vers votre dossier clone = "Tirer" :
+### Récupérer les données actualisées du dépôt GitHub vers votre dossier clone = "Tirer"
 
 ```bash
 git pull
 ```
 
-### Vérifier l'état de votre copie de travail :
+### Vérifier l'état de votre copie de travail
 
 ```bash
 git status
 ```
 
-### Visualiser tous les changements réalisés à ce stade :
+### Visualiser tous les changements réalisés à ce stade
 
 ```bash
 git diff
@@ -246,7 +246,7 @@ git commit -m "message du commit"
 > 
 > La commande `git commit` sans argument ouvre l'éditeur définit par défaut pour permettre d'écrire le message de `commit`...
 
-### Mettre à jour votre dépôt GitHub avec votre copie de travail = "Pousser" :
+### Mettre à jour votre dépôt GitHub avec votre copie de travail = "Pousser"
 
 ```bash
 git push origin main

@@ -21,16 +21,17 @@
         === "Rendu"
             --8<-- "docs/images/undraw_Polaroid.svg"
 
-### Fichier `.md` :
+### Fichier `.md`
 !!! attention ""
     On observe que le code MarkDown contenu dans le fichier `:::md index.md`
-    s'affiche bien, hormis son [entête de métadonnées](https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#hiding-the-sidebars)...
+    s'affiche bien, hormis son [en tête de métadonnées][meta]{target=_blank}...
 
     On a là une solution pour inclure du contenu externe codé en MarkDown
     pour développer une longue page web en la décomposant en sous-parties.  
 
     ??? example "Exemple avec le début du code qui génère cette page : ..."
-        ```` md hl_lines="3 6 25"
+        ```` md hl_lines="4 7 26"
+        # MarkDown Mkdocs-Material pour le contenu
         ## Introduction :
         === "Rendu MarkDown"
             --8<-- "includes/md/introductionM.md" 
@@ -183,7 +184,7 @@
 
             --8<-- "includes/md/abr_ref-exemple.md"
 
-### Autres fichiers :
+### Autres fichiers
 !!! failure ""
     On observe que le contenu du fichier `.py` n'est pas bien interprété
     car son indentation n'est pas respecté.

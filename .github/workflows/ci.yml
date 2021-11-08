@@ -16,7 +16,7 @@ jobs:
       - run: pip install mkdocs-jupyter
       # C'est ici qu'il faut ajouter si besoin
       # les instructions pour installer avec pip
-      # les autres plug-in MkDocs ou extensions MarkDown
+      # les autres plugins MkDocs ou extensions MarkDown
       # souhaités pour le déploiement du site...
 
       - run: mkdocs gh-deploy --force

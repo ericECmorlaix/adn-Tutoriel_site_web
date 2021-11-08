@@ -1,5 +1,5 @@
 
-### Code inline :
+### Code inline
 Comme vu dans le [Corps de texte](./#corps-de-texte),
  on peut afficher dans le flux d'un paragraphe,
   du code en caractères [`monospaces`][2]
@@ -34,7 +34,7 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
           - pymdownx.inlinehilite         
         ```
 
-### Bloc de texte brut :
+### Bloc de texte brut
 === "MarkDown"
     ```markdown
     Pour produire un bloc de texte brut,
@@ -88,9 +88,9 @@ Comme vu dans le [Corps de texte](./#corps-de-texte),
 
 !!! attention "Une indentation &ges; à 4 espaces après une ligne vide &rArr; génère du texte brut !"
 ***
-### Bloc de code :
+### Bloc de code
 
-#### Coloré :
+#### Coloré
 
 Une autre pratique pour produire des blocs de texte brut
  consiste à encadrer les lignes de code
@@ -139,7 +139,7 @@ Aussi, si on précise après le premier triplet le nom court
 !!! tip ""
     La [liste des langages supportés](https://pygments.org/languages/){ target=_blank} est plutôt exhaustive. Aussi il est pratique d'utiliser la barre de recherche pour trouver un nom court correspondant au langage souhaité...
 
-#### Numéroté, surligné :
+#### Numéroté, surligné
 
 Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.gitlab.io/mkdocs/markdown-mkdocs/#options-sur-les-blocs-de-code){ target=_blank} pour faire cela. Il s'appuie sur l'exemple de code utilisé dans la [référence mkdocs-material](https://squidfunk.github.io/mkdocs-material/reference/code-blocks/#adding-line-numbers){ target=_blank} à ce sujet :
 
@@ -267,7 +267,7 @@ Franck CHAMBON présente parfaitement les [différentes options](https://ens-fr.
       - pymdownx.snippets    
     ```
 
-#### Intégré :
+#### Intégré
 !!! bug inline end "Ne pas copier/coller..."
     ... le code ci-contre
     sans enlever l'espace laissé volontairement

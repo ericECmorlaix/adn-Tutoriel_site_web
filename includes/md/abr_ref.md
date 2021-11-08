@@ -1,7 +1,7 @@
 
 <!-- Liste d'abréviations -->
 *[HTML]: Hyper Text Markup Language
-*[YAML]: Yet Another Markup Language | Ain't Markup Language
+*[YAML]: Yet Another Markup Language ~> Ain't Markup Language
 
 <!-- Liste d'URL référencées pour liens hypertextes -->
 [W3C]: https://www.w3.org/Consortium/ "World Wide Web Consortium"
@@ -15,14 +15,13 @@
 [Les vidéos de Fred LELEU]: https://youtube.com/playlist?list=PL-Q7fIakgvUAcUluPeUMIP1128wWxboJY "Lien vers sa playlist _Tutoriels MkDocs_ sur Youtube"
 
 
-
 [MkDocs]: https://www.mkdocs.org/
 [Mkdocs-material]: https://squidfunk.github.io/mkdocs-material/
 [MkDocs Plugins]: https://github.com/mkdocs/mkdocs/wiki/MkDocs-Plugins/
 
 [Snippets]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets
 
-
+[meta]: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#hiding-the-sidebars 
 
 
 

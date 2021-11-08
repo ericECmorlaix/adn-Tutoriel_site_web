@@ -1,6 +1,6 @@
 # Premiers pas depuis un navigateur web :
 
-## Créer un dépot GitHub :
+## Créer un dépot GitHub
 Créer un compte sur GitHub (Sign up) depuis un navigateur à l'adresse [https://github.com/](https://github.com/){target="_blank"}, ou identifier vous (Sign in) si vous avez déjà un compte.
 
 <figure>
@@ -18,7 +18,7 @@ Cocher la case **"Initialize this repository with a README"** puis cliquer sur l
 > Voilà, vous faites maintenant parti d'un autre [réseau social mondial celui des développeurs de code](https://medium.com/coding-days/focus-sur-github-le-r%C3%A9seau-social-des-d%C3%A9veloppeurs-165a2978ea9e){target="_blank"}...
 
 
-## Modifier le fichier `README.md` :
+## Modifier le fichier `README.md`
 
 Le fichier `README` à pour extension `.md` pour [**MarkDown**](https://fr.wikipedia.org/wiki/Markdown){target="_blank"}, c'est ce langage de description rudimentaire que nous utiliserons principalement pour rédiger nos futures pages web.
 
@@ -47,7 +47,7 @@ Le fichier `README` à pour extension `.md` pour [**MarkDown**](https://fr.wikip
 
 > **Waouh !** vous venez de faire votre premier [**Commit**](https://fr.wikipedia.org/wiki/Commit){target="_blank"} **!**
 
-## Récupérer un modèle de site :
+## Récupérer un modèle de site
 
 Vous allez recopier dans votre dépot GitHub les fichiers nécessaires pour produire un site tel que celui visible à cette adresse : [https://ericecmorlaix.github.io/base_mkdocs_material/](https://ericecmorlaix.github.io/base_mkdocs_material/){target="_blank"} ;
 
@@ -101,7 +101,7 @@ Vous allez recopier dans votre dépot GitHub les fichiers nécessaires pour prod
     <img src="https://ericecmorlaix.github.io/img/GitHub07bis.png" alt="branche">
 </figure>
 
-## Déployer votre site :
+## Déployer votre site
 
 **Cliquer** sur les onglets `Settings` (1) puis `Pages` (2), **sélectionner** la branche `gh-pages` (3) enfin **cliquer** sur le bouton `Save` (4) :
 
@@ -111,7 +111,7 @@ Vous allez recopier dans votre dépot GitHub les fichiers nécessaires pour prod
 
 > Au bout d'un moment, si tout se passe bien, votre site devrait être visible sur le web...
 
-## Personnaliser votre site :
+## Personnaliser votre site
 
 **Analyser** l'architecture des fichiers dans chacune des branches `main` et `gh-pages`...
 

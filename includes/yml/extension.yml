@@ -7,9 +7,9 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - md_in_html                    # Pour écrire en MarkDown dans des balises HTML https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
     - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
     - admonition                    # Boite d'avertissements  !!! info "ma remarque"
-    - toc:                          # Table des matières générée automatiquement à partir des titres du niveau 2
-        permalink: "&num;"          # Ajoute une ancre pour de potentiels liens hypertextes vers #le-titre 
-        toc_depth: 4                # inclusion des titres jusqu'au niveau toc_depth
+    - toc:                          # Configuration de la table des matières générée automatiquement à partir des titres du niveau 2
+        permalink: "&num;"          # Ajoute un symbole lien hypertexte vers l'ancre du titre #le-titre 
+        toc_depth: 4                # Limite de la profondeur d'inclusion des titres dans la table des matières
     # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.details              # plier/déplier les avertissements.
     - pymdownx.caret                # texte ^^souligné^^ ou en ^exposant^.

@@ -66,7 +66,7 @@ theme:
         # - navigation.tabs.sticky # Menu de navigation horizontal collant
         - navigation.top # bouton pour remonter tout en haut de la page
         - toc.integrate # Table Of Content, table des matières intégrée dans la barre verticale de navigation
-        - header.autohide # masquage automatique de l'en tête du site lorsque l'on descend dans la page
+        - header.autohide # masquage automatique de l'en tête du site lorsque l'on descend dans la page        
 
 ### Configuration des extensions MarkDown :        
 markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abbreviations/
@@ -78,9 +78,9 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - md_in_html                    # Pour écrire en MarkDown dans des balises HTML https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/#markdown-in-html
     - footnotes                     # Notes[^1] de bas de page.  [^1]: ma note.
     - admonition                    # Boite d'avertissements  !!! info "ma remarque"
-    - toc:                          # Table des matières générée automatiquement à partir des titres du niveau 2
-        permalink: "&num;"          # Ajoute une ancre pour de potentiels liens hypertextes vers #le-titre 
-        toc_depth: 4                # inclusion des titres jusqu'au niveau toc_depth
+    - toc:                          # Configuration de la table des matières générée automatiquement à partir des titres du niveau 2
+        permalink: "&num;"          # Ajoute un symbole lien hypertexte vers l'ancre du titre #le-titre 
+        toc_depth: 4                # Limite de la profondeur d'inclusion des titres dans la table des matières
     # extensions de python-markdown https://facelessuser.github.io/pymdown-extensions/
     - pymdownx.details              # plier/déplier les avertissements.
     - pymdownx.caret                # texte ^^souligné^^ ou en ^exposant^.
@@ -121,7 +121,7 @@ copyright: >
 extra:
   social: 
     - icon: fontawesome/solid/paper-plane
-      link: mailto:eric.madec@ecmorlaix.fr
+      link: "mailto:eric.madec@ecmorlaix.fr?subject=ADN - Tutoriel documentation web&body=Votre question : ..."
       name: Pour toute question, suggestion ou commentaire, écrire à l'auteur
     - icon: fontawesome/brands/github
       link: https://github.com/ericECmorlaix/adn-Tutoriel_site_web

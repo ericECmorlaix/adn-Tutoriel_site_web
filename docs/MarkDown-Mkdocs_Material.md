@@ -71,6 +71,11 @@ title: Le MarkDown avec Mkdocs-Material
 --8<-- "includes/md/footnote.md"
 
 ***
+## Ancre
+--8<-- "includes/md/ancre.md"
+
+
+***
 ## Bouton
 
 --8<-- "includes/md/bouton.md"
@@ -93,6 +98,8 @@ title: Le MarkDown avec Mkdocs-Material
 <https://agea.github.io/tutorial.md/>
 
 <https://learninglab.gitlabpages.inria.fr/mooc-rr/mooc-rr-ressources/module1/ressources/introduction_to_markdown_fr.html>
+
+<https://learninglab.gitlabpages.inria.fr/mooc-impacts-num/mooc-impacts-num-ressources/Exemples.html>
 
 <https://www.markdownguide.org/>
 

@@ -21,7 +21,8 @@
 
 [Snippets]: https://facelessuser.github.io/pymdown-extensions/extensions/snippets/#snippets
 
-[meta]: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#hiding-the-sidebars 
+[meta]: https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/#hiding-the-sidebars
+[toc]: https://squidfunk.github.io/mkdocs-material/setup/extensions/python-markdown/?h=tit#table-of-contents
 
 
 

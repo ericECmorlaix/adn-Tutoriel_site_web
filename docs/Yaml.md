@@ -400,18 +400,17 @@ Pour afficher un bouton de téléchargement du fichier `source.ipynb` (ou `.py`)
     === "Ce code YAML :"
         ```yaml
         extra:
-          social: 
+        social: 
             - icon: fontawesome/solid/paper-plane
-                link: mailto:eric.madec@ecmorlaix.fr
-                name: Pour toute question, suggestion ou commentaire, écrire à l'auteur
+            link: "mailto:eric.madec@ecmorlaix.fr?subject=ADN - Tutoriel documentation web&body=Votre question : ..."
+            name: Pour toute question, suggestion ou commentaire, écrire à l'auteur
             - icon: fontawesome/brands/github
-                link: https://github.com/ericECmorlaix/adn-Tutoriel_site_web
-                name: dépôt github
+            link: https://github.com/ericECmorlaix/adn-Tutoriel_site_web
+            name: dépôt github
             - icon: fontawesome/solid/university
-                link: https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/
-                name: Lycée Notre Dame du Mur
+            link: https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/
+            name: Lycée Notre Dame du Mur
         ```
 ***
 --8<-- "includes/md/chantier.md"
-
 --8<-- "includes/md/abr_ref.md"

@@ -351,7 +351,7 @@ Pour afficher un bouton de téléchargement du fichier `source.ipynb` (ou `.py`)
         include_source: True
     ```
 === "dans overrides/main.html"
-    ```html
+    ```html    
     {% extends "base.html" %}    
     {% block content %}
     {% if page.nb_url %}

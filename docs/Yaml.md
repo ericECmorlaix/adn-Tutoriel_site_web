@@ -90,7 +90,28 @@ la branche `gh-pages` à partir du contenu de la branche `main` à chaque change
 
 ??? example "Exemple pour ce site : ..."
     ```yaml hl_lines="5 16"
-    --8<-- ".github/workflows/ci.yml"
+    name: ci
+    on:
+      push:
+        branches:
+        - main
+    jobs:
+      deploy:
+        runs-on: ubuntu-latest
+        steps:
+          - uses: actions/checkout@v2
+          - uses: actions/setup-python@v2
+            with:
+            python-version: 3.x      
+          - run: pip install --upgrade pip
+          - run: pip install mkdocs-material
+          - run: pip install mkdocs-jupyter
+          # C'est ici qu'il faut ajouter si besoin
+          # les instructions pour installer avec pip
+          # les autres plugins MkDocs ou extensions MarkDown
+          # souhaités pour le déploiement du site...
+
+          - run: mkdocs gh-deploy --force
     ```
     Ce code correspond à celui proposé dans la [documentation MkDocs-Material](
     https://squidfunk.github.io/mkdocs-material/publishing-your-site/#with-github-actions){target=_blank}

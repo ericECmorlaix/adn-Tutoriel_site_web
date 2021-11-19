@@ -23,6 +23,16 @@
     - Excellentes vidéos simples, claires et calmes, pour bien comprendre de zéro : [mkdocs: intro to mkdocs](https://calmcode.io/mkdocs/intro-to-mkdocs.html)
     - [Using MkDocs for technical reporting](https://www.timvink.nl/mkdocs-for-tech-doc/){ target="_blank"}
 
+- Autres exemples de sites réalisés avec MkDocs :
+    - [www.carnets.info](https://www.carnets.info/){target=_blank} par Nathalie WEIBEL ;
+    - [Enumeration/](https://ens-fr.gitlab.io/enumeration/){target=_blank} par Franck CHAMBON ;
+    - [Console Python intégrée](https://edenmaths.gitlab.io/ecs1/2020_21/bac_a_sable.html){target=_blank} par Guillaume CONNAN ;
+    - [SNT](https://glassus.github.io/snt/){target=_blank}, [Première NSI](https://github.com/glassus/premiere_nsi){target=_blank}, [Terminale NSI](https://glassus.github.io/terminale_nsi/){target=_blank}  par Gilles LASSUS ;
+    - [https://impytoyable.fr/](https://impytoyable.fr/){target=_blank} par Fred LELEU ;
+
+    - [Documentation de khartis logiciel de Sciences Po - Atelier de cartographie](https://www.sciencespo.fr/cartographie/khartis/docs/){target=_blank}
+        
+
 
 - Autres solutions pour produire de la documentation :
     - [Announcing the new Jupyter Book](https://blog.jupyter.org/announcing-the-new-jupyter-book-cbf7aa8bc72e){ target="_blank"}

@@ -14,7 +14,8 @@ jobs:
       - run: pip install --upgrade pip
       - run: pip install mkdocs-material
       - run: pip install mkdocs-jupyter
-      - run: pip install mkdocs-macros-plugin
+      - run: pip install mkdocs-kroki-plugin
+      # - run: pip install mkdocs-macros-plugin
       # C'est ici qu'il faut ajouter si besoin
       # les instructions pour installer avec pip
       # les autres plugins MkDocs ou extensions MarkDown

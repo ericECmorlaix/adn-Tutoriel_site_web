@@ -45,7 +45,7 @@ Dans le dossier du projet, modifier les fichiers suivants tels que :
           - run: mkdocs gh-deploy --force
     ```
 Au prochain redémarrage avec la commande `mkdocs serve` en local
- et au prochain déploiement distant sur GitHub le plugin macros sera actif.
+ et au prochain déploiement distant sur GitHub le plugin mkdocs-macros sera actif.
 
 ## Hello world :
 A la racine du projet, à coté de `mkdocs.yml`, créer un fichier `main.py` tel que par exemple :
@@ -72,9 +72,9 @@ pour appeler la macro `hello()` et obtenir le rendu ainsi généré :
     
 !!! note "Remarques :"
     - Une macro comme `hello()` doit renvoyer une chaine de caractères constituée
-    de MarkDown, $\LaTeX$, HTML, SVG, ...
-    - Pour permettre l'affichage de la syntaxe MarkDown <code>&lbrace;&lbrace; hello() &rbrace;&rbrace;</code> sans provoquer l'appel de la macro `hello()`
-    dans ce site, c'est ce code HTML `<code>&lbrace;&lbrace; hello() &rbrace;&rbrace;</code>` qui a été saisi :wink:.     
-
+    de MarkDown, $\LaTeX$, HTML, SVG, ...    
+    - Le plugin macros est désactivé sur ce site, la configuration présentée ici est déployée
+    dans le [dépôt](https://github.com/ericECmorlaix/macros_mkdocs_material/){target=_blank}
+    et le résultat est visible sur le [site](https://ericecmorlaix.github.io/macros_mkdocs_material/){target=_blank}.
 
 --8<-- "includes/md/chantier.md"

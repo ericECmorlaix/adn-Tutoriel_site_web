@@ -32,7 +32,9 @@ nav:
     YAML, la configuration: Yaml.md
     LaTeX, les sciences: LaTeX.md
     Python, les macros: Python.md
-- Ressources : Ressources.md 
+- Ressources : Ressources.md
+- Annexes :
+    kroki.md
    
 # Configuration du thème https://squidfunk.github.io/mkdocs-material/creating-your-site/#configuration
 theme:
@@ -108,7 +110,8 @@ plugins:
   - search # Inclure une barre de recherche
   - mkdocs-jupyter: # Convertir les fichiers .ipynb et .py en pages du site https://github.com/danielfrg/mkdocs-jupyter
       include_source: True # Inclu une copie du fichier source.ipynb (ou .py) dans le dossier de la page sur le site pour son téléchargement
-  # - macros # ajout du mini-framework mkdocs-macros-plugin, https://mkdocs-macros-plugin.readthedocs.io/  
+  # - macros # ajout du mini-framework mkdocs-macros-plugin, https://mkdocs-macros-plugin.readthedocs.io/
+  - kroki # intégration de diagramme avec https://kroki.io ; https://github.com/AVATEAM-IT-SYSTEMHAUS/mkdocs-kroki-plugin    
 
 ### Configuration d'une licence
 # Information de droit d'auteur qui s'affiche dans le pied de page pour toutes les pages du site

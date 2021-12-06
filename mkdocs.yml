@@ -95,7 +95,7 @@ markdown_extensions: # https://squidfunk.github.io/mkdocs-material/reference/abb
     - pymdownx.tasklist:            # Cases à cocher  - [ ]  et - [x]
         custom_checkbox:    true    #   avec cases d'origine
         clickable_checkbox: true    #   et cliquables.
-    - pymdownx.tabbed               # Onglets coulissants.  === "Onglet"
+    - pymdownx.tabbed:              # Onglets coulissants.  === "Onglet"
         alternate_style: true       # Ajout depuis la version 8
     - pymdownx.superfences          # Imbrication de blocs.
     - pymdownx.keys:                # Touches du clavier.  ++ctrl+d++

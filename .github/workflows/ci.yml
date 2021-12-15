@@ -12,7 +12,7 @@ jobs:
         with:
           python-version: 3.x      
       - run: pip install --upgrade pip
-      - run: pip install mkdocs-material
+      - run: pip install mkdocs-material==8.1.2
       - run: pip install mkdocs-jupyter
       - run: pip install mkdocs-kroki-plugin
       # - run: pip install mkdocs-macros-plugin

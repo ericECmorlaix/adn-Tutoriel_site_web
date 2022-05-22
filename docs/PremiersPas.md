@@ -120,3 +120,42 @@ Vous allez recopier dans votre dépot GitHub les fichiers nécessaires pour prod
 **Modifier** le fichier `mkdocs.yml` à l'aide du langage [YAML](../Yaml/) pour personnaliser la configuration de votre site...
 
 
+## Complément pour éditer dans votre navigateur
+
+Vous disposez maintenant d'un site web généré avec le framework MkDocs et le thème Material qui est publié sur un de vos dépots GitHub.
+
+Ceci est un tutoriel complémentaire pour développer et maintenir votre site depuis votre navigateur avec l'éditeur Visual Studio Code.
+
+
+### Préparation
+
+Pour faire fonctionner un Visual Studio Code dans un navigateur et ainsi piloter des dépôts GitHub depuis n’importe quelle machine sans installation locale on peut faire une demande de béta testeur auprès de Microsoft pour obtenir [GitHub Codespaces](https://visualstudio.microsoft.com/fr/services/github-codespaces/){target=_blank}...
+
+En attendant, on peut utiliser [https://www.gitpod.io/](https://www.gitpod.io/){target=_blank} :
+
+- Signer avec votre compte GitHub ;
+- Choisir VS Code BROWSER ;
+- Cliquer sur `New Workspace` ;
+- Rechercher puis choisir votre dépot dans la liste...
+
+Tous les dossiers et fichiers de votre dépot sont alors éditables dans l'environnement de développement intégré Visual Studio Code fonctionnant ici dans votre navigateur.  
+
+### ==La routine pour maintenir votre site Git avec un éditeur VSC en ligne se résume à : ==
+
+??? summary "3 - Modifier vos fichiers depuis la machine virtuelle :"
+    Depuis l'Explorateur (`Explorer` ++"Ctrl"+"Maj"+"E"++) de VSC ,
+     cliquer sur un fichier pour l'ouvrir dans l'éditeur afin de le modifier ;
+
+??? summary "4 - Indexer vos changements :"
+    Depuis le "Contrôle de code source" (`Source Control` ++"Ctrl"+"Maj"+"G"++),
+     dans "Changements" (`Changes`) cliquer sur le `+` pour ajouter les fichiers modifiés
+      à mettre en attente (indexer) dans cette phase (stage) de développement ;
+
+??? summary "5 - Committer, valider vos modifications :"
+    Ajouter un message sous "CONTRÔLE DE CODE SOURCE" (`SOURCE CONTROL`)
+     pour définir ces modifications à ce stade de votre développement,
+      puis cliquer sur `✓` pour valider ce commit ;
+
+??? summary "6 - Pousser les modifications vers votre dépôt distant :"
+    Cliquer sur les `...` en face de `CONTRÔLE DE CODE SOURCE`
+    et choisir `Push` ;

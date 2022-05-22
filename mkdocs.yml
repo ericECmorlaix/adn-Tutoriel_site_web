@@ -130,7 +130,7 @@ extra:
     - icon: fontawesome/brands/github
       link: https://github.com/ericECmorlaix/adn-Tutoriel_site_web
       name: dépôt github
-    - icon: fontawesome/solid/university
+    - icon: fontawesome/solid/school
       link: https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/
       name: Lycée Notre Dame du Mur
 

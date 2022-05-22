@@ -140,7 +140,7 @@ En attendant, on peut utiliser [https://www.gitpod.io/](https://www.gitpod.io/){
 
 Tous les dossiers et fichiers de votre dépot sont alors éditables dans l'environnement de développement intégré Visual Studio Code fonctionnant ici dans votre navigateur.  
 
-### ==La routine pour maintenir votre site Git avec un éditeur VSC en ligne se résume à : ==
+### ==La routine pour maintenir votre site Git avec un éditeur VSC en ligne se résume à :==
 
 ??? summary "3 - Modifier vos fichiers depuis la machine virtuelle :"
     Depuis l'Explorateur (`Explorer` ++"Ctrl"+"Maj"+"E"++) de VSC ,

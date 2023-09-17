@@ -28,9 +28,15 @@
     - par Franck CHAMBON :
         - [Enumeration/](https://ens-fr.gitlab.io/enumeration/){target=_blank} ;
         - [france-ioi/](https://ens-fr.gitlab.io/france-ioi/){target=_blank} ;
+        - [https://ens-fr.gitlab.io/nsi1/](https://ens-fr.gitlab.io/nsi1/){target=_blank} ;
+        - [https://ens-fr.gitlab.io/nsi2/](https://ens-fr.gitlab.io/nsi2/){target=_blank} ;
     - [Console Python intégrée](https://edenmaths.gitlab.io/ecs1/2020_21/bac_a_sable.html){target=_blank} par Guillaume CONNAN ;
     - [SNT](https://glassus.github.io/snt/){target=_blank}, [Première NSI](https://github.com/glassus/premiere_nsi){target=_blank}, [Terminale NSI](https://glassus.github.io/terminale_nsi/){target=_blank}  par Gilles LASSUS ;
     - [https://impytoyable.fr/](https://impytoyable.fr/){target=_blank} par Fred LELEU ;
+    - [http://frederic-junier.org/NSI/premiere/](http://frederic-junier.org/NSI/premiere/){target=_blank} par Frédéric JUNIER ;
+    - [http://www.zonensi.fr/](http://www.zonensi.fr/){target=_blank} par Fabien VERGNIAUD ;
+    - [https://ferney-nsi.gitlab.io/premiere/](https://ferney-nsi.gitlab.io/premiere/){target=_blank} et  [https://ferney-nsi.gitlab.io/terminale/](https://ferney-nsi.gitlab.io/terminale/){target=_blank} par Vincent BOUILLOT ;
+    - [https://pgdg.frama.io/tnsi/](https://pgdg.frama.io/tnsi/){target=_blank} et [https://pgdg.frama.io/1nsi/](https://pgdg.frama.io/1nsi/){target=_blank} de Éric ROUGIER / Paul GODARD ;
     - Fiches d'aide et ressources pour l'utilisation de Python, SolidWorks et autres logiciels en CPGE : [fiches-cpge-SI](https://cpge.frama.io/fiches-cpge/){target=_blank} par Pierre SUPPER ? ;
 
     - [Documentation de khartis logiciel de Sciences Po - Atelier de cartographie](https://www.sciencespo.fr/cartographie/khartis/docs/){target=_blank}

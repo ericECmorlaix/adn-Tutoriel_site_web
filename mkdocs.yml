@@ -48,6 +48,9 @@ theme:
     # Palettes de couleurs jour/nuit, cf : https://squidfunk.github.io/mkdocs-material/setup/changing-the-colors/
     icon:
       repo: fontawesome/brands/github-alt # modifie l'icône du lien vers le dépot du projet de l'en tête
+      edit: material/pencil 
+      view: material/eye
+
     palette: 
       - scheme: default # nom du thème clair
         primary: pink # couleur primaire des titres, des liens, ..., à prendre dans la liste
@@ -63,6 +66,8 @@ theme:
           name: Basculer en mode clair
     # Configuration du comportement de la navigation, cf : https://squidfunk.github.io/mkdocs-material/setup/setting-up-navigation/
     features: 
+        - content.action.edit # pour éditer le code de la page en cliquant sur le crayon
+        - content.action.view # pour voir le code de la page en cliquant sur l'oeil
         - navigation.instant # active XHR https://fr.wikipedia.org/wiki/XMLHttpRequest
         - navigation.tabs # Menu de navigation horizontal sous l'en-tête sauf sur appareil mobile
         # - navigation.tabs.sticky # Menu de navigation horizontal collant

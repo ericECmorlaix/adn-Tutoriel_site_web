@@ -1,5 +1,5 @@
 # adn-Tutoriel_site_web
-Tutoriel de l'atelier du numérique [ec@m](https://www.ecmorlaix.fr) pour créer et gérer un site web depuis un dépôt git avec le framework material pour mkdocs en incluant, ou pas, des notebook jupyter
+Tutoriel de l'atelier du numérique [ec@m](https://www.ecmorlaix.fr) pour créer et gérer un site web depuis un dépôt github avec le framework material pour mkdocs.
 
 Ce tutoriel est visible à l'adresse : https://ericecmorlaix.github.io/adn-Tutoriel_site_web/
 

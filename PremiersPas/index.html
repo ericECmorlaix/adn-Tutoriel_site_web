@@ -1,0 +1,1086 @@
+
+
+<!doctype html>
+<html lang="fr" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Tutoriel pour créer et gérer un site web depuis un dépôt git avec le framework material pour mkdocs et des notebook jupyter
+">
+      
+      
+        <meta name="author" content="Eric MADEC">
+      
+      
+        <link rel="canonical" href="https://ericecmorlaix.github.io/adn-Tutoriel_site_web/PremiersPas/">
+      
+      
+        <link rel="prev" href="..">
+      
+      
+        <link rel="next" href="../PCW10-VSC/">
+      
+      
+      <link rel="icon" href="../images/LogoIO-pink.png">
+      <meta name="generator" content="mkdocs-1.5.2, mkdocs-material-9.3.1">
+    
+    
+      
+        <title>Dans un navigateur - ADN - Tutoriel site web</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.046329b4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.85d0ee34.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+      
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="cyan">
+  
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&"object"==typeof palette.color)for(var key of Object.keys(palette.color))document.body.setAttribute("data-md-color-"+key,palette.color[key])</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#premiers-pas-depuis-un-navigateur-web" class="md-skip">
+          Aller au contenu
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="En-tête">
+    <a href=".." title="ADN - Tutoriel site web" class="md-header__button md-logo" aria-label="ADN - Tutoriel site web" data-md-component="logo">
+      
+  <img src="../images/LogoIO.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            ADN - Tutoriel site web
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Dans un navigateur
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+        <form class="md-header__option" data-md-component="palette">
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="pink" data-md-color-accent="cyan"  aria-label="Basculer en mode sombre"  type="radio" name="__palette" id="__palette_1">
+    
+      <label class="md-header__button md-icon" title="Basculer en mode sombre" for="__palette_2" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0-7 2.39 3.42C13.65 5.15 12.84 5 12 5c-.84 0-1.65.15-2.39.42L12 2M3.34 7l4.16-.35A7.2 7.2 0 0 0 5.94 8.5c-.44.74-.69 1.5-.83 2.29L3.34 7m.02 10 1.76-3.77a7.131 7.131 0 0 0 2.38 4.14L3.36 17M20.65 7l-1.77 3.79a7.023 7.023 0 0 0-2.38-4.15l4.15.36m-.01 10-4.14.36c.59-.51 1.12-1.14 1.54-1.86.42-.73.69-1.5.83-2.29L20.64 17M12 22l-2.41-3.44c.74.27 1.55.44 2.41.44.82 0 1.63-.17 2.37-.44L12 22Z"/></svg>
+      </label>
+    
+  
+    
+    
+    
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="cyan" data-md-color-accent="pink"  aria-label="Basculer en mode clair"  type="radio" name="__palette" id="__palette_2">
+    
+      <label class="md-header__button md-icon" title="Basculer en mode clair" for="__palette_1" hidden>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m17.75 4.09-2.53 1.94.91 3.06-2.63-1.81-2.63 1.81.91-3.06-2.53-1.94L12.44 4l1.06-3 1.06 3 3.19.09m3.5 6.91-1.64 1.25.59 1.98-1.7-1.17-1.7 1.17.59-1.98L15.75 11l2.06-.05L18.5 9l.69 1.95 2.06.05m-2.28 4.95c.83-.08 1.72 1.1 1.19 1.85-.32.45-.66.87-1.08 1.27C15.17 23 8.84 23 4.94 19.07c-3.91-3.9-3.91-10.24 0-14.14.4-.4.82-.76 1.27-1.08.75-.53 1.93.36 1.85 1.19-.27 2.86.69 5.83 2.89 8.02a9.96 9.96 0 0 0 8.02 2.89m-1.64 2.02a12.08 12.08 0 0 1-7.8-3.47c-2.17-2.19-3.33-5-3.49-7.82-2.81 3.14-2.7 7.96.31 10.98 3.02 3.01 7.84 3.12 10.98.31Z"/></svg>
+      </label>
+    
+  
+</form>
+      
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Rechercher" placeholder="Rechercher" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Recherche">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Effacer" aria-label="Effacer" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initialisation de la recherche
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/ericECmorlaix/adn-Tutoriel_site_web/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adn-Tutoriel_site_web
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+            
+<nav class="md-tabs" aria-label="Onglets" data-md-component="tabs">
+  <div class="md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href=".." class="md-tabs__link">
+        
+  
+    
+  
+  Accueil
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+    
+  
+  
+    
+    
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="./" class="md-tabs__link">
+          
+  
+  Créer, déployer puis maintenir son site
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    
+    
+      <li class="md-tabs__item">
+        <a href="../MarkDown-Mkdocs_Material/" class="md-tabs__link">
+          
+  
+  Coder pour générer ses pages web
+
+        </a>
+      </li>
+    
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../Ressources/" class="md-tabs__link">
+        
+  
+    
+  
+  Ressources
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../kroki/" class="md-tabs__link">
+        
+  
+    
+  
+  Annexes
+
+      </a>
+    </li>
+  
+
+      
+    </ul>
+  </div>
+</nav>
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+  
+
+
+  
+
+<nav class="md-nav md-nav--primary md-nav--lifted md-nav--integrated" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="ADN - Tutoriel site web" class="md-nav__button md-logo" aria-label="ADN - Tutoriel site web" data-md-component="logo">
+      
+  <img src="../images/LogoIO.png" alt="logo">
+
+    </a>
+    ADN - Tutoriel site web
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/ericECmorlaix/adn-Tutoriel_site_web/" title="Aller au dépôt" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M186.1 328.7c0 20.9-10.9 55.1-36.7 55.1s-36.7-34.2-36.7-55.1 10.9-55.1 36.7-55.1 36.7 34.2 36.7 55.1zM480 278.2c0 31.9-3.2 65.7-17.5 95-37.9 76.6-142.1 74.8-216.7 74.8-75.8 0-186.2 2.7-225.6-74.8-14.6-29-20.2-63.1-20.2-95 0-41.9 13.9-81.5 41.5-113.6-5.2-15.8-7.7-32.4-7.7-48.8 0-21.5 4.9-32.3 14.6-51.8 45.3 0 74.3 9 108.8 36 29-6.9 58.8-10 88.7-10 27 0 54.2 2.9 80.4 9.2 34-26.7 63-35.2 107.8-35.2 9.8 19.5 14.6 30.3 14.6 51.8 0 16.4-2.6 32.7-7.7 48.2 27.5 32.4 39 72.3 39 114.2zm-64.3 50.5c0-43.9-26.7-82.6-73.5-82.6-18.9 0-37 3.4-56 6-14.9 2.3-29.8 3.2-45.1 3.2-15.2 0-30.1-.9-45.1-3.2-18.7-2.6-37-6-56-6-46.8 0-73.5 38.7-73.5 82.6 0 87.8 80.4 101.3 150.4 101.3h48.2c70.3 0 150.6-13.4 150.6-101.3zm-82.6-55.1c-25.8 0-36.7 34.2-36.7 55.1s10.9 55.1 36.7 55.1 36.7-34.2 36.7-55.1-10.9-55.1-36.7-55.1z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    adn-Tutoriel_site_web
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Accueil
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_2" checked>
+        
+          <label class="md-nav__link" for="__nav_2" id="__nav_2_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Créer, déployer puis maintenir son site
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_2_label" aria-expanded="true">
+          <label class="md-nav__title" for="__nav_2">
+            <span class="md-nav__icon md-icon"></span>
+            Créer, déployer puis maintenir son site
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Dans un navigateur
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  <span class="md-ellipsis">
+    Dans un navigateur
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table des matières">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table des matières
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#se-connecter-a-github" class="md-nav__link">
+    Se connecter à GitHub
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#creer-un-nouveau-depot-a-partir-dun-template" class="md-nav__link">
+    Créer un nouveau dépôt à partir d'un template
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#modifier-le-fichier-readmemd" class="md-nav__link">
+    Modifier le fichier README.md
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#deployer-votre-site" class="md-nav__link">
+    Déployer votre site
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#maintenir-votre-site-avec-visual-studio-code-en-ligne" class="md-nav__link">
+    Maintenir votre site avec Visual Studio Code en ligne
+  </a>
+  
+    <nav class="md-nav" aria-label="Maintenir votre site avec Visual Studio Code en ligne">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#la-routine-pour-maintenir-votre-site-github-avec-un-editeur-vsc-en-ligne-se-resume-a" class="md-nav__link">
+    La routine pour maintenir votre site GitHub avec un éditeur VSC en ligne se résume à :
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#configurer-votre-site" class="md-nav__link">
+    Configurer votre site
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#developper-votre-site" class="md-nav__link">
+    Développer votre site
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../PCW10-VSC/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sur PC avec Visual Studio Code
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../iPad/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Sur iPad en ligne de commande
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    
+    
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+        
+        
+        
+        
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_3" >
+        
+          <label class="md-nav__link" for="__nav_3" id="__nav_3_label" tabindex="0">
+            
+  
+  <span class="md-ellipsis">
+    Coder pour générer ses pages web
+  </span>
+  
+
+            <span class="md-nav__icon md-icon"></span>
+          </label>
+        
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_3_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_3">
+            <span class="md-nav__icon md-icon"></span>
+            Coder pour générer ses pages web
+          </label>
+          <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../MarkDown-Mkdocs_Material/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    MarkDown Mkdocs-Material, le contenu
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Yaml/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    YAML, la configuration
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../LaTeX/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    LaTeX, les sciences
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Python/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Python, les macros
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
+          </ul>
+        </nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../Ressources/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Ressources
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../kroki/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Annexes
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+<!-- Ajout pour le bouton de téléchargement et le style des jupyter notebook   https://github.com/danielfrg/mkdocs-jupyter -->
+
+
+                  
+
+  
+    <a href="https://github.com/ericECmorlaix/adn-Tutoriel_site_web/edit/main/docs/PremiersPas.md" title="Editer cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+    </a>
+  
+  
+    
+      
+    
+    <a href="https://github.com/ericECmorlaix/adn-Tutoriel_site_web/raw/main/docs/PremiersPas.md" title="Consulter la source de cette page" class="md-content__button md-icon">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5Z"/></svg>
+    </a>
+  
+
+
+<h1 id="premiers-pas-depuis-un-navigateur-web">Premiers pas depuis un navigateur web<a class="headerlink" href="#premiers-pas-depuis-un-navigateur-web" title="Permanent link">&num;</a></h1>
+<h2 id="se-connecter-a-github">Se connecter à GitHub<a class="headerlink" href="#se-connecter-a-github" title="Permanent link">&num;</a></h2>
+<p><strong>Créer</strong> un compte sur GitHub (Sign up) depuis un navigateur à l'adresse <a href="https://github.com/">https://github.com/</a> :</p>
+<p><img class="center" src="https://ericecmorlaix.github.io/img/GitHub00a.png" width=55% alt="inscription GitHub"></p>
+<p>Ou <strong>identifier</strong> vous (Sign in) si vous avez déjà un compte :</p>
+<p><img class="center" src="https://ericecmorlaix.github.io/img/GitHub00b.png" width=45% alt="identification GitHub" ></p>
+<h2 id="creer-un-nouveau-depot-a-partir-dun-template">Créer un nouveau dépôt à partir d'un template<a class="headerlink" href="#creer-un-nouveau-depot-a-partir-dun-template" title="Permanent link">&num;</a></h2>
+<p><strong>Créer</strong> un nouveau dépôt GitHub à partir du modèle <a href="https://ericecmorlaix.github.io/base_mkdocs_material/" target="_blank">base_mkdocs_material</a> en cliquant sur le bouton "<mark>Use this template</mark>" ou tout simplement en cliquant sur <a href="https://github.com/ericECmorlaix/base_mkdocs_material/generate">ce lien</a> ;</p>
+<p><img class="center" src="https://ericecmorlaix.github.io/adn-Tutoriel_Obsidian/assets/Use_this_template.png" width=90% alt="Use_this_template GitHub" ></p>
+<ul>
+<li><strong>Donner</strong> un nom à votre dépôt public sachant que par défaut votre site sera publié à une adresse au format <a href="https://votre-pseudo-github.github.io/nom-depot/">https://votre-pseudo-github.github.io/nom-depot/</a> ;</li>
+<li><strong>ajouter</strong> une description ;</li>
+<li><strong>ne copier que</strong> la branche <code>main</code> du dépôt template ;</li>
+<li>enfin <strong>cliquer</strong> sur le bouton "<mark>Create repository from template</mark>".</li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title">Voilà !</p>
+<p>Vous faites maintenant parti d'un autre <a href="https://medium.com/coding-days/focus-sur-github-le-r%C3%A9seau-social-des-d%C3%A9veloppeurs-165a2978ea9e">réseau social mondial celui des développeurs de code</a>...  </p>
+</div>
+<h2 id="modifier-le-fichier-readmemd">Modifier le fichier <code>README.md</code><a class="headerlink" href="#modifier-le-fichier-readmemd" title="Permanent link">&num;</a></h2>
+<blockquote>
+<p>Le fichier <code>README</code> est la vitrine de votre dépôt GitHub, il a pour extension <code>.md</code> pour <a href="https://fr.wikipedia.org/wiki/Markdown" target="_blank"><strong>MarkDown</strong></a>, un langage de balisage léger qui est ici, à quelques spécificités près, le même que celui que vous utilisez pour rédiger vos fichiers <code>notebook.md</code> de <a href="https://ericecmorlaix.github.io/adn-Tutoriel_lab_si/notebook/" target="_blank">Jupyter</a> et <code>note.md</code> d'<a href="https://ericecmorlaix.github.io/adn-Tutoriel_Obsidian/" target="_blank">Obsidian</a>.<br />
+C'est ce langage de description rudimentaire que nous utiliserons principalement pour rédiger nos futures pages web.<br />
+Il existe plusieurs versions de ce langage qui, à partir d'une syntaxe de base commune, possèdent d'autres éléments additionnels spécifiques...</p>
+</blockquote>
+<ul>
+<li>
+<p><strong>Cliquer</strong> sur le crayon pour ouvrir le fichier <code>README.md</code>dans l'éditeur en ligne :
+ <img class="center" src="https://ericecmorlaix.github.io/img/GitHub02bis.png" alt="editer README" width=75%></p>
+</li>
+<li>
+<p><strong>Modifier</strong> son contenu en utilisant la syntaxe <a href="https://guides.github.com/features/mastering-markdown/" target="_blank">MarkDown à la sauce GitHub</a> :
+<img class="center" src="https://ericecmorlaix.github.io/img/GitHub03bis.png" alt="modifier README" width=75%></p>
+</li>
+</ul>
+<blockquote>
+<p>l'onglet <code>Preview</code> permet de visualiser le résultat avant sa publication...</p>
+</blockquote>
+<ul>
+<li><strong>Publier</strong> la nouvelle version du fichier <code>README.md</code> en décrivant vos modifications dans un message et puis en cliquant sur le bouton <code>Commit changes</code> :
+<img class="center" src="https://ericecmorlaix.github.io/img/GitHub04bis.png" alt="publier README" width=75%></li>
+</ul>
+<div class="admonition success">
+<p class="admonition-title"><strong>Waouh !</strong></p>
+<p>Vous venez de faire votre premier <a href="https://fr.wikipedia.org/wiki/Commit" target="_blank"><strong>Commit</strong></a> <strong>!</strong></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Remarque</p>
+<p>Nous allons bientôt voir qu'il est également possible d'éditer ce fichier <code>README.md</code> facilement dans <a href="https://vscode.dev/" target="_blank">Visual Studio Code pour le web</a>...</p>
+</div>
+<h2 id="deployer-votre-site">Déployer votre site<a class="headerlink" href="#deployer-votre-site" title="Permanent link">&num;</a></h2>
+<div class="admonition success">
+<p>Normalement, le "bot" de GitHub doit avoir généré à partir de votre branche <code>main</code>, une seconde branche nommée <code>gh-pages</code> :
+<img class="center" src="https://ericecmorlaix.github.io/img/GitHub07bis.png" alt="branche" width=40%></p>
+</div>
+<ul>
+<li><strong>Cliquer</strong> sur les onglets <code>Settings</code> (1) puis <code>Pages</code> (2), <strong>sélectionner</strong> la branche <code>gh-pages</code> (3) enfin <strong>cliquer</strong> sur le bouton <code>Save</code> (4) :
+ <img class="center" src="https://ericecmorlaix.github.io/img/GitHub08bis.png" alt="Déploiement" width=90%></li>
+</ul>
+<div class="admonition success">
+<p>Au bout d'un moment, si tout se passe bien, votre site devrait être visible sur le web à une adresse au format <a href="https://votre-pseudo-github.github.io/nom-depot/">https://votre-pseudo-github.github.io/nom-depot/</a>...</p>
+</div>
+<h2 id="maintenir-votre-site-avec-visual-studio-code-en-ligne">Maintenir votre site avec Visual Studio Code en ligne<a class="headerlink" href="#maintenir-votre-site-avec-visual-studio-code-en-ligne" title="Permanent link">&num;</a></h2>
+<p>Vous disposez maintenant d'un site web généré avec le framework MkDocs et le thème Material qui est publié sur un de vos dépots GitHub.</p>
+<p>Pour éditer facilement vos fichiers avec l'<a href="https://fr.wikipedia.org/wiki/Environnement_de_d%C3%A9veloppement" target="_blank">IDE</a> Visual Studio Code dans un navigateur et ainsi développer et maintenir des dépôts GitHub depuis n’importe quelle machine sans installation locale plusieures solutions s'offrent à nous :</p>
+<details class="tip">
+<summary>Une version allégée de VS Code s'exécutant entièrement dans votre navigateur</summary>
+<blockquote>
+<p>Une fois toutes les fonctionnalités de sa page web chargée, l'outil de développement peut fonctionner entièrement sans serveur dans le navigateur mais le terminal et le débogueur ne seront pas disponibles. Donc, par exemple :</p>
+<ul>
+<li>Pour exécuter le code d'une cellule python d'un notebook il faut recourir à l'extension <a href="https://marketplace.visualstudio.com/items?itemName=joyceerhl.vscode-pyodide" target="_blank">vscode-pyodide</a>...  </li>
+<li>Il n'est pas possible de prévisualiser en local le rendu d'un site avec la commande <code>mkdocs serve</code>...</li>
+</ul>
+</blockquote>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="__tabbed_1_1" name="__tabbed_1" type="radio" /><input id="__tabbed_1_2" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="__tabbed_1_1">vscode.dev</label><label for="__tabbed_1_2">github.dev</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>Depuis l’affichage d’un dépôt GitHub dans un navigateur, il suffit d’insérer <code>vscode.dev/</code> devant l’URL pour ouvrir ce dépôt dans l’interface VSCode pour le web...</li>
+<li>OU depuis l'adresse <a href="https://vscode.dev/" target="_blank">https://vscode.dev/</a> cliquer sur le bouton <code>Ouvrir un référentiel distant</code> et suivre les instructions...</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Depuis l’affichage d’un dépôt GitHub dans un navigateur, il suffit :<ul>
+<li>d’enfoncer les touches d'un clavier <span class="keys"><kbd>Maj</kbd><span>＋</span><kbd>.</kbd></span> ;</li>
+<li>ou de changer le <code>github.com</code> en <code>github.dev</code> dans l’URL pour ouvrir ce dépôt dans l’interface VSCode pour le web...</li>
+</ul>
+</li>
+</ul>
+<p><img alt="github dev" class="center" src="https://user-images.githubusercontent.com/856858/130119109-4769f2d7-9027-4bc4-a38c-10f297499e8f.gif" width="60%" /></p>
+<ul>
+<li>OU depuis l'adresse <a href="https://github.dev/" target="_blank">https://github.dev/</a> cliquer sur le bouton <code>GitHub</code> en bas à gauche et choisir <code>Ouvrir le dépôt/référentiel distant</code> et suivre les instructions...</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<details class="tip">
+<summary>Piloter un serveur distant depuis votre navigateur pour y exécuter VS Code</summary>
+<p>Solution plus énergivore car fonctionnant dans le cloud mais plus puissante et complète...</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="__tabbed_2_1" name="__tabbed_2" type="radio" /><input id="__tabbed_2_2" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="__tabbed_2_1"><a href="https://github.com/features/codespaces" target="_blank">Codespaces</a></label><label for="__tabbed_2_2"><a href="https://www.gitpod.io/" target="_blank">Gitpod</a></label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>A la racine de votre dépot GitHub <strong>cliquer</strong> sur le bouton vert <code>&lt;&gt; Code</code> puis choisir l'onglet <code>Codespaces</code> et enfin <strong>cliquer</strong> sur le bouton vert <code>Create codespace on main</code> </li>
+</ul>
+<p><figure>
+<img src="https://ericecmorlaix.github.io/img/Codespaces00.png" alt="Codespaces">
+</figure> </p>
+</div>
+<div class="tabbed-block">
+<ul>
+<li>Sur le site <a href="https://www.gitpod.io/" target="_blank">Gitpod</a>, <strong>signer</strong> avec votre compte GitHub ;</li>
+<li><strong>Choisir</strong> VS Code BROWSER ;</li>
+<li><strong>Cliquer</strong> sur <code>New Workspace</code> ;</li>
+<li><strong>Rechercher</strong> puis choisir votre dépot dans la liste...</li>
+</ul>
+</div>
+</div>
+</div>
+</details>
+<!-- Lire la page vscode.dev Visual Studio Code pour le Web ou regarder la vidéo https://www.youtube.com/live/sy3TUb_iVJM?feature=shared 
+
+-   Extensions pour VSCode récemment découverte :
+o   VSCode Pyodide https://marketplace.visualstudio.com/items?itemName=joyceerhl.vscode-pyodide
+o   MPE https://shd101wyy.github.io/markdown-preview-enhanced/#/vscode-installation
+o   Wikilens WikiLens - Visual Studio Marketplace
+o   CodeSwing https://marketplace.visualstudio.com/items?itemName=codespaces-Contrib.codeswing
+o   Luna Paint Luna Paint — Image Editor - Visual Studio Marketplace
+o   Code Tour CodeTour - Visual Studio Marketplace
+-->
+
+<p>Tous les dossiers et fichiers de votre dépot sont alors éditables dans l'environnement de développement intégré Visual Studio Code en ligne.</p>
+<figure>
+    <img src="https://ericecmorlaix.github.io/img/GitPod01.png" alt="GitPod VSC Explorer">
+</figure>
+
+<h3 id="la-routine-pour-maintenir-votre-site-github-avec-un-editeur-vsc-en-ligne-se-resume-a"><mark>La routine pour maintenir votre site GitHub avec un éditeur VSC en ligne se résume à :</mark><a class="headerlink" href="#la-routine-pour-maintenir-votre-site-github-avec-un-editeur-vsc-en-ligne-se-resume-a" title="Permanent link">&num;</a></h3>
+<details class="summary">
+<summary>I - Modifier vos fichiers :</summary>
+<p>Depuis l'Explorateur (<code>Explorer</code> <span class="keys"><kbd>Ctrl</kbd><span>＋</span><kbd>Maj</kbd><span>＋</span><kbd>E</kbd></span>) de VSC (<em>bleu</em>) :</p>
+<ul>
+<li>cliquer sur un dossier pour afficher la liste de son contenu ;</li>
+<li>cliquer sur les icônes (<em>jaunes</em>) pour créer un nouveau fichier et/ou un nouveau dossier ;</li>
+<li>maintenir le clic sur un fichier (ou un dossier) pour le déplacer dans l'arborescence ;</li>
+<li>cliquer sur un fichier pour l'ouvrir dans l'éditeur afin de le modifier ;</li>
+<li>cliquer droit sur un fichier <code>.md</code> et choisir <code>Open preview</code> pour le prévisualiser ;</li>
+</ul>
+</details>
+<figure>
+    <img src="https://ericecmorlaix.github.io/img/GitPod02.png" alt="GitPod VSC Explorer">
+</figure>
+
+<details class="summary">
+<summary>II - Indexer vos changements :</summary>
+<p>Depuis le "Contrôle de code source" (<em>vert</em>) (<code>Source Control</code> <span class="keys"><kbd>Ctrl</kbd><span>＋</span><kbd>Maj</kbd><span>＋</span><kbd>G</kbd></span>),
+ dans "Changements" (<code>Changes</code>) cliquer sur le <code>+</code> (<em>orange</em>) pour ajouter les fichiers modifiés
+  à mettre en attente (indexer) dans cette phase (stage) de développement ;</p>
+</details>
+<details class="summary">
+<summary>III - Committer, valider vos modifications :</summary>
+<p>Ajouter un message sous "CONTRÔLE DE CODE SOURCE" (<code>SOURCE CONTROL</code>) (<em>rose</em>)
+ pour définir ces modifications à ce stade de votre développement,
+  puis cliquer sur <code>✓</code> (<em>violet</em>) pour valider ce commit ;</p>
+</details>
+<details class="summary">
+<summary>IV - Pousser les modifications vers votre dépôt distant :</summary>
+<p>Cliquer sur les <code>...</code> en face de <code>CONTRÔLE DE CODE SOURCE</code>
+et choisir <code>Push</code> ;</p>
+</details>
+<h2 id="configurer-votre-site">Configurer votre site<a class="headerlink" href="#configurer-votre-site" title="Permanent link">&num;</a></h2>
+<p>Les fichiers de configuration du site <code>mkdocs.yml</code> et <code>ci.yml</code> sont écrits en <a href="https://fr.wikipedia.org/wiki/YAML">YAML</a>, un langage avec une syntaxe la plus lisible possible par des humains pour représenter des données. </p>
+<p><strong>Modifier</strong> ces fichiers de configuration pour les personnaliser :</p>
+<ul>
+<li>Sauf à vouloir ajouter de nouvelles fonctionnalités, le fichier <a href="https://ericecmorlaix.github.io/adn-Tutoriel_site_web/Yaml/#le-fichier-ciyml"><code>CI.yml</code></a> peut rester inchangé ;</li>
+<li>En revanche, il sera nécessaire de modifier le fichier <code>mkdocs.yml</code> en s'aidant des explications laissées en commentaires ou encore de celles ce <a href="https://ericecmorlaix.github.io/adn-Tutoriel_site_web/Yaml/#le-fichier-mkdocsyml">tutoriel de configuration d'un site web avec MkDocs</a></li>
+</ul>
+<h2 id="developper-votre-site">Développer votre site<a class="headerlink" href="#developper-votre-site" title="Permanent link">&num;</a></h2>
+<p><strong>Analyser</strong> l'architecture des fichiers dans chacune des branches <code>main</code> et <code>gh-pages</code>...</p>
+<p>Le texte en MarkDown de la page <code>index.md</code> du dossier <code>/docs</code> devient la page  d'accueil en HTML de votre site : <code>index.html</code>.</p>
+<p><strong>Modifier</strong> le fichier <code>index.md</code> à l'aide du langage <a href="../MarkDown-Mkdocs_Material/">MarkDown de Mkdocks avec Material</a> pour faire évoluer votre page d'accueil...</p>
+<p>Les dossiers présents dans <code>/docs</code> apparaissent comme sections principales de la barre de navigation. De même pour le titre de niveau 1 <code># Accueil</code> écrit au début du fichier <code>index.md</code>.</p>
+<p>Chaque note, <code>fichier.md</code> écrit en MarkDown, devient une nouvelle page du site dans leur section respective. Les noms de ces fichiers sont visibles dans la barre d'URL. Les titres et sous-titres de la table des matières apparaissent dans des sous-sections d'un menu secondaire.</p>
+<blockquote>
+<p>En l'absence de titre de niveau 1 au début d'une note, c'est le nom du fichier qui apparaitra en tête de la sous-section.</p>
+</blockquote>
+<p>Il est donc préférable d'attribuer aux dossiers et fichiers des noms significatifs, sans caractère accentué ni espace et, de même que pour les titres et sous-titres, le mieux est de les choisir courts. </p>
+<blockquote>
+<p>Ce nommage automatique peut-être modifié en définissant manuellement la rubrique <code>nav</code> dans le fichier <code>mkdocs.yml</code>, ce qui devient cependant vite fastidieux...</p>
+</blockquote>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Toutes ces fichiers en MarkDown, futures page de votre site, sont éditables soit directement dans GitHub ou dans VS Code ou dans Obsidian...</p>
+</div>
+
+
+
+
+
+                
+<style>
+    .jp-RenderedHTMLCommon p {
+        font-size: 0.8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon li {
+        font-size: .8rem;
+        line-height: 1.6;
+    }
+    .jp-RenderedHTMLCommon h1 {
+        margin: 0 0 1.25em;
+        color: var(--md-default-fg-color--light);
+        font-weight: 300;
+        font-size: 2em;
+        line-height: 1.3;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h2 {
+        margin: 1.6em 0 .64em;
+        font-weight: 300;
+        font-size: 1.965em;
+        line-height: 1.4;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon h3 {
+        margin: 1.6em 0 .8em;
+        font-weight: 400;
+        font-size: 1.57em;
+        line-height: 1.5;
+        letter-spacing: -0.01em;
+    }
+    .jp-RenderedHTMLCommon hr {
+        border: none;
+    }
+</style>
+
+              </article>
+            </div>
+          
+          
+        </div>
+        
+          <button type="button" class="md-top md-icon" data-md-component="top" hidden>
+            
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M13 20h-2V8l-5.5 5.5-1.42-1.42L12 4.16l7.92 7.92-1.42 1.42L13 8v12Z"/></svg>
+            Retour en haut de la page
+          </button>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+    <div class="md-copyright__highlight">
+      Document partagé par <a href="https://github.com/ericECmorlaix" target="_blank">Eric MADEC</a> &copy; 2021 sous licence <a href="https://creativecommons.org/licenses/by-nc-sa/4.0/deed.fr" target="_blank">CC BY-NC-SA 4.0</a> <br> Illustrations par <a href="https://undraw.co/" target="_blank">UnDraw</a>
+
+    </div>
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+    <a href="mailto:eric.madec@ecmorlaix.fr?subject=ADN - Tutoriel documentation web&body=Votre question : ..." target="_blank" rel="noopener" title="Pour toute question, suggestion ou commentaire, écrire à l&#39;auteur" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M498.1 5.6c10.1 7 15.4 19.1 13.5 31.2l-64 416c-1.5 9.7-7.4 18.2-16 23s-18.9 5.4-28 1.6L284 427.7l-68.5 74.1c-8.9 9.7-22.9 12.9-35.2 8.1S160 493.2 160 480v-83.6c0-4 1.5-7.8 4.2-10.7l167.6-182.9c5.8-6.3 5.6-16-.4-22s-15.7-6.4-22-.7L106 360.8l-88.3-44.2C7.1 311.3.3 300.7 0 288.9s5.9-22.8 16.1-28.7l448-256c10.7-6.1 23.9-5.5 34 1.4z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://github.com/ericECmorlaix/adn-Tutoriel_site_web" target="_blank" rel="noopener" title="dépôt github" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+    
+    
+    
+    
+    <a href="https://www.ecmorlaix.fr/nos-etablissements/lycee-notre-dame-du-mur/" target="_blank" rel="noopener" title="Lycée Notre Dame du Mur" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--! Font Awesome Free 6.4.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M337.8 5.4c-10.8-7.2-24.8-7.2-35.6 0L166.3 96H48c-26.5 0-48 21.5-48 48v320c0 26.5 21.5 48 48 48h544c26.5 0 48-21.5 48-48V144c0-26.5-21.5-48-48-48H473.7L337.8 5.4zM256 416c0-35.3 28.7-64 64-64s64 28.7 64 64v96H256v-96zM96 192h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-64zM96 320h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16H96c-8.8 0-16-7.2-16-16v-64c0-8.8 7.2-16 16-16zm400 16c0-8.8 7.2-16 16-16h32c8.8 0 16 7.2 16 16v64c0 8.8-7.2 16-16 16h-32c-8.8 0-16-7.2-16-16v-64zM232 176a88 88 0 1 1 176 0 88 88 0 1 1-176 0zm88-48c-8.8 0-16 7.2-16 16v32c0 8.8 7.2 16 16 16h32c8.8 0 16-7.2 16-16s-7.2-16-16-16h-16v-16c0-8.8-7.2-16-16-16z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "navigation.instant", "navigation.tabs", "navigation.top", "toc.integrate", "header.autohide"], "search": "../assets/javascripts/workers/search.dfff1995.min.js", "translations": {"clipboard.copied": "Copi\u00e9 dans le presse-papier", "clipboard.copy": "Copier dans le presse-papier", "search.result.more.one": "1 de plus sur cette page", "search.result.more.other": "# de plus sur cette page", "search.result.none": "Aucun document trouv\u00e9", "search.result.one": "1 document trouv\u00e9", "search.result.other": "# documents trouv\u00e9s", "search.result.placeholder": "Taper pour d\u00e9marrer la recherche", "search.result.term.missing": "Non trouv\u00e9", "select.version": "S\u00e9lectionner la version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.dff1b7c8.min.js"></script>
+      
+        <script src="../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+    
+  </body>
+</html>
